@@ -20,6 +20,8 @@
     <script type="text/javascript" src="{{ asset('js/iepngfix_tilebg.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.tools.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.fancybox-1.3.1.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.codaslider.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.bgiframe.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.jeditable.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>

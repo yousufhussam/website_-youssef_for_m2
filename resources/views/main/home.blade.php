@@ -31,10 +31,21 @@
         <div class="content banner">
             <div class="content-bg">
                 <div class="content-bg-bottom">
-                <a href="{{ url('teaser/dc') }}" target="_blank"><img src="{{ asset('img/banner/ro/dcbanner.jpg') }}" width="480px" /></a></div>
+                    <div class="coda-slider-wrapper">
+                        <div class="coda-slider preload" id="coda-slider-1">
+                            <div class="panel">
+                                <a href="{{ url('teaser/grotto') }}" target="_blank"><img src="{{ asset('img/banner/ro/gdvteaser.jpg') }}" width="480px" /></a>
+                            </div>
+                            <div class="panel">
+                                <a href="{{ url('teaser/dc') }}" target="_blank"><img src="{{ asset('img/banner/ro/dcbanner.jpg') }}" width="480px" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="shadow"> </div>
+
+        <div class="shadow"></div>
 
         <div class="content">
             <div class="content-bg">
@@ -47,6 +58,37 @@
                         <a title="Captura 4" href="/img/screenshots/mmorpg-fantasy-metin2-screenshot04.jpg"><img alt="Captura 4" src="/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb04.jpg" width="100" height="75" /></a>
                     </div>
                     <br class="clearfloat" />
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow"></div>
+
+        <div class="content">
+            <div class="content-bg">
+                <div class="content-bg-bottom">
+                    <h2>Noutăți</h2>
+                    <div class="inner-content" id="news_compact">
+                        <ul>
+                            <li>
+                                <h4>26.06.2013 11:00:52</h4>
+                                <h3><a style="color:#7B1300" href="https://web.archive.org/web/20130708012217/http://board.metin2.ro/index.php?page=Thread&amp;threadID=137942" target="_blank">Ziua tricolorului</a></h3>
+                                <p>Dragi jucatori,<br>bucurati-va de aceasta zi si totodata, profitati de 50% xp si 6 ore de drop cutii hexagonale, de la ora 18:00 pana la miezul noptii. <br>Numai bine,<br>Echipa Metin2</p>
+                            </li>
+                            <li>
+                                <h4>24.06.2013 08:40:04</h4>
+                                <h3><a style="color:#7B1300" href="https://web.archive.org/web/20130708012217/http://board.metin2.ro/index.php?page=Thread&amp;threadID=137808" target="_blank">Obtine un frumos Panda!</a></h3>
+                                <p><br>Draga comunitate,<br>profita de sansa de a detine acest frumos Panda ce va fi disponibil in itemshop de pe 24.06.2013 ora 12:00 pana la miezul noptii, pe 01.07.2013.<br>Deasemenea, in aceeasi <a href="{{ url('main/news') }}" class="news_link">[...]</a></p>
+                            </li>
+                            <li>
+                                <h4>14.06.2013 09:08:18</h4>
+                                <h3><a style="color:#7B1300" href="https://web.archive.org/web/20130708012217/http://board.metin2.ro/index.php?page=Thread&amp;threadID=137297" target="_blank">+15% Happy Hour si un frumos Ursulet Polar!</a></h3>
+                                <p>Draga comunitate<br>Binevointa Zeului Dragon radiaza peste cele trei regate!<br>Profita de aceasta oportunitate si procura-ti cu 15% mai multe Monede Dragon azi! 14.06.2013 incepand cu ora 12;00 pana <a href="{{ url('main/news') }}" class="news_link">[...]</a></p>
+                            </li>
+                        </ul>
+                        <a href="{{ url('main/news') }}" class="btn">Mergi la noutăți</a>
+                        <br class="clearfloat">
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,6 +139,14 @@
                 next:	'.forward',
                 prev: 	'.back',
                 speed: 800
+            });
+
+            $('#coda-slider-1').codaSlider({
+                autoSlide: true,
+                autoHeight: false,
+                autoSlideInterval: 4000,
+                autoSlideStopWhenClicked: true,
+                dynamicArrows: false
             });
         });
     </script>

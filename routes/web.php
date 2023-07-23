@@ -20,6 +20,7 @@ Route::get('/', fn () => view('main/home'));
 Route::prefix('main')->group(function() {
     Route::get('/home', fn () => view('main/home'));
     Route::get('/media', fn () => view('main/media'));
+    Route::get('/news', fn () => view('main/news'));
     Route::get('/download', fn () => view('main/download'));
     Route::get('/highscore', fn () => view('main/highscore'));
     Route::get('/guildhighscore', fn () => view('main/guildhighscore'));
