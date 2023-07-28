@@ -758,7 +758,7 @@ a.left:hover {
 
 #fancybox-title-left {
 	padding-left: 15px;
-	background-image: url('/img/fancybox/fancy_title_left.png');
+	background-image: url('/img/fancybox/fancybox.png');
 	background-position: -40px -90px;
 	background-repeat: no-repeat;
 }
@@ -773,7 +773,7 @@ a.left:hover {
 
 #fancybox-title-right {
 	padding-left: 15px;
-	background-image: url('/img/fancybox/fancy_title_right.png');
+	background-image: url('/img/fancybox/fancybox.png');
 	background-position: -55px -90px;
 	background-repeat: no-repeat;
 }
