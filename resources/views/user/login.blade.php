@@ -12,19 +12,27 @@
                             <h3><a id="topwLost" href="{{ url('user/passwordlostrequest') }}" title="Ai uitat parola?">Ai uitat parola?</a>Logare</h3>
                             <div class="trenner"></div>
                             <form name="loginForm" id="loginForm" action="{{ url('user/login') }}" method="post">
+                                @csrf
+
                                 <div>
                                     <label for="username">Nume de utilizator: *</label>
-                                    <input type="text" class="validate[required,custom[noSpecialCharacters]]" id="username" name="username" maxlength="16" value=""/>
+                                    <input type="text" class="validate[required,custom[noSpecialCharacters]]" id="username" name="login" maxlength="16" value="{{ old('login') }}"/>
                                 </div>
                                 <div>
                                     <label for="password">Parola: *</label>
-                                    <input type="password" class="validate[required,length[5,16]]" id="password" name="password" maxlength="16" value=""/>
+                                    <input type="password" class="validate[required,length[5,16]]" id="password" name="password" maxlength="16" value="{{ old('password') }}" />
                                 </div>
                                 <div id="checkerror">
                                     <p>Intrând aici, accept <a href="{{ url('legal/terms') }}" target="_blank"><strong>Termenii şi condiţiile</strong></a>.</p>
                                 </div>
                                 <input id="submitBtn" class="btn-big" type="submit" name="SubmitLoginForm" value="Trimite"/>
                                 <script type="text/javascript">
+                                    @error('login')
+                                        $.validationEngine.buildPrompt("#username", "{{ $message }}", "error");
+                                    @enderror
+                                    @error('password')
+                                        $.validationEngine.buildPrompt("#password", "{{ $message }}", "error");
+                                    @enderror
                                 </script>
                             </form>
                             <p id="regLegend">* este necesar</p>

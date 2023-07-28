@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -49,27 +50,30 @@ Route::prefix('main')->group(function() {
 
 Route::prefix('user')->group(function() {
     Route::get('/register', fn () => view('user/register'));
-    Route::get('/login', fn () => view('user/login'));
+    Route::get('/login', fn () => view('user/login'))->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
     // will autocomplete the username
     Route::get('/login/{username}', fn ($username) => view('user/login'));
-    Route::get('/logout', fn () => view('user/logout'));
-
-    Route::get('/administration', fn () => view('user/administration'));
-
-    Route::get('/characters', fn () => view('user/characters'));
+    Route::get('/logout', [LoginController::class, 'logout']);
 
     Route::get('/passwordlostrequest', fn () => view('user/passwordlostrequest'));
     Route::get('/passwordlost/{username}/{hash}', fn ($username, $hash) => view('user/passwordlost-expired'));
     Route::get('/resendack', fn () => view('user/resendack'));
 
-    Route::get('/emailchangeaccept/{username}/{hash}', fn ($username, $hash) => view('user/emailchangeaccept'));
-    Route::get('/emailchangecancel/{username}/{hash}', fn ($username, $hash) => view('user/emailchangecancel'));
+    Route::middleware('auth')->group(function() {
+        Route::get('/administration', fn () => view('user/administration'));
 
-    Route::get('/changeemailcode/{username}/{hash}', fn ($username, $hash) => view('user/changeemailcode'));
+        Route::get('/characters', fn () => view('user/characters'));
 
-    Route::get('/generatecode/{userId}/{hash}', fn ($userId, $hash) => view('user/generatecode'));
+        Route::get('/emailchangeaccept/{username}/{hash}', fn ($username, $hash) => view('user/emailchangeaccept'));
+        Route::get('/emailchangecancel/{username}/{hash}', fn ($username, $hash) => view('user/emailchangecancel'));
 
-    Route::get('/lostpasswordcode/{userId}/{hash}', fn ($userId, $hash) => view('user/lostpasswordcode'));
+        Route::get('/changeemailcode/{username}/{hash}', fn ($username, $hash) => view('user/changeemailcode'));
+
+        Route::get('/generatecode/{userId}/{hash}', fn ($userId, $hash) => view('user/generatecode'));
+
+        Route::get('/lostpasswordcode/{userId}/{hash}', fn ($userId, $hash) => view('user/lostpasswordcode'));
+    });
 });
 
 Route::prefix('contest')->group(function() {
@@ -83,4 +87,8 @@ Route::prefix('legal')->group(function() {
     Route::get('/terms', fn () => view('legal/terms'));
     Route::get('/privacy', fn () => view('legal/privacy'));
     Route::get('/imprint', fn () => view('legal/imprint'));
+});
+
+Route::fallback(function() {
+    return view('errors.404');
 });

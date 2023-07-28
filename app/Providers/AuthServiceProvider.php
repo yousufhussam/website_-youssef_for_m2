@@ -3,7 +3,11 @@
 namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
+use App\Hashing\MySQLHasher;
+use Illuminate\Auth\EloquentUserProvider;
+use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Auth;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -21,6 +25,9 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Auth::provider('legacy', function (Application $app, array $config) {
+            $mysqlHasher = new MySQLHasher();
+            return new EloquentUserProvider($mysqlHasher, $config['model']);
+        });
     }
 }

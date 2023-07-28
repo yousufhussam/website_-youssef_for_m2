@@ -59,7 +59,7 @@
                     fancybox_css.close.right = $('#fancybox-close').css('right');
                     fancybox_css.close.top = $('#fancybox-close').css('top');
                     fancybox_css.close.width = $('#fancybox-close').css('width');
-                    $('#fancybox-outer').css({'background': 'transparent url("img/isbg.png") center center no-repeat'});
+                    $('#fancybox-outer').css({'background': 'transparent url("/img/isbg.png") center center no-repeat'});
                     $('#fancybox-close').css({'background-image': 'none', 'height': '16px', 'right': '3px', 'top': '7px', 'width': '16px'});
                 },
                 'onComplete': function() {
@@ -129,14 +129,14 @@
                     </div>
                 @else
                     <div id="userBox">
-                        <div class='welcome-text welcome-text-left'>Bun venit, " . $_SESSION['id'] . "</div>
-                        <div class='welcome-text welcome-text-right'>Ai " . $_SESSION['coins'] . " Monede</div>
+                        <div class="welcome-text welcome-text-left">Bun venit, {{ Auth::user()->login }}</div>
+                        <div class="welcome-text welcome-text-right">Ai {{ Auth::user()->cash }} Monede Dragon</div>
                         <br class="clearfloat" />
                         <div class="header-box-nav-container">
                             <ul class="header-box-nav-login" style="position:absolute; margin-left:-0px;">
-                                <li class="stepdown"><a href="?s=donate" class="nav-box-btn nav-box-btn-1">Doneaza</a></li>
-                                <li class="stepdown"><a href="?s=administration" class="nav-box-btn nav-box-btn-2">Datele utilizatorului</a></li>
-                                <li class="stepdown"><a href="?s=home&logout" class="nav-box-btn nav-box-btn-4">Delogare</a></li>
+                                <li class="stepdown"><a href="#" class="nav-box-btn nav-box-btn-1">Încarcă MD</a></li>
+                                <li class="stepdown"><a href="{{ url('user/administration') }}" class="nav-box-btn nav-box-btn-2">Datele utilizatorului</a></li>
+                                <li class="stepdown"><a href="{{ url('user/logout') }}" class="nav-box-btn nav-box-btn-4">Delogare</a></li>
                             </ul>
                         </div>
                     </div>
@@ -180,18 +180,20 @@
                             <div class="modul-box-bg-bottom">
                                 <h3>Logare</h3>
                                 <form action="{{ url('user/login') }}" method="post">
+                                    @csrf
+
                                     <div class="form-login">
                                         <label>Nume de utilizator</label>
                                         <div class="input">
-                                            <input type="text" name="user"><br>
+                                            <input type="text" name="login"><br>
                                         </div>
 
                                         <label>Parola</label>
                                         <div class="input">
-                                            <input type="password" name="pw"><br>
+                                            <input type="password" name="password"><br>
                                         </div>
                                         <div>
-                                            <input type="submit" class="button btn-login" name="login" value="Login">
+                                            <input type="submit" class="button btn-login" value="Login">
                                             <p class="agbok">
                                                 Intrând aici, accept <a href="{{ url('legal/terms') }}"><strong>Termenii și condițiile</strong></a>.
                                                 <a href="{{ url('user/passwordlostrequest') }}" rel="nofollow" class="password">Ai uitat parola?</a>
@@ -209,7 +211,7 @@
                             <div class="modul-box-bg">
                                 <div class="modul-box-bg-bottom">
                                     <h3>Descărcare</h3>
-                                    <a href="?s=download" class="btn download-btn"></a>
+                                    <a href="{{ url('main/download') }}" class="btn download-btn"></a>
                                 </div>
                             </div>
                         </div>
@@ -219,16 +221,6 @@
                             <div class="modul-box-bg">
                                 <div class="modul-box-bg-bottom">
                                     <h3>Magazinul de item-uri</h3>
-                                    <script type="text/javascript">
-                                        $(document).ready(function() {
-                                            $.ajax({
-                                                dataType: 'jsonp', data: '', jsonp: '',
-                                                url: "/is/",
-                                                success: function(returndata) {;},
-                                                error: function(XMLHttpRequest, textStatus, errorThrown) {;}
-                                            });
-                                        });
-                                    </script>
                                     <a href="/is/" class="itemshop btn itemshop-btn iframe" title="Magazinul de item-uri"></a>
                                 </div>
                             </div>
