@@ -175,37 +175,47 @@
                 <div class="col-3">
                     <div class="boxes-top">&nbsp;</div>
                     @guest
-                    <div class="modul-box">
-                        <div class="modul-box-bg">
-                            <div class="modul-box-bg-bottom">
-                                <h3>Logare</h3>
-                                <form action="{{ url('user/login') }}" method="post">
-                                    @csrf
+                        <div class="modul-box">
+                            <div class="modul-box-bg">
+                                <div class="modul-box-bg-bottom">
+                                    <h3>Logare</h3>
+                                    <form action="{{ url('user/login') }}" method="post">
+                                        @csrf
 
-                                    <div class="form-login">
-                                        <label>Nume de utilizator</label>
-                                        <div class="input">
-                                            <input type="text" name="login"><br>
-                                        </div>
+                                        <div class="form-login">
+                                            <label>Nume de utilizator</label>
+                                            <div class="input">
+                                                <input type="text" name="login"><br>
+                                            </div>
 
-                                        <label>Parola</label>
-                                        <div class="input">
-                                            <input type="password" name="password"><br>
+                                            <label>Parola</label>
+                                            <div class="input">
+                                                <input type="password" name="password"><br>
+                                            </div>
+                                            <div>
+                                                <input type="submit" class="button btn-login" value="Login">
+                                                <p class="agbok">
+                                                    Intrând aici, accept <a href="{{ url('legal/terms') }}"><strong>Termenii și condițiile</strong></a>.
+                                                    <a href="{{ url('user/passwordlostrequest') }}" rel="nofollow" class="password">Ai uitat parola?</a>
+                                                    <a href="{{ url('user/resendack') }}" rel="nofollow" class="password">Retrimiterea emailului de înregistrare</a>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <input type="submit" class="button btn-login" value="Login">
-                                            <p class="agbok">
-                                                Intrând aici, accept <a href="{{ url('legal/terms') }}"><strong>Termenii și condițiile</strong></a>.
-                                                <a href="{{ url('user/passwordlostrequest') }}" rel="nofollow" class="password">Ai uitat parola?</a>
-                                                <a href="{{ url('user/resendack') }}" rel="nofollow" class="password">Retrimiterea emailului de înregistrare</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="boxes-middle"></div>
+
+                        <div class="modul-box modul-box-2">
+                            <div class="modul-box-bg">
+                                <div class="modul-box-bg-bottom">
+                                    <h3>Descărcare</h3>
+                                    <a href="{{ url('main/download') }}" class="btn download-btn"></a>
+                                </div>
+                            </div>
+                        </div>
                     @else
                         <div class="modul-box modul-box-2">
                             <div class="modul-box-bg">
@@ -216,27 +226,17 @@
                             </div>
                         </div>
 
-                        <div class="boxes-middle">&nbsp;</div>
-                        <div class="modul-box modul-box-2">
-                            <div class="modul-box-bg">
-                                <div class="modul-box-bg-bottom">
-                                    <h3>Magazinul de item-uri</h3>
-                                    <a href="/is/" class="itemshop btn itemshop-btn iframe" title="Magazinul de item-uri"></a>
+                        @if (Auth::user()->status == \App\Models\Enums\AccountStatusEnum::OK)
+                            <div class="boxes-middle"></div>
+                            <div class="modul-box modul-box-2">
+                                <div class="modul-box-bg">
+                                    <div class="modul-box-bg-bottom">
+                                        <h3>Magazinul de item-uri</h3>
+                                        <a href="/is/" class="itemshop btn itemshop-btn iframe" title="Magazinul de item-uri"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endguest
-
-                    @guest
-                        <div class="boxes-middle">&nbsp;</div>
-                        <div class="modul-box modul-box-2">
-                            <div class="modul-box-bg">
-                                <div class="modul-box-bg-bottom">
-                                    <h3>Descărcare</h3>
-                                    <a href="{{ url('main/download') }}" class="btn download-btn"></a>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
                     @endguest
 
                     {{--
@@ -251,7 +251,7 @@
                         </div>
                     --}}
 
-                    <div class="boxes-middle">&nbsp;</div>
+                    <div class="boxes-middle"></div>
                     <div class="modul-box modul-box-2">
                         <div class="modul-box-bg">
                             <div class="modul-box-bg-bottom">
@@ -261,74 +261,8 @@
                         </div>
                     </div>
 
-                    <?php /*									<div class="boxes-middle">&nbsp;</div>
-
-                                        <div class="modul-box modul-box-2">
-                                            <div class="modul-box-bg">
-                                                <div class="modul-box-bg-bottom">
-                                                    <h3>Jucatori</h3>
-                                                    <form action="#">
-                                                        <div class="form-score">
-                                                            <ul id="highscore">
-                                                                <?php
-                                                                    $result = mysqli_query($con, "SELECT * FROM `player`.`player` WHERE `name` NOT LIKE '[%]%' ORDER BY `level` DESC, `exp` DESC LIMIT 0, 10");
-                                                                    $rank = 1;
-                                                                    $i = 1;
-                                                                    while($row = mysqli_fetch_array($result)) {
-                                                                        if ($i == 0) {
-                                                                            $i = 1;
-                                                                            echo "<li class=\"light\">";
-                                                                        } else {
-                                                                            $i = 0;
-                                                                            echo "<li>";
-                                                                        }
-
-                                                                        echo '<strong>' . $rank . '</strong> - <a href="?s=highscore" class="first">' . $row['name'] .'</a></li>';
-                                                                        $rank++;
-                                                                    }
-                                                            ?>
-                                                            </ul>
-                                                            <a href="?s=highscore" class="btn">Tot Clasamentul</a>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="boxes-middle"></div>
-                                        <div class="modul-box modul-box-2">
-                                            <div class="modul-box-bg">
-                                                <div class="modul-box-bg-bottom">
-                                                    <h3>Bresle</h3>
-                                                    <form action="#">
-                                                        <div class="form-score">
-                                                            <ul id="guild">
-                                                                <?php
-                                                                    $result = mysqli_query($con, "SELECT * FROM player.guild WHERE name NOT LIKE '[%]%' ORDER BY level desc, exp desc LIMIT 0, 10");
-                                                                    $rank = 1;
-                                                                    $i = 1;
-                                                                    while($row = mysqli_fetch_array($result)) {
-                                                                        if ($i == 0) {
-                                                                            $i = 1;
-                                                                            echo "<li class=\"light\">";
-                                                                        } else {
-                                                                            $i = 0;
-                                                                            echo "<li>";
-                                                                        }
-
-                                                                        echo '<strong>' . $rank . '</strong> - <a href="?s=guild" class="first">' . $row['name'] . '</a></li>';
-
-                                                                        $rank++;
-                                                                    }
-                                                                ?>
-                                                            </ul>
-                                                            <a href="?s=guild&search=search&empirechoice=-1&classchoice=-1&characterchoice=" class="btn">Tot Clasamentul</a>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="boxes-bottom"></div> */ ?>
                     <div class="boxes-middle">&nbsp;</div>
+
                     <div class="modul-box modul-box-2">
                         <div class="modul-box-bg">
                             <div class="modul-box-bg-bottom">

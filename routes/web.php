@@ -49,18 +49,24 @@ Route::prefix('main')->group(function() {
 });
 
 Route::prefix('user')->group(function() {
-    Route::get('/register', fn () => view('user/register'));
-    Route::get('/login', fn () => view('user/login'))->name('login');
-    Route::post('/login', [LoginController::class, 'login']);
-    // will autocomplete the username
-    Route::get('/login/{username}', fn ($username) => view('user/login'));
+    # Registration
+    Route::get('/register', fn () => view('user/registration/register'))->middleware('guest');
+    Route::get('/activate', fn () => view('user/registration/activation-pending'))->name('verification.notice');
+    Route::get('/resendack', fn () => view('user/registration/resendack'));
+
+    # Authentication
+    Route::middleware('guest')->group(function() {
+        Route::get('/login', fn () => view('user/login'))->name('login');
+        Route::post('/login', [LoginController::class, 'login']);
+        // will autocomplete the username
+        Route::get('/login/{username}', fn ($username) => view('user/login'));
+    });
     Route::get('/logout', [LoginController::class, 'logout']);
 
     Route::get('/passwordlostrequest', fn () => view('user/passwordlostrequest'));
     Route::get('/passwordlost/{username}/{hash}', fn ($username, $hash) => view('user/passwordlost-expired'));
-    Route::get('/resendack', fn () => view('user/resendack'));
 
-    Route::middleware('auth')->group(function() {
+    Route::middleware(['auth', 'verified'])->group(function() {
         Route::get('/administration', fn () => view('user/administration'));
 
         Route::get('/characters', fn () => view('user/characters'));

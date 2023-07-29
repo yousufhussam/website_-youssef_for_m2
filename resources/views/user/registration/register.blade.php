@@ -23,7 +23,7 @@
                     </div>
                     <div class="inner-form-border">
                         <div class="inner-form-box">
-                            <h3><a id="toLogin" href="{{ url('user/login') }}" title="sau la autentificare">sau la autentificare</a>Crează un cont</h3>
+                            <h3><a id="toLogin" href="{{ url('user/login') }}" title="sau la autentificare">sau la autentificare</a>Creează un cont</h3>
                             <div class="trenner"></div>
                             <form name="registerForm" id="registerForm" method="post" action="{{ url('user/register') }}">
                                 <div>

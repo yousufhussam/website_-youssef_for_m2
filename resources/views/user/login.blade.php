@@ -40,7 +40,7 @@
                             <div id="subscribe">
                                 <h3>Încă nu ai cont?</h3>
                                 <p>Crearea unui jucător (cont) este rapidă, usoară și gratis.</p>
-                                <a class="btn-big" href="{{ url('user/register') }}" title="Crează un cont">Crează un cont</a>
+                                <a class="btn-big" href="{{ url('user/register') }}" title="Creează un cont">Creează un cont</a>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@
                 <img src="{{ asset('img/tutorial/1_4.jpg') }}" width="480" height="360" alt="" />
                 <p class="pager">4/ 4</p>
                 <p class="txt">Exista 4 clase diferite in joc, fiecare cu caracteristici individuale.<br />
-                    Poti sa te folosesti de sageti pentru a alege clasa. Cand caracterul tau este afisat in fata, poti folosi linkul din cutie (cu verde marcat) pentru a schimba aspectul caracterului prin alegerea intre 1 si 2. Intr-un final caracterul tau are nevoie de un nume. Dupa ce ai ales numele apasa pe " Creaza " pentru a da viata caracterului. Acum poti apasa pe Start pentru a intra in joc.</p>
+                    Poti sa te folosesti de sageti pentru a alege clasa. Cand caracterul tau este afisat in fata, poti folosi linkul din cutie (cu verde marcat) pentru a schimba aspectul caracterului prin alegerea intre 1 si 2. Intr-un final caracterul tau are nevoie de un nume. Dupa ce ai ales numele apasa pe " Creeaza " pentru a da viata caracterului. Acum poti apasa pe Start pentru a intra in joc.</p>
             </div>
         </div>
     </div>

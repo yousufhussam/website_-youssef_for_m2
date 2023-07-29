@@ -16,8 +16,8 @@ class LoginController extends Controller
     public function login(Request $request): RedirectResponse
     {
         $validator = Validator::make($request->all(), [
-            'login' => ['required'],
-            'password' => ['required'],
+            'login' => 'required|string',
+            'password' => 'required|string',
         ]);
 
         if ($validator->fails())
@@ -25,19 +25,36 @@ class LoginController extends Controller
 
         $credentials = $validator->validated();
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-
-            $user = Auth::user();
-            $user->ip = $request->ip();
-            $user->saveOrFail();
-
-            return redirect()->intended('user/administration');
+        // Validate the credentials
+        if (!Auth::once($credentials)) {
+            return redirect('user/login')->withErrors([
+                'login' => 'The provided credentials do not match our records.',
+            ])->onlyInput('login');
         }
 
-        return redirect('user/login')->withErrors([
-            'login' => 'The provided credentials do not match our records.',
-        ])->onlyInput('login');
+        // The user is now available
+        $user = Auth::user();
+
+        // Check if the user is banned
+        if ($user->status->isBlocked()) {
+            Auth::logout();
+
+            $request->session()->invalidate();
+
+            return redirect('user/login')->withErrors([
+                'login' => 'Your account is blocked.',
+            ])->onlyInput('login');
+        }
+
+        // Authenticate user
+        Auth::login($user);
+        $request->session()->regenerate();
+
+        // Save user's IP address
+        $user->ip = $request->ip();
+        $user->saveOrFail();
+
+        return redirect()->intended('user/administration');
     }
 
 
