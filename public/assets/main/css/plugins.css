@@ -40,7 +40,7 @@
 #lostPasswordCode #pwInfo,
 #changePw #pwInfo,
 .formError .formErrorContent {
-	background:url("/img/tooltip-bg.png") repeat-x scroll 0 0 #B9A16E;
+	background:url("../img/tooltip-bg.png") repeat-x scroll 0 0 #B9A16E;
 	border:1px solid #60430a;
 	box-shadow: 4px 4px 4px #000000;
 	-moz-box-shadow: 4px 4px 4px #000000;
@@ -55,7 +55,7 @@
 * html .formError .formErrorContent { height:auto; height:30px;}
 
 #registerForm .valid-check {
-	background:url("/img/ok.gif") no-repeat scroll 0 0 transparent;
+	background:url("../img/ok.gif") no-repeat scroll 0 0 transparent;
 	height:20px;
 	margin:0 0 0 10px;
 	position:absolute;
@@ -74,7 +74,7 @@
 	color:#FFF;
 }
 .formError .formErrorArrow {
-	background:url("/img/tooltip-arrow.gif") no-repeat scroll 0 0 transparent;
+	background:url("../img/tooltip-arrow.gif") no-repeat scroll 0 0 transparent;
 	height:20px;
 	left:5px;
 	position:absolute;
@@ -104,14 +104,14 @@
 	color:#FFF;
 }
 .formError .icon {
-	background:url(/img/warning_16.gif) no-repeat scroll 5px 2px;
+	background:url(../img/warning_16.gif) no-repeat scroll 5px 2px;
 	padding:4px 10px 4px 25px;
 }
-.valid .icon {background:url(/img/info.gif) no-repeat scroll 5px 2px;}
+.valid .icon {background:url(../img/info.gif) no-repeat scroll 5px 2px;}
 .valid .formErrorContent,
-.ajaxed .formErrorContent {background:#028e09 url(/img/tooltip-bg-green.png) repeat-x;}
+.ajaxed .formErrorContent {background:#028e09 url(../img/tooltip-bg-green.png) repeat-x;}
 .valid .formErrorArrow,
-.ajaxed .formErrorArrow {background:url(/img/tooltip-arrow-green.gif) no-repeat;}
+.ajaxed .formErrorArrow {background:url(../img/tooltip-arrow-green.gif) no-repeat;}
 .tacformError {margin-left:250px !important;}
 
 /*###############################
@@ -127,7 +127,7 @@
 	font-weight:bold;
 }
 #page .valid-icon {
-	background:url("/img/valid-icon.gif") no-repeat scroll 0 0 transparent;
+	background:url("../img/valid-icon.gif") no-repeat scroll 0 0 transparent;
 	display:inline;
 	float:left;
 	height:16px;
@@ -142,7 +142,7 @@
 	width:180px;
 }
 #securePwd .securePwdBarBox, #securePwd #securePwdBar { /* has IE-fix */
-	background:transparent url(/img/secure-pwd-bar.gif) no-repeat 0 -13px;
+	background:transparent url(../img/secure-pwd-bar.gif) no-repeat 0 -13px;
 	font-size:1px;
 	height:13px;
 
@@ -197,7 +197,7 @@
 }
 
 #pwInfo li {
-	background:url("/img/check.gif") no-repeat scroll 0 0 transparent;
+	background:url("../img/check.gif") no-repeat scroll 0 0 transparent;
 	min-height:15px;
 	margin:0 0 5px;
 	padding:0 0 0 20px;
@@ -238,7 +238,7 @@
 
 /* close button positioned on upper right corner */
 .overlay .close, .simple_overlay .close {
-	background: url(/img/closelabel.gif) no-repeat;
+	background: url(../img/closelabel.gif) no-repeat;
 	position:absolute;
 	right:-15px;
 	top:-15px;
@@ -276,7 +276,7 @@
 }
 
 .back {
-	background:#D8C79C url(/img/prevlabel.gif) no-repeat center center;
+	background:#D8C79C url(../img/prevlabel.gif) no-repeat center center;
 	left:0;
 	border-left:0;
 	-moz-border-radius-topleft:0;
@@ -286,7 +286,7 @@
 }
 
 .forward {
-	background:#D8C79C url(/img/nextlabel.gif) no-repeat center center;
+	background:#D8C79C url(../img/nextlabel.gif) no-repeat center center;
 	right:0;
 	border-right:0;
 	-moz-border-radius-topright:0;
@@ -295,8 +295,8 @@
 	-webkit-border-top-right-radius:0;
 }
 
-.forward:hover {background:#D8C79C url(/img/nextlabel-hover.gif) no-repeat center center;}
-.back:hover {background:#D8C79C url(/img/prevlabel-hover.gif) no-repeat center center;}
+.forward:hover {background:#D8C79C url(../img/nextlabel-hover.gif) no-repeat center center;}
+.back:hover {background:#D8C79C url(../img/prevlabel-hover.gif) no-repeat center center;}
 
 /* when there is no next or previous link available this class is added */
 .disabled {
@@ -335,7 +335,7 @@
 }
 
 .contentWrap {
-	background:transparent url(/img/tb-tutorials-bg.jpg) no-repeat scroll 0 0;
+	background:transparent url(../img/tb-tutorials-bg.jpg) no-repeat scroll 0 0;
 	direction:ltr;
 	height:574px;
 	width:553px;
@@ -363,7 +363,7 @@
     height:8px;
     float:left;
     margin:3px;
-    background:url(/img/scrollable/arrow/navigator.png) 0 0 no-repeat;
+    background:url(../img/scrollable/arrow/navigator.png) 0 0 no-repeat;
     display:block;
     font-size:1px;
 }
@@ -434,7 +434,7 @@ div.scrollable div.items div p.txt {
 }
 
 a.browse {
-	background:url(/img/prevlabel.gif) no-repeat center center;
+	background:url(../img/prevlabel.gif) no-repeat center center;
 	cursor:pointer;
 	display:block;
 	float:left;
@@ -444,7 +444,7 @@ a.browse {
 }
 
 a.right {
-	background:url(/img/nextlabel.gif) no-repeat center center;
+	background:url(../img/nextlabel.gif) no-repeat center center;
 	clear:right;
 	margin-right:0;
 	right:39px;
@@ -452,7 +452,7 @@ a.right {
 	top:416px;
 }
 a.right:hover {
-	background:url(/img/nextlabel-hover.gif) no-repeat center center;
+	background:url(../img/nextlabel-hover.gif) no-repeat center center;
 }
 
 a.left {
@@ -462,7 +462,7 @@ a.left {
 	top:416px;
 }
 a.left:hover {
-		background:url(/img/prevlabel-hover.gif) no-repeat center center;
+		background:url(../img/prevlabel-hover.gif) no-repeat center center;
 }
 
 
@@ -492,7 +492,7 @@ a.left:hover {
 	display: block;
 }
 .selectArea .center {
-	background: url(/img/bg_select.png) no-repeat right top;
+	background: url(../img/bg_select.png) no-repeat right top;
 	color:#000;
 	height: 18px;
 	line-height:18px;
@@ -537,7 +537,7 @@ a.left:hover {
 	border-color:#333;
 }
 .darksel .center {
-	background: #666 url(/img/bg_select_dark.png) no-repeat right top;
+	background: #666 url(../img/bg_select_dark.png) no-repeat right top;
 }
 .darksel .center {color:#fff;}
 .darksel ul {
@@ -554,10 +554,10 @@ a.left:hover {
 	border-color:#998153;
 }
 .selectBg .center {
-	background: #D3BE93 url(/img/distributebox-select-bg.png) no-repeat right top;
+	background: #D3BE93 url(../img/distributebox-select-bg.png) no-repeat right top;
 }
-.selectBg ul li a {background: #D3BE93 url(/img/distributebox-select-bg.jpg) no-repeat 0 -20px;}
-.selectBg ul li a:hover {background: #D3BE93 url(/img/distributebox-select-bg.jpg) no-repeat 0 -40px;}
+.selectBg ul li a {background: #D3BE93 url(../img/distributebox-select-bg.jpg) no-repeat 0 -20px;}
+.selectBg ul li a:hover {background: #D3BE93 url(../img/distributebox-select-bg.jpg) no-repeat 0 -40px;}
 
 
 
@@ -603,7 +603,7 @@ a.left:hover {
 	left: 0;
 	width: 40px;
 	height: 480px;
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 }
 
 #fancybox-overlay {
@@ -674,7 +674,7 @@ a.left:hover {
 	right: -15px;
 	width: 25px;
 	height: 25px;
-	background-image: url('/img/closelabel.gif');
+	background-image: url('../img/closelabel.gif');
 	cursor: pointer;
 	z-index: 1103;
 	display: none;
@@ -743,7 +743,7 @@ a.left:hover {
 
 #fancybox-title-over {
 	padding: 10px;
-	background-image: url('/img/fancybox/fancy_title_over.png');
+	background-image: url('../img/fancybox/fancy_title_over.png');
 	display: block;
 }
 
@@ -758,7 +758,7 @@ a.left:hover {
 
 #fancybox-title-left {
 	padding-left: 15px;
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 	background-position: -40px -90px;
 	background-repeat: no-repeat;
 }
@@ -766,14 +766,14 @@ a.left:hover {
 #fancybox-title-main {
 	font-weight: bold;
 	line-height: 29px;
-	background-image: url('/img/fancybox/fancybox-x.png');
+	background-image: url('../img/fancybox/fancybox-x.png');
 	background-position: 0px -40px;
 	color: #FFF;
 }
 
 #fancybox-title-right {
 	padding-left: 15px;
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 	background-position: -55px -90px;
 	background-repeat: no-repeat;
 }
@@ -785,7 +785,7 @@ a.left:hover {
 	width: 35%;
 	cursor: pointer;
 	outline: none;
-	background-image: url('/img/fancybox/blank.gif');
+	background-image: url('../img/fancybox/blank.gif');
 	z-index: 1102;
 	display: none;
 }
@@ -811,12 +811,12 @@ a.left:hover {
 }
 
 #fancybox-left-ico {
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 	background-position: -40px -30px;
 }
 
 #fancybox-right-ico {
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 	background-position: -40px -60px;
 }
 
@@ -847,13 +847,13 @@ a.left:hover {
 	top: -20px;
 	left: 0;
 	width: 100%;
-	background-image: url('/img/fancybox/fancybox-x.png');
+	background-image: url('../img/fancybox/fancybox-x.png');
 }
 
 #fancy-bg-ne {
 	top: -20px;
 	right: -20px;
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 	background-position: -40px -162px;
 }
 
@@ -861,14 +861,14 @@ a.left:hover {
 	top: 0;
 	right: -20px;
 	height: 100%;
-	background-image: url('/img/fancybox/fancybox-y.png');
+	background-image: url('../img/fancybox/fancybox-y.png');
 	background-position: -20px 0px;
 }
 
 #fancy-bg-se {
 	bottom: -20px;
 	right: -20px;
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 	background-position: -40px -182px;
 }
 
@@ -876,14 +876,14 @@ a.left:hover {
 	bottom: -20px;
 	left: 0;
 	width: 100%;
-	background-image: url('/img/fancybox/fancybox-x.png');
+	background-image: url('../img/fancybox/fancybox-x.png');
 	background-position: 0px -20px;
 }
 
 #fancy-bg-sw {
 	bottom: -20px;
 	left: -20px;
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 	background-position: -40px -142px;
 }
 
@@ -891,38 +891,38 @@ a.left:hover {
 	top: 0;
 	left: -20px;
 	height: 100%;
-	background-image: url('/img/fancybox/fancybox-y.png');
+	background-image: url('../img/fancybox/fancybox-y.png');
 }
 
 #fancy-bg-nw {
 	top: -20px;
 	left: -20px;
-	background-image: url('/img/fancybox/fancybox.png');
+	background-image: url('../img/fancybox/fancybox.png');
 	background-position: -40px -122px;
 }
 
 /* IE */
 
-#fancybox-loading.fancybox-ie div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_loading.png', sizingMethod='scale'); }
+#fancybox-loading.fancybox-ie div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_loading.png', sizingMethod='scale'); }
 
-.fancybox-ie #fancybox-title-over	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
-.fancybox-ie #fancybox-title-left	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_title_left.png', sizingMethod='scale'); }
-.fancybox-ie #fancybox-title-main	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_title_main.png', sizingMethod='scale'); }
-.fancybox-ie #fancybox-title-right	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_title_right.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-title-over	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie #fancybox-title-left	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_title_left.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-title-main	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-title-right	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_title_right.png', sizingMethod='scale'); }
 
-.fancybox-ie #fancybox-left-ico		{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_nav_left.png', sizingMethod='scale'); }
-.fancybox-ie #fancybox-right-ico	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-left-ico		{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-right-ico	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_nav_right.png', sizingMethod='scale'); }
 
 .fancybox-ie .fancy-bg { background: transparent !important; }
 
-.fancybox-ie #fancy-bg-n	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-ne	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-e	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-se	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-s	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-sw	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-w	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-nw	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-n	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-ne	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-e	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-se	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-s	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-sw	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-w	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-nw	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }
 
 /**************************************/
 /*             Slider                 */

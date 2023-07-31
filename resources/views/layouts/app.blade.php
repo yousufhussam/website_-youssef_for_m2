@@ -8,23 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <meta name="description" content="MMORPG Metin2" />
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
-    <link href="{{ asset('css/reset.css') }}" rel="stylesheet" type="text/css" media="all"/>
-    <link href="{{ asset('css/all.css') }}" rel="stylesheet" type="text/css" media="all"/>
-    <link  href="{{ asset('css/plugins.css') }}" rel="stylesheet" type="text/css" media="screen" />
+    <link href="{{ asset('assets/main/css/reset.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{{ asset('assets/main/css/all.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    <link  href="{{ asset('assets/main/css/plugins.css') }}" rel="stylesheet" type="text/css" media="screen" />
 
-    <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="{{ asset('css/ie6.css') }}" media="screen"/><![endif]-->
-    <!--[if gte IE 6]><link rel="stylesheet" type="text/css" href="{{ asset('css/ie7.css') }}" media="screen"/><![endif]-->
-    <script type="text/javascript" src="{{ asset('js/jquery-latest.pack.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.validationEngine.modified.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.validationEngine.rules.php') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/iepngfix_tilebg.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.tools.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.fancybox-1.3.1.pack.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.easing.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.codaslider.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.bgiframe.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.jeditable.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="{{ asset('assets/main/css/ie6.css') }}" media="screen"/><![endif]-->
+    <!--[if gte IE 6]><link rel="stylesheet" type="text/css" href="{{ asset('assets/main/css/ie7.css') }}" media="screen"/><![endif]-->
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery-latest.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery.validationEngine.modified.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery.validationEngine.rules.php') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/iepngfix_tilebg.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery.tools.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery.fancybox-1.3.1.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery.easing.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery.codaslider.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery.bgiframe.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/jquery.jeditable.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/main.js') }}"></script>
     <script type="text/javascript">
         $.fn.exists = function(){return jQuery(this).length>0;}
 
@@ -59,7 +59,7 @@
                     fancybox_css.close.right = $('#fancybox-close').css('right');
                     fancybox_css.close.top = $('#fancybox-close').css('top');
                     fancybox_css.close.width = $('#fancybox-close').css('width');
-                    $('#fancybox-outer').css({'background': 'transparent url("/img/isbg.png") center center no-repeat'});
+                    $('#fancybox-outer').css({'background': 'transparent url("/assets/main/img/isbg.png") center center no-repeat'});
                     $('#fancybox-close').css({'background-image': 'none', 'height': '16px', 'right': '3px', 'top': '7px', 'width': '16px'});
                 },
                 'onComplete': function() {
@@ -293,9 +293,9 @@
         <div id="footer">
             <a class="gameforge4d" href="http://ro.gameforge.com" target="_blank" rel="nofollow">gameforge</a>
             <div id="pegi" >
-                <a rel="nofollow" target="_blank" href="http://www.pegi.info"><img src="{{ asset('img/footer/pegi1.png') }}" title="pegi age" alt="pegi age" id="pegiAge" /></a>
-                <img src="{{ asset('img/footer/pegi2.png') }}" title="pegi online" alt="pegi online" id="pegiOnline" />
-                <img src="{{ asset('img/footer/pegi3.png') }}" title="pegi violence" alt="pegi violence" id="pegiViolence" />
+                <a rel="nofollow" target="_blank" href="http://www.pegi.info"><img src="{{ asset('assets/main/img/footer/pegi1.png') }}" title="pegi age" alt="pegi age" id="pegiAge" /></a>
+                <img src="{{ asset('assets/main/img/footer/pegi2.png') }}" title="pegi online" alt="pegi online" id="pegiOnline" />
+                <img src="{{ asset('assets/main/img/footer/pegi3.png') }}" title="pegi violence" alt="pegi violence" id="pegiViolence" />
             </div>
             <ul>
                 <li class="first">
@@ -316,7 +316,7 @@
             </div>
         </div>
     </div>
-    <div class="simple_overlay" id="gallery"> <a class="back">back</a> <a class="forward">forward</a> <img class="progress" src="{{ asset('img/loading2.gif') }}" alt="..." /> </div>
+    <div class="simple_overlay" id="gallery"> <a class="back">back</a> <a class="forward">forward</a> <img class="progress" src="{{ asset('assets/main/img/loading2.gif') }}" alt="..." /> </div>
     <div class="overlay" id="overlay">
         <div class="contentWrap"></div>
     </div>

@@ -43,8 +43,8 @@
                                 Aici aveti un exemplu de site care fraudeaza:</p>
                         </div>
                         <div class="securitybox">
-                            <a id="single_image" href="{{ asset('img/fraud.jpg') }}">
-                                <img style="max-width:455px; max-height:none; margin-left:6px; margin-top:6px;" src="{{ asset('img/fraud.jpg') }}"/>
+                            <a id="single_image" href="{{ asset('assets/main/img/fraud.jpg') }}">
+                                <img style="max-width:455px; max-height:none; margin-left:6px; margin-top:6px;" src="{{ asset('assets/main/img/fraud.jpg') }}"/>
                             </a>
                             <p>&nbsp;</p>
                         </div>

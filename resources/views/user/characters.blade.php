@@ -33,7 +33,7 @@
 
                         <div class="charList">
                             <div class="charimg" rowspan="3">
-                                <img src="{{ asset('img/characters/0.png') }}" width="44" height="40" />
+                                <img src="{{ asset('assets/main/img/characters/0.png') }}" width="44" height="40" />
                             </div>
                             <div class="charuser">
                                 <div class="charname">gigelfronescu</div>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="charList">
                             <div class="charimg" rowspan="3">
-                                <img src="{{ asset('img/characters/2.png') }}" width="44" height="40" />
+                                <img src="{{ asset('assets/main/img/characters/2.png') }}" width="44" height="40" />
                             </div>
                             <div class="charuser">
                                 <div class="charname">gigelfronescu</div>

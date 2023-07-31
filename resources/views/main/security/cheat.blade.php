@@ -44,7 +44,7 @@
                                 <li>Daca un GM iti trimite un mesaj, textul scris care va aparea pe ecran va fi de culoare <em class="highlighted">galbena</em>. Textul din mesajele jucatorilor obisnuiti este <em class="highlighted">alb</em>.</li>
                                 <li>Un GM nu iti va cere <em class="highlighted">niciodata</em> sub nicio forma detaliile contului.</li>
                                 <li>Un GM poate fi recunoscut dupa semnul cu GM ce-l poarta deasupra capului.</li>
-                                <img src="{{ asset('img/gm.jpg') }}">
+                                <img src="{{ asset('assets/main/img/gm.jpg') }}">
                             </ul>
                         </div>
                         <div class="securitybox">

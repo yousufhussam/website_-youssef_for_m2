@@ -1,8 +1,8 @@
 // JavaScript Document
 $(document).ready(function() {
-	
+
 	jQuery.fn.exists = function(){return jQuery(this).length>0;};
-	
+
 	// check pws for valid characters
 	function hasValidChar(strPass) {
 		// check if str contains special characters
@@ -12,14 +12,14 @@ $(document).ready(function() {
 		}
 		return true;
 	}
-	
+
 	// check for secure pwd
 	function checkPass(strPass,minLen) {
 		var sec = 0;
 		var check = 100;
 		var steps = 7;
 		var checkByStep = check / steps;
-	
+
 		var strToCheck = '0123456789'; // check if numbers
 		if (contains(strPass, strToCheck)) { sec++ }
 		strToCheck = 'abcdefghijklmnopqrstuvwxyz'; // check if lowercase letters
@@ -28,17 +28,17 @@ $(document).ready(function() {
 		if (contains(strPass, strToCheck)) { sec++ }
 		//strToCheck = '.$!;:-_#'; // check if special characters
 		//if (contains(strPass, strToCheck)) { sec++ }
-	
+
 		// check if at least one uppercase AND one lowercase AND one number
 		if (strPass.length < 6) sec = 0;
 		if (strPass.length >= 6) sec++;
 		if (strPass.length >= 8) sec++;
 		if (strPass.length >= 10) sec++;
-	
+
 		var nCount = sec * checkByStep;
-	
+
 		if (nCount > check) nCount = check;
-	
+
 		return Math.ceil(nCount);
 	}
 	// check if string in pattern
@@ -48,7 +48,7 @@ $(document).ready(function() {
 		}
 		return false;
 	}
-	
+
 	$('input[type=password], input[type=text], textarea').filter('.autoclear').each(function() {
 		var default_value = this.value;
 		$(this).focus(function() {
@@ -67,18 +67,18 @@ $(document).ready(function() {
 			}
 		});
 	});
-	
+
 	$("#registerForm").validationEngine({
-		validationEventTriggers:"keyup blur", 
+		validationEventTriggers:"keyup blur",
 		inlineValidation: true
 	});
 	$('#loginForm, #pwlostForm, #changepwForm, #emailChangeForm, #resendactivForm, #lostPasswordCodeForm, #recruitMailForm, #creationForm').validationEngine
-	({																									 					
+	({
 	 	validationEventTriggers:"blur",
 		inlineValidation: true
 	});
-	
-	$('#registerForm input').not('#captcha').keyup(function() { 
+
+	$('#registerForm input').not('#captcha').keyup(function() {
 											//console.log($.validationEngine.loadValidation(this));
 		if (!$.validationEngine.loadValidation(this)) {
 			if (!$(this).parent().has('.valid-check').length){
@@ -89,11 +89,11 @@ $(document).ready(function() {
 			$(this).parent().find('.valid-check').remove();
 		}
 	});
-	
-	
+
+
 	//CHECKBOX bei "checked" gr�n machen
- 	var checkSel = function () { 
-    	$('#checkerror label').toggleClass('green'); 
+ 	var checkSel = function () {
+    	$('#checkerror label').toggleClass('green');
 	}
 	if ( $("#tac:checked").length) checkSel();
 	$("#tac").click(checkSel);
@@ -108,16 +108,16 @@ $(document).ready(function() {
 			$('#validChar').text($('#txtInvalidChar').text());
 			return;
 		}
-		if (strPass.length >= 8) { 
+		if (strPass.length >= 8) {
 			$('#securePwd .valid-icon').removeClass('invalid');
 			$('#securePwd').closest('.formError').addClass('valid');
-			
+
 		}
-		else{ 
+		else{
 			$('#securePwd .valid-icon').addClass('invalid');
 			$('#securePwd').closest('.formError').removeClass('valid');
 		}
-		
+
 		ratio = checkPass($(this).val(),pwdMinLen);
 		if (ratio) {
 			$('#securePwdBar').css({width: ratio+'%'});
@@ -136,7 +136,7 @@ $(document).ready(function() {
 			$('#securePwdBar').css({'width':'48px', 'background-position':'0px 0px'});
 		}
 	});
-		
+
 	$('#submitBtn').click(function(){
 		var success = $(this).parent().validationEngine({returnIsValid:true});
 		if (success == true ) {		}
@@ -147,19 +147,19 @@ $(document).ready(function() {
 function showScreenshots(number)
 {
 	number = parseInt(number);
-	var screenShotPath = "/img/screenshots/";
+	var screenShotPath = "/assets/main/img/screenshots/";
 	Slimbox.open( [ [screenShotPath + "screenshot-gallery-1.jpg", ""], [screenShotPath + "screenshot-gallery-2.jpg", ""], [screenShotPath + "screenshot-gallery-3.jpg", ""], [screenShotPath + "screenshot-gallery-4.jpg", ""], [screenShotPath + "screenshot-gallery-5.jpg", ""],[screenShotPath + "screenshot-gallery-6.jpg", ""],[screenShotPath + "screenshot-gallery-7.jpg", ""],[screenShotPath + "screenshot-gallery-8.jpg", ""] ], number );
 }
 function showIndexScreenshots(number)
 {
 	number = parseInt(number);
-	var screenShotPath = "/img/screenshots/";
+	var screenShotPath = "/assets/main/img/screenshots/";
 	Slimbox.open( [ [screenShotPath + "screenshot-index-1.jpg", ""], [screenShotPath + "screenshot-index-2.jpg", ""], [screenShotPath + "screenshot-index-3.jpg", ""], [screenShotPath + "screenshot-index-4.jpg", ""] ], number  );
 }
 function showWallpapers(number)
 {
 	number = parseInt(number);
-	var wallPaperPath = "/img/wallpapers/";
+	var wallPaperPath = "/assets/main/img/wallpapers/";
 	Slimbox.open( [ [wallPaperPath + "wallpaper-1.jpg", ""],[wallPaperPath + "wallpaper-2.jpg", ""],[wallPaperPath + "wallpaper-3.jpg", ""],[wallPaperPath + "wallpaper-4.jpg", ""],[wallPaperPath + "wallpaper-5.jpg", ""],[wallPaperPath + "wallpaper-6.jpg", ""],[wallPaperPath + "wallpaper-7.jpg", ""],[wallPaperPath + "wallpaper-8.jpg", ""] ], number );
 }
 function submitEnter(e, form)

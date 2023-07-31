@@ -4,7 +4,7 @@ html {
 	min-width: 930px;
 }
 body {
-	background: #000 url(/img/container-bg.jpg) repeat-y 50% 0;
+	background: #000 url(../img/container-bg.jpg) repeat-y 50% 0;
 	color: #160400;
 	font: 11px/14px Arial, Helvetica, sans-serif;
 	height: 100%;
@@ -32,7 +32,7 @@ form {
 .right {float:right;}
 
 .header-wrapper {
-	background: url(/img/header-bg.jpg) no-repeat 50% 0;
+	background: url(../img/header-bg.jpg) no-repeat 50% 0;
 	height: 253px;
 }
 .clearfloat {
@@ -54,7 +54,7 @@ form {
 }
 /* logo */
 .logo {
-	background: url(/img/logo.jpg) no-repeat;
+	background: url(../img/logo.jpg) no-repeat;
 	height: 60px;
 	left: 363px;
 	overflow: hidden;
@@ -76,7 +76,7 @@ form {
 }
 
 #regBtn {
-	background:url(/img/reg-btn.jpg) no-repeat;
+	background:url(../img/reg-btn.jpg) no-repeat;
 	height:92px;
 	margin:0 auto;
 	width:533px;
@@ -123,7 +123,7 @@ form {
 	width: 100%;
 }
 .top-nav li { /* has IE-fix */
-	background: url(/img/number-bg.png) no-repeat;
+	background: url(../img/number-bg.png) no-repeat;
 	color: #fef6aa;
 	display: inline;
 	float: left;
@@ -152,7 +152,7 @@ form {
 	text-decoration: underline;
 }
 .header-box-nav-container{
-	background: url(/img/header-box.gif) no-repeat;
+	background: url(../img/header-box.gif) no-repeat;
 	border: none;
 	height: 42px;
 	margin: 4px 0 0 6px;
@@ -194,16 +194,16 @@ form {
 	text-decoration: underline;
 }
 .nav-box-btn-1 {
-	background-image: url(/img/nav-box-login-1-bg.gif);
+	background-image: url(../img/nav-box-login-1-bg.gif);
 }
 .nav-box-btn-2 {
-	background-image: url(/img/nav-box-login-2-bg.gif);
+	background-image: url(../img/nav-box-login-2-bg.gif);
 }
 .nav-box-btn-3 {
-	background-image:url(/img/nav-box-login-3-bg.gif);
+	background-image:url(../img/nav-box-login-3-bg.gif);
 }
 .nav-box-btn-4 {
-	background-image:url(/img/nav-box-login-4-bg.gif);
+	background-image:url(../img/nav-box-login-4-bg.gif);
 }
 /* top navigation end */
 /* form start */
@@ -211,7 +211,7 @@ form {
 	clear: both;
 }
 .form fieldset {
-	background: url(/img/header-box.png) no-repeat;
+	background: url(../img/header-box.png) no-repeat;
 	border: none;
 	height: 42px;
 	margin: 0 0 0 6px;
@@ -266,7 +266,7 @@ form {
 	width:135px;
 }
 .form fieldset .input {
-	background: url(/img/input-bg-1.gif) no-repeat;
+	background: url(../img/input-bg-1.gif) no-repeat;
 	display: inline;
 	float: left;
 	height: 18px;
@@ -274,10 +274,10 @@ form {
 	width: 126px;
 }
 .form fieldset .input-2 {
-	background: url(/img/input-bg-2.gif) no-repeat;
+	background: url(../img/input-bg-2.gif) no-repeat;
 }
 .form fieldset .input-3 {
-	background: url(/img/input-bg-3.gif) no-repeat;
+	background: url(../img/input-bg-3.gif) no-repeat;
 }
 .form fieldset .input input {
 	background: none;
@@ -293,7 +293,7 @@ form {
 }
 /* all buttons styles */
 .button, .dyn-button {
-	background: transparent url(/img/top-nav-register-btn.gif) no-repeat scroll 0 0;
+	background: transparent url(../img/top-nav-register-btn.gif) no-repeat scroll 0 0;
 	border-style: none;
 	color: #DFBF8B;
 	cursor: pointer;
@@ -314,7 +314,7 @@ form {
 	text-decoration: underline;
 }
 .btn {
-	background: url(/img/button-bg-2.gif) no-repeat;
+	background: url(../img/button-bg-2.gif) no-repeat;
 	color: #DFBF8B;
 	display: block;
 	font-size: 10px;
@@ -328,7 +328,7 @@ form {
 	width: 116px;
 }
 .btn-login {
-	background:transparent url(/img/button-bg-2.gif) no-repeat scroll 0 0 !important;
+	background:transparent url(../img/button-bg-2.gif) no-repeat scroll 0 0 !important;
 	border-style:none;
 	margin-top:3px;
 	padding-bottom:4px;
@@ -336,7 +336,7 @@ form {
 }
 .btn-login:hover {text-decoration: underline !important;}
 .form-score .btn {
-	background: url(/img/button-bg-3.gif) no-repeat;
+	background: url(../img/button-bg-3.gif) no-repeat;
 	color: #dfbf8b;
 	margin-left: 4px;
 }
@@ -349,19 +349,19 @@ form {
 	width:141px;
 }
 .back-btn {
-	background:transparent url(/img/back-btn-bg.gif) repeat scroll 0 0;
+	background:transparent url(../img/back-btn-bg.gif) repeat scroll 0 0;
 	margin:30px 0 22px 145px;
 	padding-left:28px;
 	width:87px;
 }
 .dyn-button {
-	background: transparent url(/img/tutorial-btn.png) no-repeat;
+	background: transparent url(../img/tutorial-btn.png) no-repeat;
 	line-height:18px;
 	padding: 0 0 0 8px;
 	text-align:left;
 }
 .dyn-button-end {
-	background: transparent url(/img/tutorial-btn.png) no-repeat top right;
+	background: transparent url(../img/tutorial-btn.png) no-repeat top right;
 	float:right;
 	height:19px;
 	width:20px
@@ -372,7 +372,7 @@ form {
 /* header end */
 /* footer start  */
 .footer-wrapper {
-	background: url(/img/footer-bg.gif) no-repeat 50% 0;
+	background: url(../img/footer-bg.gif) no-repeat 50% 0;
 	height: 220px;
 	margin: -130px 0 0;
 	float: left;
@@ -386,7 +386,7 @@ form {
 }
 #footer a, #footer a:hover, #footer a:linked, #footer a:focus, #footer a:visited { border:0 none; }
 .gameforge4d {
-	background: url(/img/gameforge4d.gif) no-repeat;
+	background: url(../img/gameforge4d.gif) no-repeat;
 	width: 128px;
 	height: 35px;
 	display: block;
@@ -433,7 +433,7 @@ form {
 
 /* list */
 #footer ul {
-	background: url(/img/footer-box.jpg) no-repeat;
+	background: url(../img/footer-box.jpg) no-repeat;
 	float:left;
 	font-size: 10px;
 	height: 66px;
@@ -444,7 +444,7 @@ form {
 	width: 544px;
 }
 #footer ul li {
-	background: url(/img/sep.gif) no-repeat 0 7px;
+	background: url(../img/sep.gif) no-repeat 0 7px;
 	color: #ae9467;
 	display: inline;
 	list-style: none;
@@ -469,7 +469,7 @@ form {
 /* footer end  */
 /* main container */
 .container-wrapper {
-	background: url(/img/container-bg-top.jpg) no-repeat 50% 0;
+	background: url(../img/container-bg-top.jpg) no-repeat 50% 0;
 	float: left;
 	padding: 0 0 181px;
 	width: 100%;
@@ -497,37 +497,37 @@ form {
 }
 /* right and left boxes styles start */
 .boxes-top {
-	background: url(/img/box-top-1.jpg) no-repeat;
+	background: url(../img/box-top-1.jpg) no-repeat;
 	height: 23px;
 	width: 157px;
 }
 .col-3 .boxes-top {
-	background: url(/img/box-top-2.jpg) no-repeat;
+	background: url(../img/box-top-2.jpg) no-repeat;
 }
 .boxes-bottom { /* has IE-fix */
-	background: url(/img/box-bottom.png) no-repeat;
+	background: url(../img/box-bottom.png) no-repeat;
 	height: 48px;
 	margin: 0 0 0 4px;
 	width: 150px;
 }
 .boxes-middle { /* has IE-fix */
-	background: url(/img/box-middle.png) no-repeat;
+	background: url(../img/box-middle.png) no-repeat;
 	height: 32px;
 	margin: 0 0 0 12px;
 	width: 134px;
 }
 .modul-box {
-	background: url(/img/modul-box-bg.jpg) repeat-y;
+	background: url(../img/modul-box-bg.jpg) repeat-y;
 	width: 157px;
 }
 .modul-box .modul-box-bg {
-	background: url(/img/modul-box-top.jpg) no-repeat;
+	background: url(../img/modul-box-top.jpg) no-repeat;
 }
 .modul-box-2 .modul-box-bg {
-	background: url(/img/modul-box-top-2.jpg) no-repeat;
+	background: url(../img/modul-box-top-2.jpg) no-repeat;
 }
 .modul-box .modul-box-bg-bottom { /* has IE-fix */
-	background: url(/img/modul-box-bottom.jpg) no-repeat 0 100%;
+	background: url(../img/modul-box-bottom.jpg) no-repeat 0 100%;
 	min-height: 132px;
 	overflow: hidden;
 	padding: 0 0 5px;
@@ -545,7 +545,7 @@ form {
 }
 .main-nav li a,
 .modul-box h3 {
-	background: url(/img/main-mav-bg.gif) no-repeat;
+	background: url(../img/main-mav-bg.gif) no-repeat;
 	color: #fef6aa;
 	display: block;
 	font-weight: bold;
@@ -600,7 +600,7 @@ form {
 	line-height: 14px;
 }
 .form-login .input {
-	background: url(/img/input-bg-4.gif) no-repeat;
+	background: url(../img/input-bg-4.gif) no-repeat;
 	height: 18px;
 	margin: 2px 0 0;
 	padding: 0 0 4px;
@@ -672,7 +672,7 @@ form {
 	width: 129px;
 }
 .select-replacement {
-	background-image: url(/img/select-replacement-bg.gif);
+	background-image: url(../img/select-replacement-bg.gif);
 	height: 20px;
 	margin: 0 0 0 4px;
 	padding: 0;
@@ -690,20 +690,20 @@ form {
 	padding: 3px 0 3px 6px;
 }
 .form-score ul li.light {
-	background: url(/img/shadow.gif) no-repeat;
+	background: url(../img/shadow.gif) no-repeat;
 }
 .form-score ul li div {
 	margin:0 16px 0 0;
 	background:no-repeat 100% 0;
 }
 .form-score ul li div.empire1 {
-	background-image:url(/img/empire1_small.png);
+	background-image:url(../img/empire1_small.png);
 }
 .form-score ul li div.empire2 {
-	background-image:url(/img/empire2_small.png);
+	background-image:url(../img/empire2_small.png);
 }
 .form-score ul li div.empire3 {
-	background-image:url(/img/empire3_small.png);
+	background-image:url(../img/empire3_small.png);
 }
 .form-score ul li strong {
 	color: #8d0404;
@@ -734,14 +734,14 @@ form {
 }
 /* two boxes holder start */
 .two-boxes {
-	background: url(/img/two-boxes-bg.jpg) repeat-y;
+	background: url(../img/two-boxes-bg.jpg) repeat-y;
 	width: 506px;
 }
 .two-boxes .two-boxes-top {
-	background: url(/img/two-boxes-top.jpg) no-repeat;
+	background: url(../img/two-boxes-top.jpg) no-repeat;
 }
 .two-boxes .two-boxes-bottom {
-	background: url(/img/two-boxes-bottom.jpg) no-repeat 0 100%;
+	background: url(../img/two-boxes-bottom.jpg) no-repeat 0 100%;
 	overflow: hidden;
 	padding: 0 0 15px;
 	width: 100%;
@@ -760,7 +760,7 @@ form {
 }
 .box h2,
 .content h2 {
-	background: url(/img/heading-1.jpg) no-repeat;
+	background: url(../img/heading-1.jpg) no-repeat;
 	color: #7b1300;
 	font-size: 14px;
 	font-weight: bold;
@@ -769,10 +769,10 @@ form {
 	padding: 7px 0 7px 33px;
 }
 .box-right h2 {
-	background: url(/img/heading-2.jpg) no-repeat;
+	background: url(../img/heading-2.jpg) no-repeat;
 }
 .content h2 {
-	background: url(/img/heading-3.jpg) no-repeat;
+	background: url(../img/heading-3.jpg) no-repeat;
 }
 .box .body {
 	margin: 4px 6px 0 5px;
@@ -787,12 +787,12 @@ form {
 }
 /* video */
 .video {
-	background: url(/img/video-border-bg.gif) no-repeat;
+	background: url(../img/video-border-bg.gif) no-repeat;
 	margin: 7px 0 0;
 	width: 223px;
 }
 .video .video-bg {
-	background: url(/img/video-border-bg-bottom.gif) no-repeat 0 100%;
+	background: url(../img/video-border-bg-bottom.gif) no-repeat 0 100%;
 	overflow: hidden;
 	padding: 3px 0 3px 3px;
 	width: 220px;
@@ -803,21 +803,21 @@ form {
 }
 /* two boxes holder end */
 .content {
-	background: url(/img/content-box-bg.jpg) repeat-y;
+	background: url(../img/content-box-bg.jpg) repeat-y;
 	margin: 0;
 	width: 507px;
 }
 .content .content-bg {
-	background: url(/img/content-box-top.jpg) no-repeat;
+	background: url(../img/content-box-top.jpg) no-repeat;
 }
 .content .content-bg-bottom {
-	background: url(/img/content-box-bottom.jpg) no-repeat 0 100%;
+	background: url(../img/content-box-bottom.jpg) no-repeat 0 100%;
 	overflow: hidden;
 	padding: 0 0 0 11px;
 	width: 496px;
 }
 .shadow { /* has IE-fix */
-	background: url(/img/shadow-2.png) no-repeat;
+	background: url(../img/shadow-2.png) no-repeat;
 	height: 5px;
 	overflow: hidden;
 	width: 507px;
@@ -875,18 +875,18 @@ form {
 	width:140px;
 }
 .distribute-content .shadow-line {
-	background: transparent url(/img/shadow-line.png) no-repeat scroll left bottom;
+	background: transparent url(../img/shadow-line.png) no-repeat scroll left bottom;
 	height:3px;
 	margin:0 0 6px 10px;
 }
 .distribute-content .distribute-box {
-	background: url(/img/distributebox-bg.jpg) no-repeat;
+	background: url(../img/distributebox-bg.jpg) no-repeat;
 	height:121px;
 	margin:0 0 20px 10px;
 	width:458px;
 }
 .distribute-content .special-box {
-	background: url(/img/distributebox-bg-special.jpg) no-repeat;
+	background: url(../img/distributebox-bg-special.jpg) no-repeat;
 	height:181px;
 }
 .distribute-content .distribute-box form {
@@ -912,13 +912,13 @@ form {
 	margin-right:10px;
 }
 .distribute-content .distribute-box .amount {
-	background:url(/img/distributebox-input.jpg);
+	background:url(../img/distributebox-input.jpg);
 	border:0px;
 	height:18px;
 	width:37px;
 }
 .distribute-content .distribute-box .distribute-btn {
-	background:url(/img/distributebox-btn.jpg) no-repeat;
+	background:url(../img/distributebox-btn.jpg) no-repeat;
 	color:#FEF6AA;
 	display:block;
 	font-weight:bold;
@@ -929,7 +929,7 @@ form {
 	width:121px;
 }
 .distribute-content .success-msg {
-	background:transparent url(/img/bullet.gif) no-repeat scroll 0 0;
+	background:transparent url(../img/bullet.gif) no-repeat scroll 0 0;
 	font-weight:bold;
 	list-style:none outside none;
 	padding:0 0 13px 20px;
@@ -937,7 +937,7 @@ form {
 .distribute-content .error-mini {margin-left:10px;}
 .distribute-content .error-mini p {margin:6px 0 6px 6px;}
 .distribute-content .error-mini ul li{
-	background: url(/img/error-bullet.png) no-repeat 0 6px;
+	background: url(../img/error-bullet.png) no-repeat 0 6px;
 	list-style: none;
 	padding: 0 0 13px 20px;
 }
@@ -973,7 +973,7 @@ form {
 	width: 100%;
 }
 .screenshots li {
-	background: url(/img/screeshot-border-2.gif) no-repeat;
+	background: url(../img/screeshot-border-2.gif) no-repeat;
 	display: inline;
 	float: left;
 	height: 79px;
@@ -983,7 +983,7 @@ form {
 	width: 104px;
 }
 .screenshots li.first {
-	background: url(/img/screeshot-border.gif) no-repeat;
+	background: url(../img/screeshot-border.gif) no-repeat;
 }
 /* content start */
 .stepdown {
@@ -1021,7 +1021,7 @@ form {
 	text-align: justify;
 }
 .inner-content ul li {
-	background: url(/img/bullet.gif) no-repeat;
+	background: url(../img/bullet.gif) no-repeat;
 	list-style: none;
 	padding: 0 0 13px 20px;
 }
@@ -1036,14 +1036,14 @@ form {
 	width: 100%;
 }
 #lbCenter, #lbBottomContainer {
-	background: #d2bc85 url(/img/standard-bg.jpg) no-repeat;
+	background: #d2bc85 url(../img/standard-bg.jpg) no-repeat;
 	left: 50%;
 	overflow: hidden;
 	position: absolute;
 	z-index: 9999;
 }
 .lbLoading {
-	background: #fff url(/img/loading.gif) no-repeat center;
+	background: #fff url(../img/loading.gif) no-repeat center;
 }
 #lbImage {
 	background-repeat: no-repeat;
@@ -1060,18 +1060,18 @@ form {
 	width: 50%;
 }
 #lbPrevLink {
-	background: transparent url(/img/prevlabel.gif) no-repeat 0% 50%;
+	background: transparent url(../img/prevlabel.gif) no-repeat 0% 50%;
 	left: 0;
 }
 #lbPrevLink:hover {
-	background: transparent url(/img/prevlabel-hover.gif) no-repeat 0% 50%;
+	background: transparent url(../img/prevlabel-hover.gif) no-repeat 0% 50%;
 }
 #lbNextLink {
-	background: transparent url(/img/nextlabel.gif) no-repeat 100% 50%;
+	background: transparent url(../img/nextlabel.gif) no-repeat 100% 50%;
 	right: 0;
 }
 #lbNextLink:hover {
-	background: transparent url(/img/nextlabel-hover.gif) no-repeat 100% 50%;
+	background: transparent url(../img/nextlabel-hover.gif) no-repeat 100% 50%;
 }
 #lbBottom {
 	border: 2px solid #d2bc85;
@@ -1086,7 +1086,7 @@ form {
 	text-align:center;
 }
 #lbCloseLink {
-	background: transparent url(/img/closelabel.gif) no-repeat center;
+	background: transparent url(../img/closelabel.gif) no-repeat center;
 	display: block;
 	float:right;
 	height: 25px;
@@ -1108,23 +1108,23 @@ form {
 	width:281px;
 }
 .aboutbox-1 {
-	background:url(/img/aboutbox-1-bg.jpg) no-repeat;
+	background:url(../img/aboutbox-1-bg.jpg) no-repeat;
 }
 .aboutbox-2{
-	background:url(/img/aboutbox-2-bg.jpg) no-repeat;
+	background:url(../img/aboutbox-2-bg.jpg) no-repeat;
 }
 .aboutbox-3{
-	background:url(/img/aboutbox-3-bg.jpg) no-repeat;
+	background:url(../img/aboutbox-3-bg.jpg) no-repeat;
 }
 .aboutbox-4{
-	background:url(/img/aboutbox-4-bg.jpg) no-repeat;
+	background:url(../img/aboutbox-4-bg.jpg) no-repeat;
 }
 .aboutbox-5{
-	background:url(/img/aboutbox-5-bg.jpg) no-repeat;
+	background:url(../img/aboutbox-5-bg.jpg) no-repeat;
 	/*width:462px;*/
 }
 .about-inner-content h4 {
-	background:url(/img/shadow-line.png) no-repeat bottom left;
+	background:url(../img/shadow-line.png) no-repeat bottom left;
 	color: #7b1300;
 	font-size:11px;
 	padding-bottom:8px;
@@ -1143,7 +1143,7 @@ form {
 	padding: 0;
 }
 .box-foot{
-	background-image:url(/img/aboutbox-foot-bg.jpg);
+	background-image:url(../img/aboutbox-foot-bg.jpg);
 	height:10px;
 	margin-bottom:12px;
 	width:481px;
@@ -1156,20 +1156,20 @@ form {
 	width:282px;
 }
 .firststepsbox-1 {
-	background:url(/img/firststepsbox-1-bg.jpg) no-repeat;
+	background:url(../img/firststepsbox-1-bg.jpg) no-repeat;
 }
 .firststepsbox-2 {
-	background:url(/img/firststepsbox-2-bg.jpg) no-repeat;
+	background:url(../img/firststepsbox-2-bg.jpg) no-repeat;
 }
 .firststepsbox-3 {
-	background:url(/img/firststepsbox-3-bg.jpg) no-repeat;
+	background:url(../img/firststepsbox-3-bg.jpg) no-repeat;
 }
 .firststeps-inner-content {
 	margin: 9px 0px 0px 0px;
 	padding: 0 0 0px;
 }
 .firststeps-inner-content h4{
-	background: url(/img/shadow-line.png) no-repeat bottom left;
+	background: url(../img/shadow-line.png) no-repeat bottom left;
 	color: #7b1300;
 	font-size:12px;
 	padding-bottom:8px;
@@ -1185,13 +1185,13 @@ form {
 	width:166px;
 }
 .firststeps-inner-content .tutorialsbox {
-	background: url(/img/tutorials-box-1-bg.jpg) no-repeat;
+	background: url(../img/tutorials-box-1-bg.jpg) no-repeat;
 	min-height:155px;
 	padding:7px 190px 7px 9px;
 	width:282px;
 }
 .firststeps-inner-content .tutorial-btn {
-	background: transparent url(/img/tutorial-btn.png) no-repeat;
+	background: transparent url(../img/tutorial-btn.png) no-repeat;
 	color:#f1e6a6;
 	display:block;
 	font-size:11px;
@@ -1203,7 +1203,7 @@ form {
 }
 .firststeps-inner-content .tutorial-btn:hover {text-decoration:underline;}
 .firststeps-inner-content .community {
-	background: url(/img/community_dragon_bg.jpg) no-repeat;
+	background: url(../img/community_dragon_bg.jpg) no-repeat;
 	min-height:155px;
 	padding:7px 190px 7px 9px;
 	width:282px;
@@ -1216,7 +1216,7 @@ form {
 	position:relative;
 }
 .empires-content .empires-map {
-	background: url(/img/empires-map-bg.png) no-repeat;
+	background: url(../img/empires-map-bg.png) no-repeat;
 	height:341px;
 	position:relative;
 	width:481px;
@@ -1225,21 +1225,21 @@ form {
 	display:none;
 }
 .empirebox-1, .empirebox-2, .empirebox-3 {
-	background:url(/img/empire-box-bg.jpg) no-repeat;
+	background:url(../img/empire-box-bg.jpg) no-repeat;
 	min-height:169px;
 	padding:7px;
 	position:relative;
 	width:467px;
 }
 .empires-content h4 {
-	background: url(/img/shadow-line.png) no-repeat bottom left;
+	background: url(../img/shadow-line.png) no-repeat bottom left;
 	color: #7b1300;
 	font-size:11px;
 	padding-bottom:8px;
 	margin:1px 0 0 0;
 }
 .empires-content .empire-crest {
-	background: url(/img/empire-box-bg.jpg) no-repeat;
+	background: url(../img/empire-box-bg.jpg) no-repeat;
 	height:87px;
 	position:absolute;
 	top:0px;
@@ -1247,13 +1247,13 @@ form {
 	width:136px;
 }
 .empires-content .empirebox-1 .empire-crest {
-	background:url(/img/empire-crest.png) no-repeat 0 0;
+	background:url(../img/empire-crest.png) no-repeat 0 0;
 }
 .empires-content .empirebox-2 .empire-crest {
-	background:url(/img/empire-crest.png) no-repeat 0 -87px;
+	background:url(../img/empire-crest.png) no-repeat 0 -87px;
 }
 .empires-content .empirebox-3 .empire-crest {
-	background:url(/img/empire-crest.png) no-repeat 0 -174px;
+	background:url(../img/empire-crest.png) no-repeat 0 -174px;
 }
 .empires-content p {
 	margin:5px 0 9px 0;
@@ -1267,21 +1267,21 @@ form {
 	position:relative;
 }
 .empires-content .empire-1 {
-	background: url(/img/empires-map.png) no-repeat 0 -196px;
+	background: url(../img/empires-map.png) no-repeat 0 -196px;
 	height:145px;
 	left:0px;
 	top:196px;
 	width:345px;
 }
 .empires-content .empire-2 {
-	background: url(/img/empires-map.png) no-repeat 0 0;
+	background: url(../img/empires-map.png) no-repeat 0 0;
 	height:160px;
 	left:0px;
 	top:0px;
 	width:200px;
 }
 .empires-content .empire-3 {
-	background: url(/img/empires-map.png) no-repeat -291px 0;
+	background: url(../img/empires-map.png) no-repeat -291px 0;
 	height:225px;
 	left:291px;
 	width:190px;
@@ -1292,15 +1292,15 @@ form {
 
 #wallpapers a,
 #screenshots a {
-	background: url(/img/screeshot-border-2.gif) no-repeat;
+	background: url(../img/screeshot-border-2.gif) no-repeat;
 	float:left;
 	margin:4px;
 	padding:4px;
 }
 #wallpapers a.first,
-#screenshots a.first { background: url(/img/screenshot-li-bg.jpg) no-repeat }
+#screenshots a.first { background: url(../img/screenshot-li-bg.jpg) no-repeat }
 .gallerybox{
-	background: url(/img/gallerybox-bg.jpg) no-repeat;
+	background: url(../img/gallerybox-bg.jpg) no-repeat;
 	margin-bottom:9px;
 	height:auto;
 	padding-top:7px;
@@ -1309,11 +1309,11 @@ form {
 }
 
 .gallerybox-small {
-	background-image: url(/img/gallerybox-small-bg.jpg);
+	background-image: url(../img/gallerybox-small-bg.jpg);
 	min-height:133px;
 }
 .gallerybox-middle {
-	background-image: url(/img/gallerybox-bg.jpg);
+	background-image: url(../img/gallerybox-bg.jpg);
 	min-height:193px;
 	margin-bottom:30px;
 }
@@ -1341,7 +1341,7 @@ form {
 	width: 100%;
 }
 .screenshots-gallery-list li {
-	background: url(/img/screenshot-li-bg.jpg) no-repeat;
+	background: url(../img/screenshot-li-bg.jpg) no-repeat;
 	display: inline;
 	float: left;
 	list-style: none;
@@ -1369,15 +1369,15 @@ form {
 	padding:7px 190px 7px 9px;
 	width:282px;
 }
-.charclass-1 {background:url(/img/characterclasses-knight-bg.jpg) no-repeat;}
-.charclass-2 {background:url(/img/characterclasses-ninja-bg.jpg) no-repeat;}
-.charclass-3 {background:url(/img/characterclasses-shaman-bg.jpg) no-repeat;}
-.charclass-4 {background:url(/img/characterclasses-sura-bg.jpg) no-repeat;}
+.charclass-1 {background:url(../img/characterclasses-knight-bg.jpg) no-repeat;}
+.charclass-2 {background:url(../img/characterclasses-ninja-bg.jpg) no-repeat;}
+.charclass-3 {background:url(../img/characterclasses-shaman-bg.jpg) no-repeat;}
+.charclass-4 {background:url(../img/characterclasses-sura-bg.jpg) no-repeat;}
 .characterclasses h4 {font-size:12px;}
 /*characterclasses end*/
 /*download start*/
 .download-inner-column-left{ /* has IE-fix */
-	background-image:url(/img/download-inner-column-left-bg.jpg);
+	background-image:url(../img/download-inner-column-left-bg.jpg);
 	float:left;
 	overflow:hidden;
 	width:301px;
@@ -1397,21 +1397,21 @@ form {
 }
 .download-inner-column-right p a:hover{color:#af4e3c;}
 .download-button-1{
-	background-image: url(/img/download-button-1.jpg);
+	background-image: url(../img/download-button-1.jpg);
 	display:block;
 	height:63px;
 	width:174px;
 }
-.download-button-1:hover{background-image:url(/img/download-button-1_h.jpg);}
+.download-button-1:hover{background-image:url(../img/download-button-1_h.jpg);}
 .download-button-2{
-	background-image: url(/img/download-button-2.jpg);
+	background-image: url(../img/download-button-2.jpg);
 	display:block;
 	height:63px;
 	width:174px;
 }
-.download-button-2:hover{background-image:url(/img/download-button-2_h.jpg);}
+.download-button-2:hover{background-image:url(../img/download-button-2_h.jpg);}
 .downloadbox{
-	background:url(/img/downloadbox-bg.jpg) no-repeat;
+	background:url(../img/downloadbox-bg.jpg) no-repeat;
 	margin-bottom:9px;
 	min-height:209px;
 	padding-top:7px;
@@ -1446,13 +1446,13 @@ form {
 	width:281px;
 }
 .left_td{
-	background: url(/img/bullet.gif) no-repeat 0px 0px;
+	background: url(../img/bullet.gif) no-repeat 0px 0px;
 	height:23px;
 	padding-left:20px;
 	width:69px;
 }
 .download-box-foot{
-	background-image: url(/img/aboutbox-foot-bg.jpg);
+	background-image: url(../img/aboutbox-foot-bg.jpg);
 	clear:both;
 	height:10px;
 	margin-bottom:12px;
@@ -1469,14 +1469,14 @@ form {
 
 }
 .error-inner-content ul li {
-	background: url(/img/bullet.gif) no-repeat;
+	background: url(../img/bullet.gif) no-repeat;
 	list-style: none;
 	padding: 0 0 13px 20px;
 }
 /*error end*/
 /*ranks start*/
 .ranks-dropdowns-box{ /* has IE-fix */
-	background-image:url(/img/ranks-dropdowns-box-bg.jpg);
+	background-image:url(../img/ranks-dropdowns-box-bg.jpg);
 	height:56px;
 	margin:0 0 15px 8px;
 	width:466px;
@@ -1518,12 +1518,12 @@ form {
 	width:30px;
 }
 .ranks-input{
-	background-image: url(/img/ranks-input-bg.jpg);
+	background-image: url(../img/ranks-input-bg.jpg);
 	height:20px;
 	width:119px;
 }
 .ranks-input-noservers {
-	background-image:url(/img/ranks-input-bg.jpg);
+	background-image:url(../img/ranks-input-bg.jpg);
 	color:#4A1E00;
 	font-size:13px;
 	height:17px;
@@ -1532,7 +1532,7 @@ form {
 	width:115px;
 }
 .small-btn {
-	background: url(/img/small-btn-bg.gif) no-repeat;
+	background: url(../img/small-btn-bg.gif) no-repeat;
 	color: #dfbf8b;
 	display: block;
 	font-weight:bold;
@@ -1588,7 +1588,7 @@ form {
 	text-align:center;
 }
 
-#highscore tr.zebra {background:url(/img/zebra.jpg);}
+#highscore tr.zebra {background:url(../img/zebra.jpg);}
 
 #highscore td img {display:inline;}
 
@@ -1656,7 +1656,7 @@ form {
 	vertical-align:middle;
 }
 
-#guildHighscore tr.zebra {background:url(/img/zebra.jpg);}
+#guildHighscore tr.zebra {background:url(../img/zebra.jpg);}
 
 #guildHighscore td img {display:inline;}
 #guildHighscore .guildrank-th-1{
@@ -1756,21 +1756,21 @@ form {
 	text-decoration:underline;
 }
 .prev{
-	background-image: url(/img/rank-td-last-1.jpg);
+	background-image: url(../img/rank-td-last-1.jpg);
 	text-align:left;
 	width:221px;
 }
 .next{
-	background-image: url(/img/rank-td-last-2.jpg);
+	background-image: url(../img/rank-td-last-2.jpg);
 	text-align:right;
 	width:220px;
 }
 .prev-top {
-	background-image: url(/img/rank-td-first-1.jpg);
+	background-image: url(../img/rank-td-first-1.jpg);
 	padding:9px 10px 0;
 }
 .next-top {
-	background-image: url(/img/rank-td-first-2.jpg);
+	background-image: url(../img/rank-td-first-2.jpg);
 	padding:9px 10px 0;
 }
 .ranks-update-time{
@@ -1784,7 +1784,7 @@ form {
 /*ranks end*/
 /*news start*/
 .news-box{
-	background-image: url(/img/news-box-bg.jpg);
+	background-image: url(../img/news-box-bg.jpg);
 	height:256px;
 	margin-top:12px;
 	overflow:hidden;
@@ -1829,7 +1829,7 @@ form {
 	text-align: justify;
 }
 .news-box ul li {
-	background: url(/img/bullet.gif) no-repeat;
+	background: url(../img/bullet.gif) no-repeat;
 	list-style: none;
 	padding: 0 0 13px 20px;
 }
@@ -1843,7 +1843,7 @@ form {
 /*news start*/
 /*password lost start*/
 .input-data-box{
-	background: url(/img/input-data-box-bg.jpg) no-repeat;
+	background: url(../img/input-data-box-bg.jpg) no-repeat;
 	min-height:129px;
 	padding-top:9px;
 	width:481px;
@@ -1880,14 +1880,14 @@ form {
 	padding: 0 0 0px;
 }
 .pass-lost-box{
-	background: url(/img/pass-lost-box.jpg) no-repeat;
+	background: url(../img/pass-lost-box.jpg) no-repeat;
 	margin-left:11px;
 	overflow:hidden;
 	padding-top:10px;
 	width:275px;
 }
 .pass-lost-box-small{
-	background: url(/img/pass-lost-box-small.jpg) no-repeat;
+	background: url(../img/pass-lost-box-small.jpg) no-repeat;
 	float:left;
 	height: auto;
 	margin-left: 11px;
@@ -1898,7 +1898,7 @@ form {
 }
 .change-password .pass-lost-box-small {padding-top:5px;}
 .login-inner-content .pass-lost-box-small{
-	background: url(/img/login-box-small.jpg) no-repeat;
+	background: url(../img/login-box-small.jpg) no-repeat;
 }
 .pass-lost-box-big {
 	height: 315px;
@@ -1937,14 +1937,14 @@ form {
 	width:245px;
 }
 .input-data-input{
-	background-image:url(/img/input-data-input-bg.jpg);
+	background-image:url(../img/input-data-input-bg.jpg);
 	height:20px;
 	margin-top:5px;
 	margin-bottom:5px;
 	width:251px;
 }
 .error-mini{
-	background:url(/img/error-mini.gif) no-repeat 0px 0px;
+	background:url(../img/error-mini.gif) no-repeat 0px 0px;
 	color:#af1b03;
 	font-size:11px;
 	font-weight:bold;
@@ -1962,7 +1962,7 @@ form {
 	margin:17px 0px 0px 62px !important;
 }
 .error-big{
-	background:url(/img/error.gif) no-repeat 0px 9px;
+	background:url(../img/error.gif) no-repeat 0px 9px;
 	color:#4a1e00;
 	font-size:10px;
 	margin:23px 0px 15px 0px;
@@ -2008,7 +2008,7 @@ form {
 	position:relative;
 }
 .register-box {
-	background:url(/img/register-box-bg.jpg) no-repeat;
+	background:url(../img/register-box-bg.jpg) no-repeat;
 	/*height:438px;*/
 	float:left;
 	margin-left:11px;
@@ -2067,7 +2067,7 @@ form {
 /*register end*/
 /*download box start*/
 .download-btn{
-	background-image:url(/img/nav-download-btn.jpg);
+	background-image:url(../img/nav-download-btn.jpg);
 	height:68px;
 	margin:4px 0 9px 14px;
 	width:130px;
@@ -2075,21 +2075,21 @@ form {
 /*download box end*/
 
 .itemshop-btn{
-	background-image:url(/img/nav-itemshop-btn.jpg);
+	background-image:url(../img/nav-itemshop-btn.jpg);
 	height:68px;
 	margin:4px 0 9px 14px;;
 	width:130px;
 }
 
 .recruit-btn{
-	background-image:url(/img/recruit/friends_recruit_btn.jpg);
+	background-image:url(../img/recruit/friends_recruit_btn.jpg);
 	height:68px;
 	margin:4px 0 9px 14px;;
 	width:130px;
 }
 
 .cosplay-btn {
-	background-image:url(/img/cosplay_btn.jpg);
+	background-image:url(../img/cosplay_btn.jpg);
 	height:68px;
 	margin:4px 0 9px 14px;;
 	width:130px;
@@ -2118,7 +2118,7 @@ form {
 	text-align: justify;
 }
 .administration-inner-content ul li {
-	background: url(/img/bullet.gif) no-repeat;
+	background: url(../img/bullet.gif) no-repeat;
 	list-style: none;
 	padding: 0 0 13px 20px;
 	width:260px;
@@ -2178,7 +2178,7 @@ form {
 	width:480px;
 }
 .char-list-content .pagerWrapper {
-	background: transparent url(/img/charlist-pager-bg.jpg) no-repeat;
+	background: transparent url(../img/charlist-pager-bg.jpg) no-repeat;
 	height:18px;
 	margin-top:10px;
 	padding:7px;
@@ -2210,7 +2210,7 @@ form {
 }
 
 .char-list-content .pagerWrapper .pager {
-	background: url(/img/charlist-pager.jpg) no-repeat;
+	background: url(../img/charlist-pager.jpg) no-repeat;
 	float:right;
 	height:20px;
 	text-align:right;
@@ -2218,11 +2218,11 @@ form {
 }
 
 .char-list-content .pagerWrapper .prev {
-	background: url(/img/charlist-pager-prev.jpg) no-repeat;
+	background: url(../img/charlist-pager-prev.jpg) no-repeat;
 }
 
 .char-list-content .pagerWrapper .next {
-	background: url(/img/charlist-pager-next.jpg) no-repeat;
+	background: url(../img/charlist-pager-next.jpg) no-repeat;
 }
 
 .char-list-content .pagerWrapper div.pager-prev,
@@ -2258,13 +2258,13 @@ form {
 	width:70px;
 }
 .char-list-content .charList {
-	background: url(/img/charlist-row-bg.jpg) no-repeat;
+	background: url(../img/charlist-row-bg.jpg) no-repeat;
 	height:96px;
 	padding:2px;
 	width:476px;
 }
 .char-list-content .charList .charimg {
-	background: url(/img/charlist-avatar-bg.jpg) no-repeat 3px 3px;
+	background: url(../img/charlist-avatar-bg.jpg) no-repeat 3px 3px;
 	float:left;
 	height:72px;
 	margin-right:5px;
@@ -2334,7 +2334,7 @@ form {
 }
 .register-captcha {margin-top:24px;}
 .pass-lost-box-inner-content .register-captcha {margin-top:0;}
-#captchaContainer .input-data-input {background-image:url(/img/input-data-input-captcha-bg.jpg);}
+#captchaContainer .input-data-input {background-image:url(../img/input-data-input-captcha-bg.jpg);}
 #captchaImageContainer {
 	position:relative;
 	width:255px !important;
@@ -2357,7 +2357,7 @@ form {
 }
 /* end captcha*/
 .help-link {
-	background: url(/img/help-link-bg.gif) no-repeat;
+	background: url(../img/help-link-bg.gif) no-repeat;
 	height: 17px;
 	width: 17px;
 }
@@ -2400,7 +2400,7 @@ form {
 	cursor:text !important;
 }
 /* tabs4 */
-.content .tabs4 li {background:transparent url(/img/tabs4-navi.png) no-repeat; width:114px;}
+.content .tabs4 li {background:transparent url(../img/tabs4-navi.png) no-repeat; width:114px;}
 .content .tabs4 li a {width:114px;}
 .content .tabs4 #tab1 {background-position:0 -40px;}
 .content .tabs4 #tab2 {background-position:-120px -40px;}
@@ -2412,7 +2412,7 @@ form {
 .content .tabs4 #tab4.selected {background-position:-360px 0;}
 /* tabs4-big */
 .content .tabs4-big {height:52px;}
-.content .tabs4-big li {background:transparent url(/img/tabs4-navi-big.jpg) no-repeat; width:114px; height:46px; display: table; padding-top: 0px;}
+.content .tabs4-big li {background:transparent url(../img/tabs4-navi-big.jpg) no-repeat; width:114px; height:46px; display: table; padding-top: 0px;}
 .content .tabs4-big li a {width:114px; line-height: 15px; display: table-cell; vertical-align: middle;}
 .content .tabs4-big #tab1 {background-position:0 -52px;}
 .content .tabs4-big #tab2 {background-position:-120px -52px;}
@@ -2423,7 +2423,7 @@ form {
 .content .tabs4-big #tab3.selected {background-position:-240px 0;}
 .content .tabs4-big #tab4.selected {background-position:-360px 0;}
 /* tabs3 */
-.content .tabs3 li {background:transparent url(/img/tabs3-navi.png) no-repeat; width:154px;}
+.content .tabs3 li {background:transparent url(../img/tabs3-navi.png) no-repeat; width:154px;}
 .content .tabs3 li a {width:154px;}
 .content .tabs3 #tab1 {background-position:0 -40px;}
 .content .tabs3 #tab2 {background-position:-160px -40px;}
@@ -2432,7 +2432,7 @@ form {
 .content .tabs3 #tab2.selected {background-position:-160px 0;}
 .content .tabs3 #tab3.selected {background-position:-320px 0;}
 /* tabs2 */
-.content .tabs2 li {background:transparent url(/img/tabs2-navi.png) no-repeat;	width:234px;}
+.content .tabs2 li {background:transparent url(../img/tabs2-navi.png) no-repeat;	width:234px;}
 .content .tabs2 li a {width:234px;}
 .content .tabs2 #tab1 {background-position:0 -40px;}
 .content .tabs2 #tab2 {background-position:-240px -40px; width:235px;}
@@ -2442,7 +2442,7 @@ form {
 /* ticketservice */
 /* DEPRECATED */
 .ticketservice {
-	background:transparent url(/img/qaservice-bg.jpg) no-repeat;
+	background:transparent url(../img/qaservice-bg.jpg) no-repeat;
 	margin-top:10px;
 	padding:7px;
 	margin:10px 0;
@@ -2459,7 +2459,7 @@ form {
 	text-decoration:none;
 }
 .ticketservice .ticketlist a {
-	background: url(/img/bullet.gif) no-repeat;
+	background: url(../img/bullet.gif) no-repeat;
 	display:block;
 	height:18px;
 	padding-left:20px;
@@ -2518,7 +2518,7 @@ form {
 #activateBox p {width:auto;}
 
 #activateAccount a#downloadLink {
-	background:url("/img/download-client.jpg") no-repeat scroll 0 0 transparent;
+	background:url("../img/download-client.jpg") no-repeat scroll 0 0 transparent;
 	color:#FFF9C7;
 	float:left;
 	font-size:16px;
@@ -2549,7 +2549,7 @@ form {
 #steps ol li {margin:5px 0 0;}
 
 #resend {
-	background:url("/img/valid-icon.gif") no-repeat scroll 5px 3px #260B01;
+	background:url("../img/valid-icon.gif") no-repeat scroll 5px 3px #260B01;
 	border:1px solid #622400;
 	padding:0 5px 2px 30px;
 }
@@ -2560,7 +2560,7 @@ form {
 }
 
 .inner-form-box {
-	background:transparent url("/img/form-bg.jpg") repeat scroll 0 0;
+	background:transparent url("../img/form-bg.jpg") repeat scroll 0 0;
 	border:1px solid #c6ab74;
 	color:#4a1e00;
 	padding:15px;
@@ -2574,12 +2574,12 @@ form {
 }
 
 #activateBox .resend {
-	background:#260B01 url("/img/valid-icon.gif") no-repeat scroll 5px 3px ;
+	background:#260B01 url("../img/valid-icon.gif") no-repeat scroll 5px 3px ;
 	border:1px solid #622400;
 	padding:0 5px 2px 30px;
 }
 #activateAccount #bigDownload {
-	background:url("/img/big-download.jpg") no-repeat scroll 0 0 transparent;
+	background:url("../img/big-download.jpg") no-repeat scroll 0 0 transparent;
 	color:#FFF9C7;
 	display:block;
 	font-size:27px;
@@ -2614,7 +2614,7 @@ form {
 }
 
 .trenner {
-	background:url(/img/trenner-shadow.jpg) no-repeat;
+	background:url(../img/trenner-shadow.jpg) no-repeat;
 	border-top:1px solid #B28A45;
 	height:8px;
 	margin:0 auto;
@@ -2677,7 +2677,7 @@ form {
 #toAdmin,
 #topwLost,
 #toLogin {
-	background:url("/img/button-bg-2.gif") no-repeat scroll 0 0 transparent;
+	background:url("../img/button-bg-2.gif") no-repeat scroll 0 0 transparent;
 	color:#DFBF8B;
 	float:right;
 	font-size:10px;
@@ -2707,7 +2707,7 @@ form {
 #login .inner-form-box input,
 #register .inner-form-box input,
 #captcha .inner-form-box input {
-	background:url(/img/form-input-bg.gif) repeat-x;
+	background:url(../img/form-input-bg.gif) repeat-x;
 	border:1px solid #622400;
 	color:#534236;
 	font-family: Arial, Helvetica, sans-serif;
@@ -2743,7 +2743,7 @@ form {
 #subscribe .btn-big,
 a.btn-big,
 .contest-inner-content #submitBtn {
-	background:url("/img/btn-big.jpg") no-repeat scroll 0 0 transparent;
+	background:url("../img/btn-big.jpg") no-repeat scroll 0 0 transparent;
 	border:0;
 	color:#dfbf8b;
 	cursor:pointer;
@@ -2847,7 +2847,7 @@ p#regLegend {
 }
 
 #progressTracker .step {
-	background:url(/img/progressTracker.gif) no-repeat scroll 0 -45px;
+	background:url(../img/progressTracker.gif) no-repeat scroll 0 -45px;
 	height:40px;
 	font-size:18px;
 	font-weight:bold;
@@ -2860,7 +2860,7 @@ p#regLegend {
 
 #progress1,
 #progress2 {
-	background:url(/img/progress-inactive.gif) repeat-x scroll 0 20px;
+	background:url(../img/progress-inactive.gif) repeat-x scroll 0 20px;
 	float:left;
 	position:relative;
 	width:177px;
@@ -2894,7 +2894,7 @@ p#regLegend {
 	width:45px;
 }
 
-#progressTracker .passed {background:url(/img/progress-active.gif) repeat-x scroll 0 20px;}
+#progressTracker .passed {background:url(../img/progress-active.gif) repeat-x scroll 0 20px;}
 #progressTracker .active .step {
 	background-position:0 0;
 	color:#4A1E00;
@@ -2922,7 +2922,7 @@ p#regLegend {
 	text-shadow:1px 1px #ECD4BA;
 }
 #download a#requirements {
-	background:url("/img/ico-plus.gif") no-repeat scroll 0 0 transparent;
+	background:url("../img/ico-plus.gif") no-repeat scroll 0 0 transparent;
 	color:#8D0404;
 	cursor:pointer;
 	display:block;
@@ -3004,7 +3004,7 @@ p#regLegend {
 
 #news td {
 	padding:8px 12px 30px;
-	background: url(/img/gallerybox-bg.jpg) no-repeat top left;
+	background: url(../img/gallerybox-bg.jpg) no-repeat top left;
 }
 
 #news h3 {
@@ -3083,7 +3083,7 @@ p#regLegend {
 	width:100%;
 	margin-top:20px;
 	height:33px;
-	background-image:url(/img/charlist-pager-bg.jpg);
+	background-image:url(../img/charlist-pager-bg.jpg);
 }
 
 #news #browse td {
@@ -3100,7 +3100,7 @@ p#regLegend {
 }
 
 #news #browse a#next {
-	background:url(/img/charlist-pager-next.jpg) no-repeat top right;
+	background:url(../img/charlist-pager-next.jpg) no-repeat top right;
 }
 
 #news #browse a#next span {
@@ -3108,7 +3108,7 @@ p#regLegend {
 }
 
 #news #browse a#prev {
-	background:url(/img/charlist-pager-prev.jpg) no-repeat top left;
+	background:url(../img/charlist-pager-prev.jpg) no-repeat top left;
 }
 
 #news #browse a#prev span {
@@ -3127,26 +3127,26 @@ p#regLegend {
 	width:480px;
 }
 .recruitbox-1 {
-	background:url(/img/recruit/recruit_friends_bg_1_intro.jpg) no-repeat;
+	background:url(../img/recruit/recruit_friends_bg_1_intro.jpg) no-repeat;
 }
 .recruitbox-2 {
-	background:url(/img/recruit/recruit_friends_bg_2_your_code.jpg) no-repeat;
+	background:url(../img/recruit/recruit_friends_bg_2_your_code.jpg) no-repeat;
 }
 .recruitbox-3 {
-	background:url(/img/recruit/recruit_friends_bg_3_status.jpg) no-repeat;
+	background:url(../img/recruit/recruit_friends_bg_3_status.jpg) no-repeat;
 }
 .recruitbox-4 {
-	background:url(/img/recruit/recruit_friends_bg_4_sendmail.jpg) no-repeat;
+	background:url(../img/recruit/recruit_friends_bg_4_sendmail.jpg) no-repeat;
 }
 .recruitbox-5 {
-	background:url(/img/recruit/recruit_friends_bg_5_socials.jpg) no-repeat;
+	background:url(../img/recruit/recruit_friends_bg_5_socials.jpg) no-repeat;
 }
 .recruit-inner-content {
 	margin: 9px 0px 0px 0px;
 	padding: 0 0 0px;
 }
 .recruit-inner-content h4{
-	background:url(/img/shadow-line.png) no-repeat bottom left;
+	background:url(../img/shadow-line.png) no-repeat bottom left;
 	color: #7b1300;
 	font-size:12px;
 	padding-bottom:8px;
@@ -3170,7 +3170,7 @@ p#regLegend {
 	padding-left: 3px;
 	padding-right: 3px;
 	padding-top: 2px;
-	background: url('/img/recruit/recruit_friends_bg_input.png') no-repeat;
+	background: url('../img/recruit/recruit_friends_bg_input.png') no-repeat;
 }
 .recruit-inner-content textarea {
 	width: 280px;
@@ -3179,11 +3179,11 @@ p#regLegend {
 	height: 100px;
 	padding-left: 3px;
 	padding-top: 2px;
-	background: url('/img/recruit/recruit_friends_bg_textarea.png') no-repeat;
+	background: url('../img/recruit/recruit_friends_bg_textarea.png') no-repeat;
 	overflow:hidden;
 }
 #recruitMailForm #submitBtn {
-	background:url('/img/recruit/recruit_friends_bg_sendmail_btn.png') no-repeat;
+	background:url('../img/recruit/recruit_friends_bg_sendmail_btn.png') no-repeat;
 	border:none;
 	color:#ffffff;
 	cursor:pointer;
@@ -3199,7 +3199,7 @@ p#regLegend {
 }
 .recruit-status-th {
 	height:26px;
-	background:url('/img/recruit/recruit_friends_status_bg_th.png') no-repeat;
+	background:url('../img/recruit/recruit_friends_status_bg_th.png') no-repeat;
 }
 .recruit-status-th th, .recruit-status-tr td {
 	vertical-align:middle;
@@ -3207,7 +3207,7 @@ p#regLegend {
 }
 .recruit-status-tr {
 	height:25px;
-	background:url('/img/recruit/recruit_friends_status_bg_tr.png') no-repeat;
+	background:url('../img/recruit/recruit_friends_status_bg_tr.png') no-repeat;
 }
 .recruit-inviteLink {
 	width: 280px;
@@ -3216,7 +3216,7 @@ p#regLegend {
 	border: none;
 	padding-left: 3px;
 	padding-top: 0px;
-	background: url('/img/recruit/recruit_friends_bg_input.png') no-repeat;
+	background: url('../img/recruit/recruit_friends_bg_input.png') no-repeat;
 }
 #recruitSocialForm #inviteLink {
 	background:none;
@@ -3226,7 +3226,7 @@ p#regLegend {
 }
 .recruit-facebook {
 	display: block;
-	background:url('/img/recruit/recruit_friends_bg_btn_facebook.png') no-repeat;
+	background:url('../img/recruit/recruit_friends_bg_btn_facebook.png') no-repeat;
 	width: 132px;
 	height: 26px;
 	margin-top:5px;
@@ -3235,7 +3235,7 @@ p#regLegend {
 }
 .recruit-twitter {
 	display: block;
-	background:url('/img/recruit/recruit_friends_bg_btn_twitter.png') no-repeat;
+	background:url('../img/recruit/recruit_friends_bg_btn_twitter.png') no-repeat;
 	width: 132px;
 	height: 26px;
 	margin-top:5px;
@@ -3259,7 +3259,7 @@ p#regLegend {
 	left: 140px;
 	width:185px;
 	height:34px;
-	background:url('/img/recruit/recruit_friends_bg_code_field.png') no-repeat;
+	background:url('../img/recruit/recruit_friends_bg_code_field.png') no-repeat;
 	text-align: center;
 	font-weight: bold;
 	padding-left:2px;
@@ -3280,7 +3280,7 @@ p#regLegend {
 }
 
 .recruit-del {
-	background: url('/img/recruit/recruit_friends_delete_btn.png') no-repeat;
+	background: url('../img/recruit/recruit_friends_delete_btn.png') no-repeat;
 	width: 21px;
 	height: 21px;
 	display: block;
@@ -3300,11 +3300,11 @@ p#regLegend {
 	text-align:center;
 	color:#7b1300;
 	height:33px;
-	background:url('/img/charlist-pager-bg.jpg') no-repeat;
+	background:url('../img/charlist-pager-bg.jpg') no-repeat;
 }
 
 #creation div.inner-content.notAllowed {
-	background:url('/img/community_dragon_bg.jpg') no-repeat;
+	background:url('../img/community_dragon_bg.jpg') no-repeat;
 	min-height:155px;
 	padding:7px 190px 7px 9px;
 	width:282px;
@@ -3344,19 +3344,19 @@ p#regLegend {
 }
 
 #creation div.jobs div.job0 {
-	background:url('/img/creation/job_0_small.png') no-repeat;
+	background:url('../img/creation/job_0_small.png') no-repeat;
 }
 
 #creation div.jobs div.job1 {
-	background:url('/img/creation/job_1_small.png') no-repeat;
+	background:url('../img/creation/job_1_small.png') no-repeat;
 }
 
 #creation div.jobs div.job2 {
-	background:url('/img/creation/job_2_small.png') no-repeat;
+	background:url('../img/creation/job_2_small.png') no-repeat;
 }
 
 #creation div.jobs div.job3 {
-	background:url('/img/creation/job_3_small.png') no-repeat;
+	background:url('../img/creation/job_3_small.png') no-repeat;
 }
 
 #creation div.jobs div.job p {
@@ -3366,7 +3366,7 @@ p#regLegend {
 	text-align:center;
 	color:#bbb;
 	border-top:solid 1px #bbb;
-	background:url('/img/creation/job_bg.png');
+	background:url('../img/creation/job_bg.png');
 }
 
 #creation div.jobs div.job.active p {
@@ -3426,35 +3426,35 @@ p#regLegend {
 }
 
 #creation div.serverAndName.job0, #creation div.completed.job0 div {
-	background-image:url('/img/creation/job_0.png');
+	background-image:url('../img/creation/job_0.png');
 }
 
 #creation div.serverAndName.job1, #creation div.completed.job1 div {
-	background-image:url('/img/creation/job_1.png');
+	background-image:url('../img/creation/job_1.png');
 }
 
 #creation div.serverAndName.job2, #creation div.completed.job2 div {
-	background-image:url('/img/creation/job_2.png');
+	background-image:url('../img/creation/job_2.png');
 }
 
 #creation div.serverAndName.job3, #creation div.completed.job3 div {
-	background-image:url('/img/creation/job_3.png');
+	background-image:url('../img/creation/job_3.png');
 }
 
 #creation div.serverAndName.job4, #creation div.completed.job4 div {
-	background-image:url('/img/creation/job_4.png');
+	background-image:url('../img/creation/job_4.png');
 }
 
 #creation div.serverAndName.job5, #creation div.completed.job5 div {
-	background-image:url('/img/creation/job_5.png');
+	background-image:url('../img/creation/job_5.png');
 }
 
 #creation div.serverAndName.job6, #creation div.completed.job6 div {
-	background-image:url('/img/creation/job_6.png');
+	background-image:url('../img/creation/job_6.png');
 }
 
 #creation div.serverAndName.job7, #creation div.completed.job7 div {
-	background-image:url('/img/creation/job_7.png');
+	background-image:url('../img/creation/job_7.png');
 }
 
 #creation div.serverAndName h4, #creation div.completed h4 {
@@ -3464,7 +3464,7 @@ p#regLegend {
 }
 
 #creation div.serverAndName p.check, #creation div.completed p.check {
-	background:url('/img/ok.gif') 0 7px no-repeat;
+	background:url('../img/ok.gif') 0 7px no-repeat;
 	margin:0 0 0 10px;
 	padding:10px 0 20px 0;
 }
@@ -3481,7 +3481,7 @@ p#regLegend {
 }
 
 #creation div.completed a {
-	background: url('/img/btn-big.jpg') no-repeat;
+	background: url('../img/btn-big.jpg') no-repeat;
 	border:none;
 	color:#dfbf8b;
 	cursor:pointer;
@@ -3520,7 +3520,7 @@ p#regLegend {
 }
 
 #creation div.serverAndName select {
-	background:url('/img/form-input-bg.gif') repeat-x;
+	background:url('../img/form-input-bg.gif') repeat-x;
 	width:208px;
 	height:22px;
 	border:solid 1px #622400;
@@ -3533,7 +3533,7 @@ p#regLegend {
 }
 
 #creation div.serverAndName input {
-	background:url('/img/form-input-bg.gif') repeat-x;
+	background:url('../img/form-input-bg.gif') repeat-x;
 	width:208px;
 	height:22px;
 	border:solid 1px #622400;
@@ -3546,7 +3546,7 @@ p#regLegend {
 }
 
 #creation #submit {
-	background: url('/img/btn-big.jpg') no-repeat;
+	background: url('../img/btn-big.jpg') no-repeat;
 	border:none;
 	color:#dfbf8b;
 	cursor:pointer;
@@ -3579,7 +3579,7 @@ p#regLegend {
 }
 
 ul.rules li {
-	background: url(/img/bullet.gif) 0 2px no-repeat;
+	background: url(../img/bullet.gif) 0 2px no-repeat;
 	padding: 3px 25px 5px;
 }
 
@@ -3596,7 +3596,7 @@ ul.rules li {
 }
 
 #screenshots.comic span {
-	background: url(/img/votes.png) no-repeat;
+	background: url(../img/votes.png) no-repeat;
 	color: #000;
 	font-weight: bold;
 	font-size: 12px;
@@ -3630,7 +3630,7 @@ a.comic_detail {
 }
 
 .comic_detail span.zoom {
-	background: url(/img/detail.png) no-repeat;
+	background: url(../img/detail.png) no-repeat;
 	display: block;
 	left: 225px;
 	height: 50px;
@@ -3649,7 +3649,7 @@ p.votes {
 }
 
 p.votes span {
-	background: url(/img/votes.png) no-repeat left 2px;
+	background: url(../img/votes.png) no-repeat left 2px;
 	height: 20px;
 	line-height: 20px;
 	margin: 0 0 10px 0;
@@ -3688,14 +3688,14 @@ p.social span {
 }
 
 a.facebook, a.twitter {
-	background: url(/img/facebook-icon.png) no-repeat;
+	background: url(../img/facebook-icon.png) no-repeat;
 	float: left;
 	margin: 0 0 0 10px;
 	height: 30px;
 	width: 30px;
 }
 
-a.twitter {background-image: url(/img/twitter-icon.png);}
+a.twitter {background-image: url(../img/twitter-icon.png);}
 
 a.back_link {
 	color: #000;
@@ -3805,7 +3805,7 @@ img.cosplayDone {
 }
 
 .securitybox-info {
-	background: url("/img/securitybox.jpg") no-repeat scroll 0 0 transparent;
+	background: url("../img/securitybox.jpg") no-repeat scroll 0 0 transparent;
 	min-height: 120px;
 	padding: 7px;
 	position: relative;
@@ -3817,7 +3817,7 @@ img.cosplayDone {
 }
 
 .securitybox {
-	background: url("/img/empire-box-bg.jpg") no-repeat scroll 0 0 transparent;
+	background: url("../img/empire-box-bg.jpg") no-repeat scroll 0 0 transparent;
 	min-height: 90px;
 	padding: 7px;
 	position: relative;
@@ -3836,7 +3836,7 @@ img.cosplayDone {
 
 /* Servermerge Start */
 .smfaqunderline {
-	background: url("/img/shadow-line.png") no-repeat scroll left bottom transparent;
+	background: url("../img/shadow-line.png") no-repeat scroll left bottom transparent;
 	color: #7B1300;
 	font-size: 11px;
 	margin: 2px 0 0;
@@ -3844,14 +3844,14 @@ img.cosplayDone {
 }
 
 .smfaqbox {
-	background:url("/img/smfaqbox.jpg") no-repeat scroll 0 0 transparent;
+	background:url("../img/smfaqbox.jpg") no-repeat scroll 0 0 transparent;
 	min-height: 169px;
 	padding: 7px 190px 7px 9px;
 	width: 465px;
 }
 
 .smfaqlinks {
-	background: url("/img/smfaqlinks.png") no-repeat scroll -3px 3px transparent;
+	background: url("../img/smfaqlinks.png") no-repeat scroll -3px 3px transparent;
 	margin-left: 9px;
 	padding-left: 24px;
 }

@@ -10,23 +10,23 @@
 
 .boxes-bottom {
     background: none;
-    filter: progid:dximagetransform.microsoft.alphaimageloader(src='img/box-bottom.png', sizingmethod='crop');
+    filter: progid:dximagetransform.microsoft.alphaimageloader(src='../../img/box-bottom.png', sizingmethod='crop');
 }
 
 .boxes-bottom {
     background: none;
-    filter: progid:dximagetransform.microsoft.alphaimageloader(src='img/box-bottom.png', sizingmethod='crop');
+    filter: progid:dximagetransform.microsoft.alphaimageloader(src='../../img/box-bottom.png', sizingmethod='crop');
 }
 .boxes-middle {
     background: none;
-    filter: progid:dximagetransform.microsoft.alphaimageloader(src='img/box-middle.png', sizingmethod='crop');
+    filter: progid:dximagetransform.microsoft.alphaimageloader(src='../../img/box-middle.png', sizingmethod='crop');
 }
 .shadow {
     background: none;
-    filter: progid:dximagetransform.microsoft.alphaimageloader(src='img/shadow-2.png', sizingmethod='crop');
+    filter: progid:dximagetransform.microsoft.alphaimageloader(src='../../img/shadow-2.png', sizingmethod='crop');
 }
 .dist-item-img {
-    behavior:url(img/iepngfix.htc);
+    behavior:url(../../img/iepngfix.htc);
 }
 .distribute-content .distribute-item {
     margin:8px 0 6px;

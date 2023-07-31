@@ -18,9 +18,9 @@
                         <div class="video">
                             <object wmode="opaque" width="221" height="131">
                                 <param name="wmode" value="opaque">
-                                <param name="movie" value="{{ asset('img/movies/videoPlayer.swf') }}">
+                                <param name="movie" value="{{ asset('assets/main/img/movies/videoPlayer.swf') }}">
                                 <param name="allowFullScreen" value="true">
-                                <embed src="{{ asset('img/movies/videoPlayer.swf') }}" type="application/x-shockwave-flash" allowfullscreen="true" wmode="opaque" width="221" height="131">
+                                <embed src="{{ asset('assets/main/img/movies/videoPlayer.swf') }}" type="application/x-shockwave-flash" allowfullscreen="true" wmode="opaque" width="221" height="131">
                             </object>
                         </div>
                     </div>
@@ -34,10 +34,10 @@
                     <div class="coda-slider-wrapper">
                         <div class="coda-slider preload" id="coda-slider-1">
                             <div class="panel">
-                                <a href="{{ url('teaser/grotto') }}" target="_blank"><img src="{{ asset('img/banner/ro/gdvteaser.jpg') }}" width="480px" /></a>
+                                <a href="{{ url('teaser/grotto') }}" target="_blank"><img src="{{ asset('assets/main/img/banner/ro/gdvteaser.jpg') }}" width="480px" /></a>
                             </div>
                             <div class="panel">
-                                <a href="{{ url('teaser/dc') }}" target="_blank"><img src="{{ asset('img/banner/ro/dcbanner.jpg') }}" width="480px" /></a>
+                                <a href="{{ url('teaser/dc') }}" target="_blank"><img src="{{ asset('assets/main/img/banner/ro/dcbanner.jpg') }}" width="480px" /></a>
                             </div>
                         </div>
                     </div>
@@ -52,10 +52,18 @@
                 <div class="content-bg-bottom">
                     <h2>Screenshots</h2>
                     <div id="screenshots">
-                        <a class="first" title="Captura 1" href="/img/screenshots/mmorpg-fantasy-metin2-screenshot01.jpg"><img alt="Captura 1" src="/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb01.jpg" width="100" height="75" /></a>
-                        <a title="Captura 2" href="/img/screenshots/mmorpg-fantasy-metin2-screenshot02.jpg"><img alt="Captura 2" src="/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb02.jpg" width="100" height="75" /></a>
-                        <a title="Captura 3" href="/img/screenshots/mmorpg-fantasy-metin2-screenshot03.jpg"><img alt="Captura 3" src="/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb03.jpg" width="100" height="75" /></a>
-                        <a title="Captura 4" href="/img/screenshots/mmorpg-fantasy-metin2-screenshot04.jpg"><img alt="Captura 4" src="/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb04.jpg" width="100" height="75" /></a>
+                        <a class="first" title="Captura 1" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot01.jpg') }}">
+                            <img alt="Captura 1" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb01.jpg') }}" width="100" height="75" />
+                        </a>
+                        <a class="first" title="Captura 2" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot02.jpg') }}">
+                            <img alt="Captura 2" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb02.jpg') }}" width="100" height="75" />
+                        </a>
+                        <a class="first" title="Captura 3" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot03.jpg') }}">
+                            <img alt="Captura 3" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb03.jpg') }}" width="100" height="75" />
+                        </a>
+                        <a class="first" title="Captura 4" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot04.jpg') }}">
+                            <img alt="Captura 4" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb04.jpg') }}" width="100" height="75" />
+                        </a>
                     </div>
                     <br class="clearfloat" />
                 </div>

@@ -27,7 +27,7 @@
                                 </div>
                                 <div id="pwField">
                                     <div id="pwInfo">
-                                        <h3><img src="{{ asset('img/help.gif') }}" alt="Reguli parolă" title="Reguli parolă"/> O parolă sigură să conţină:</h3>
+                                        <h3><img src="{{ asset('assets/main/img/help.gif') }}" alt="Reguli parolă" title="Reguli parolă"/> O parolă sigură să conţină:</h3>
                                         <ul>
                                             <li>între 5 și 16 caractere</li>
                                             <li>sau cel puțin o literă mică</li>
@@ -54,7 +54,7 @@
                                         </script>
                                     </div>
                                     <label for="password">Parola: *
-                                        <span id="toPwInfo" title="Reguli parolă">Reguli parolă <img src="{{ asset('img/help.gif') }}" alt="Reguli parolă" title="Reguli parolă"/>
+                                        <span id="toPwInfo" title="Reguli parolă">Reguli parolă <img src="{{ asset('assets/main/img/help.gif') }}" alt="Reguli parolă" title="Reguli parolă"/>
                                     </span>
                                     </label>
                                     <input type="password" class="validate[required,custom[onlyValidPasswordCharacters],length[5,16]]" id="password" name="password" maxlength="16" value=""/>
