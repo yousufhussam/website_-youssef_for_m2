@@ -49,7 +49,6 @@ class Account extends User implements MustVerifyEmail
      */
     protected $fillable = [
         'login',
-        'password',
         'email',
     ];
 
@@ -71,7 +70,6 @@ class Account extends User implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
         'status' => AccountStatusEnum::class
     ];
 

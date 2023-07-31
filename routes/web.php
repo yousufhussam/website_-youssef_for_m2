@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\VerificationController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -50,22 +52,23 @@ Route::prefix('main')->group(function() {
 
 Route::prefix('user')->group(function() {
     # Registration
-    Route::get('/register', fn () => view('user/registration/register'))->middleware('guest');
-    Route::get('/activate', fn () => view('user/registration/activation-pending'))->name('verification.notice');
-    Route::get('/resendack', fn () => view('user/registration/resendack'));
+    Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->middleware('guest');
+    Route::post('/register', [RegisterController::class, 'register'])->middleware('guest');
+    Route::get('/verification/notice', [VerificationController::class, 'show'])->name('verification.notice');
+    Route::get('/verification/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
+    Route::get('/verification/resend', [VerificationController::class, 'resend'])->name('verification.resend');
 
     # Authentication
     Route::middleware('guest')->group(function() {
         Route::get('/login', fn () => view('user/login'))->name('login');
         Route::post('/login', [LoginController::class, 'login']);
-        // will autocomplete the username
-        Route::get('/login/{username}', fn ($username) => view('user/login'));
     });
     Route::get('/logout', [LoginController::class, 'logout']);
 
     Route::get('/passwordlostrequest', fn () => view('user/passwordlostrequest'));
     Route::get('/passwordlost/{username}/{hash}', fn ($username, $hash) => view('user/passwordlost-expired'));
 
+    # User administration
     Route::middleware(['auth', 'verified'])->group(function() {
         Route::get('/administration', fn () => view('user/administration'));
 

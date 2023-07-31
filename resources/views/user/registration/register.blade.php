@@ -7,28 +7,19 @@
             <div class="content-bg">
                 <div class="content-bg-bottom">
                     <h2>Înregistrarea</h2>
-                    <div id="progressTracker">
-                        <div id="progress1" class="active">
-                            <div class="step">1</div>
-                            <p class="progress-text">Înregistrare</p>
-                        </div>
-                        <div id="progress2" class="inactive">
-                            <div class="step">2</div>
-                            <p class="progress-text">Activează și descarcă</p>
-                        </div>
-                        <div id="progress3" class="inactive">
-                            <div class="step">3</div>
-                            <p class="progress-text">Instalează și joacă-te</p>
-                        </div>
-                    </div>
+
+                    <x-registration.progress :step="1" />
+
                     <div class="inner-form-border">
                         <div class="inner-form-box">
                             <h3><a id="toLogin" href="{{ url('user/login') }}" title="sau la autentificare">sau la autentificare</a>Creează un cont</h3>
                             <div class="trenner"></div>
                             <form name="registerForm" id="registerForm" method="post" action="{{ url('user/register') }}">
+                                @csrf
+
                                 <div>
                                     <label for="username">Nume de utilizator: *</label>
-                                    <input type="text" class="validate[required,custom[noSpecialCharacters],length[5,16]]" id="username" name="username" title="" value="" maxlength="16"/>
+                                    <input type="text" class="validate[required,custom[noSpecialCharacters],length[5,16]]" id="username" name="login" title="" value="" maxlength="16"/>
                                 </div>
                                 <div>
                                     <label for="email">Email: *</label>
@@ -81,7 +72,20 @@
                                     <span>Am citit <a href="{{ url('legal/terms') }}" target="_blank"><strong>Termenii și Condițiile</strong></a> și <a href="{{ url('legal/privacy') }}" target="_blank"><strong>Declarația privind protecția datelor</strong></a>. *</span>
                                 </div>
                                 <input id="submitBtn" type="submit" name="SubmitRegisterForm" value="Înregistrare" class="btn-big"/>
+
                                 <script type="text/javascript">
+                                    @error('login')
+                                        $.validationEngine.buildPrompt("#username", "{{ $message }}", "error");
+                                    @enderror
+                                    @error('email')
+                                        $.validationEngine.buildPrompt("#email", "{{ $message }}", "error");
+                                    @enderror
+                                    @error('password')
+                                        $.validationEngine.buildPrompt("#password", "{{ $message }}", "error");
+                                    @enderror
+                                    @error('tac')
+                                        $.validationEngine.buildPrompt("#tac", "{{ $message }}", "error");
+                                    @enderror
                                 </script>
                             </form>
                             <p id="regLegend">* este necesar</p>

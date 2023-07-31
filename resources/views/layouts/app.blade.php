@@ -226,7 +226,7 @@
                             </div>
                         </div>
 
-                        @if (Auth::user()->status == \App\Models\Enums\AccountStatusEnum::OK)
+                        @if (Auth::user()->hasVerifiedEmail())
                             <div class="boxes-middle"></div>
                             <div class="modul-box modul-box-2">
                                 <div class="modul-box-bg">

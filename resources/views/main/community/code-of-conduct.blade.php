@@ -10,7 +10,7 @@
                     <div class="securitybox">
                         <p>Scopul acestui Ghid al Comunitatii este sa creeze un mediu placut ce va face sederea in aceasta comunitate plina de distractie, unica si sigura, incurajand utilizatorii sa se comporte intr-o maniera care promoveaza integritatea, decenta si respectul.
                             <br/><br/>
-                            Acest Ghid al Comunitatii va ajuta sa intelegeti ce inseamna sa faceti parte din comunitatea Metin2. Tineti minte ca prin folosirea platformelor Metin2 sunteti de acord cu Ghidul Comunitatii Metin2 si a <a href="#" target="_blank">termenilor &amp; conditiilor</a>.</p>
+                            Acest Ghid al Comunitatii va ajuta sa intelegeti ce inseamna sa faceti parte din comunitatea Metin2. Tineti minte ca prin folosirea platformelor Metin2 sunteti de acord cu Ghidul Comunitatii Metin2 si a <a href="{{ url('legal/terms') }}" target="_blank">termenilor &amp; conditiilor</a>.</p>
                     </div>
                     <div class="securitybox">
                         <h4>Cateva lucruri de tinut minte atunci cand folositi platforma Metin2</h4>
