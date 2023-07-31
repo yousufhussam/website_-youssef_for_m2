@@ -14,7 +14,7 @@
                         <div class="input-data-box">
                             <div id="activateAccount" class="inner-form-border">
                                 <div class="inner-form-box clearfix">
-                                    <h3>Ai fost înregistrat cu succes!</h3>
+                                    <h3>Înregistrare reușită!</h3>
                                     <div class="trenner"></div>
 
                                     <div id="activateBox">

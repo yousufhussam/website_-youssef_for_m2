@@ -14,31 +14,29 @@
                         <div class="input-data-box">
                             <div id="activateAccount" class="inner-form-border">
                                 <div class="inner-form-box clearfix">
-                                    <h3>Activează-ți contul!</h3>
+                                    <h3>Activează contul</h3>
                                     <div class="trenner"></div>
                                     <div id="activateBox">
-                                        <p>
-                                            Pentru finalizarea înregistrării tale, trebuie să îți verificăm adresa
-                                            de e-mail. Accesează-ți căsuța de e-mail și urmează link-ul din mesaj pentru activare.
-                                        </p>
+                                        <p>Bun venit, <b>{{ Auth::user()->login }}</b>!</p>
+                                        <p>Înregistrarea ta este completă, iar datele introduse au fost salvate.</p>
 
-                                        <h3>Nu ai primit un e-mail?</h3>
-                                        <div class="trenner"></div>
+                                        <p>
+                                            În scurt timp, va trebui să primești un email pentru <b>confirmarea înregistrării</b>.
+                                            Te rugăm <b>confirmă înregistrarea</b> accesând <b>linkul din email</b>.
+                                            Vei putea folosi contul tău de joc după această confirmare.
+                                            Ține minte că linkul de validare expiră în scurt timp. Dacă deja a expirat,
+                                            datele tale au fost șterse. În această situație, te rugăm să repeți
+                                            procesul de înregistrare. Dacă totuși nu primești acest email în cateva ore,
+                                            te rugăm să contactezi suportul.
+                                        </p>
 
                                         @if (session('resent'))
                                             <p style="color: #003100;"><strong>Un nou e-mail de verificare a fost trimis!</strong></p>
                                         @endif
 
                                         <p id="resendNormal">
-                                            Te rugăm să aștepți câteva minute pentru a primi e-mail-ul de activare.
-                                            Totodată, nu uita să verifici folderele Spam / Junk. În cazul în care
-                                            încă nu primești mesajul, poți solicita retrimiterea acestuia.
-
-                                            <br /><br />
-
-                                            <a href="{{ route('verification.resend') }}">
-                                                Retrimite mailul de activare
-                                            </a>
+                                            Nu ați primit un e-mail?
+                                            <a href="{{ route('verification.resend') }}">Retrimite mail-ul de activare</a>.
                                         </p>
                                     </div>
                                     <h3>Descarcă jocul</h3>
