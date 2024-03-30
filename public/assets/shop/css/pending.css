@@ -1,0 +1,413 @@
+.pendingItemsContent {
+    float: left;
+    width: 390px;
+    height: 372px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.pendingItems {
+    position:relative;
+    background:url(../img/pendingItems.jpg) no-repeat;
+    width:572px;
+    height:430px;
+    display:block;
+    padding-left:3px;
+    padding-top:7px;
+}
+
+.pendingItemsFlavorImg {
+    clear:both;
+    display:block;
+    position:absolute;
+    left:414px;
+    top:13px;
+    width: 135px;
+    height:300px;
+    padding:10px;
+    text-align:center;
+}
+
+
+#wideMainContent .pendingItems h1 {
+    float:left;
+    display:block;
+    background:url(../img/pendingItems-h1.png) no-repeat transparent;
+    width:385px;
+    height:24px;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+    margin-top:14px;
+    margin-bottom:4px;
+    margin-left:5px;
+    padding-left:8px;
+    line-height:23px;
+}
+
+
+.deliverItemBtn, deliverItemBtn:hover {
+    display: block;
+    background:url(../img/deliverItemBtn.png) no-repeat transparent;
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 23px;
+    text-decoration: none;
+    border: none;
+    font-family: Arial,sans-serif;
+    padding-bottom: 5px;
+}
+
+.deliverItemBtn:hover {
+    background:url(../img/deliverItemBtn-hover.png) no-repeat transparent;
+}
+
+.deliverItemBtn:disabled{
+    background:url(../img/deliverItemBtn-disabled.png) no-repeat transparent;
+    cursor: default;
+}
+
+.pendingItem h4 {
+    position:absolute;
+    top:8px;
+    left:80px;
+    display:block;
+    width:280px;
+    height:25px;
+    border:0 none;
+    color:#7B1300;
+    font-size:12px;
+    font-weight:bold;
+    line-height:16px;
+    letter-spacing:-0.05em;
+}
+
+.pendingItem div, .pendingItem p {
+    width:96px;
+}
+
+.pendingItem div a.buy, .pendingItem div a.detail {
+    margin:0 2px;
+}
+
+.pendingItem{
+    float:left;
+    position:relative;
+    display:block;
+    background:url(../img/pendingItem.png) no-repeat transparent;
+    margin-top:3px;
+    margin-left:5px;
+    width:390px;
+    height: 90px;
+}
+
+.pendingItem h4{
+    position:absolute;
+    top:8px;
+    left:80px;
+    display:block;
+    width:280px;
+    height:14px;
+    font-size:12px;
+    font-weight:bold;
+    color:#7B1300;
+    border:0 none;
+    line-height:16px;
+    margin-bottom: 5px;
+}
+.pendingItem .pendingItemImg img{
+    background: #f8f1de;
+    position:absolute;
+    top:11px;
+    left:10px;
+    border: 0 none;
+    display:block;
+    width:63px;
+    height:63px;
+}
+
+p.pendingItemDesc {
+    position:absolute;
+    top:28px;
+    left:80px;
+    display:block;
+    width:180px;
+    height: 46px;
+    overflow:auto;
+}
+
+.pendingItem .pendingItemBtns {
+    position:absolute;
+    bottom:10px;
+    right:30px;
+    width:100px;
+}
+
+.a .deliverItemBtn{
+    background: url("../img/deliverItemBtn.png") no-repeat scroll 0 0 transparent;
+}
+
+.pendingItem p.pendingItemDesc {
+    clear:none;
+    float:left;
+    width:178px;
+    text-align:left;
+    overflow:auto;
+    font-size: 10px;
+    color: #333333;
+}
+
+.pendingItemBtns .pendingItemsAmount{
+    width:35px;
+    margin-bottom:5px;
+    text-align:center;
+    float:left;
+}
+
+.pendingItemsServerRequired{
+    background: #fbe1d9;
+    border: 1px solid #cab596;
+    color: #921300;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 9px;
+
+    padding-bottom: 9px;
+}
+
+.pendingItemsDistributedInfo{
+    background: #d9fbd9;
+    border: 1px solid #cab596;
+    color: #0e863e;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.pending-overviewButtonArea{
+    clear: both;
+    float: right;
+    margin-top: -20px;
+    margin-right: 35px;
+}
+
+a.pending-gotoOverview, a.pending-gotoOverview:hover {
+    background:url(../img/pending-gotoOverview.png) no-repeat left 1px;
+    display:block;
+    height:30px;
+    line-height: 7px;
+    padding:10px 10px 10px 20px;
+    font-weight:bold;
+    vertical-align: middle;
+    color:#730709;
+    text-decoration:none;
+}
+
+a.pendingItemsFAQ
+{
+    background:url(../img/info.png) no-repeat;
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-right: -2px;
+    margin-top: 1px;
+}
+
+.pendingItemsHelp {
+    width:500px;
+}
+
+.pendingItemsHelp h2 {
+    margin:7px 0 5px;
+}
+
+.pendingItemsHelp h2 a {
+    text-decoration:none;
+}
+
+.pendingItemsHelp li
+{
+    margin-left: 60px;
+}
+
+.pendingItemsHelp .back
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#toResellingItems {
+    position:absolute;
+    top:328px;
+    right:8px;
+    width:97px;
+    height:47px;
+    padding:22px 57px 11px 4px;
+    background:url(../img/toResellingItems.png) no-repeat;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+}
+
+#toResellingItems:hover {
+    background-image:url(../img/toResellingItems-hover.png);
+}
+
+.saleableItems {
+    background-image:url(../img/saleableItems.jpg);
+}
+
+.saleableItems .pendingItemsContent {
+    height:296px;
+    margin-bottom:12px;
+}
+
+.pendingItemsContent p.msg {
+    background-color:#7b1300;
+    border-radius:12px;
+    color:white;
+    margin:10px auto;
+    padding:10px;
+    text-align:center;
+    width:300px;
+}
+
+.saleableItems .pendingItemBtns {
+    width:280px;
+    height:48px;
+}
+
+.saleableItems .itemValue {
+    clear:left;
+    display:block;
+    float:left;
+    margin:7px 0 0 28px;
+}
+
+.saleableItems .itemValue img {
+    width:12px;
+    height:12px;
+}
+
+.saleableItems .pendingItemBtns p {
+    width:auto;
+    padding-left:10px;
+}
+
+.saleableItems .pendingItemBtns p .pendingItemsAmount {
+    float:left;
+    text-align:center;
+    margin-bottom:0;
+    margin-right:5px;
+    font-size:12px;
+    width:50px;
+}
+
+.saleableItems .pendingItemBtns p .times, .saleableItems .pendingItemBtns p .unit, .saleableItems .pendingItemBtns p .equals, .saleableItems .pendingItemBtns p .total {
+    display:inline-block;
+    float:left;
+    margin:0 2px;
+}
+
+.saleableItems .deliverItemBtn {
+    margin:8px 10px 0 auto;
+}
+
+.resellingOptions {
+    clear:left;
+    overflow:auto;
+    height:64px;
+    padding:2px 4px 4px 5px;
+}
+
+.resellingOptions a, .resellingOptions img {
+    display:block;
+    float:left;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+    width:189px;
+}
+
+.resellingOptions a {
+    height:40px;
+}
+
+.resellingOptions .reroll {
+    margin:8px 7px 0 0;
+}
+
+.resellingOptions a.reroll {
+    background:url(../img/resellingOprions-reroll.png) no-repeat;
+    padding:8px 63px 4px 4px;
+    width:122px;
+}
+
+.resellingOptions a.reroll:hover {
+    background-image:url(../img/resellingOptions-reroll-hover.png);
+}
+
+.resellingOptions .sellall {
+    margin:0 8px 0 0;
+}
+
+.resellingOptions a.sellall {
+    background:url(../img/resellingOptions-sellall.png) no-repeat;
+    padding:16px 49px 4px 4px;
+    width:136px;
+}
+
+.resellingOptions a.sellall:hover {
+    background-image:url(../img/resellingOptions-sellall-hover.png);
+}
+
+.resellingOptions .countdown_reselling {
+    margin-top:2px;
+    padding-right:10px;
+    text-align:center;
+    float: left;
+    margin-left: 19px;
+}
+
+.countdown h5 {
+    margin-bottom:3px;
+}
+
+.saleableItems .pending-gotoOverview, .saleableItems .pending-gotoOverview:hover {
+    bottom:6px;
+    height:20px;
+    padding-bottom:0;
+    padding-right:0;
+    position:absolute;
+    right:45px;
+}
+
+.toOtherItems {
+    position:absolute;
+    top:2px;
+    right:32px;
+    text-decoration:none;
+    color:#730709;
+}
+
+.toOtherItems:hover {
+    text-decoration:underline;
+}

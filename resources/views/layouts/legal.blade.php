@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <title>Gameforge</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="shortcut icon" href="https://web.archive.org/web/20130716041220im_/http://www.gameforge.de/cms_images/favicon.ico"/>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
     <style type="text/css">
         <!--
         html, body, a {

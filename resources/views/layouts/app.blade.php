@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-    <title>{{ config('app.name', 'Metin2') }} - Acțiunea Orientală MMORPG</title>
+    <title>{{ config('app.name', 'Metin2') }} - {{ __('app/main.title') }}</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <meta name="description" content="MMORPG Metin2" />
@@ -110,9 +110,15 @@
                 @guest
                     <div class="header-box">
                         <div id="regBtn">
-                            <a id="toReg" href="{{ url('user/register') }}" title="Joacă gratis acum!">Descarcă gratis Metin2 acum!</a>
+                            <a id="toReg" href="{{ url('user/register') }}" title="{{ __('app/main.header.register_alt') }}">
+                                {{ __('app/main.header.register') }}
+                            </a>
                             <div id="regSteps">
-                                <a href="{{ url('user/register') }}" title="Joacă gratis acum!"><span>1. Înregistrare </span> » <span>2. Activează </span> » <span>3. Descarcă și joacă pe gratis</span></a>
+                                <a href="{{ url('user/register') }}" title="{{ __('app/main.header.register_alt') }}">
+                                    <span>{{ __('app/main.header.register_steps_1') }}</span> »
+                                    <span>{{ __('app/main.header.register_steps_2') }}</span> »
+                                    <span>{{ __('app/main.header.register_steps_3') }}</span>
+                                </a>
                             </div>
                         </div>
 
@@ -129,14 +135,26 @@
                     </div>
                 @else
                     <div id="userBox">
-                        <div class="welcome-text welcome-text-left">Bun venit, {{ Auth::user()->login }}</div>
-                        <div class="welcome-text welcome-text-right">Ai {{ Auth::user()->cash }} Monede Dragon</div>
+                        <div class="welcome-text welcome-text-left">{{ __('app/main.header.welcome', ['name' => Auth::user()->login]) }}</div>
+                        <div class="welcome-text welcome-text-right">{{ __('app/main.header.cash_balance', ['cash' => Auth::user()->cash]) }}</div>
                         <br class="clearfloat" />
                         <div class="header-box-nav-container">
                             <ul class="header-box-nav-login" style="position:absolute; margin-left:-0px;">
-                                <li class="stepdown"><a href="#" class="nav-box-btn nav-box-btn-1">Încarcă MD</a></li>
-                                <li class="stepdown"><a href="{{ url('user/administration') }}" class="nav-box-btn nav-box-btn-2">Datele utilizatorului</a></li>
-                                <li class="stepdown"><a href="{{ url('user/logout') }}" class="nav-box-btn nav-box-btn-4">Delogare</a></li>
+                                <li class="stepdown">
+                                    <a href="#" class="nav-box-btn nav-box-btn-1">
+                                        {{ __('app/main.header.nav.buy_coins') }}
+                                    </a>
+                                </li>
+                                <li class="stepdown">
+                                    <a href="{{ url('user/administration') }}" class="nav-box-btn nav-box-btn-2">
+                                        {{ __('app/main.header.nav.administration') }}
+                                    </a>
+                                </li>
+                                <li class="stepdown">
+                                    <a href="{{ url('user/logout') }}" class="nav-box-btn nav-box-btn-4">
+                                        {{ __('app/main.header.nav.logout') }}
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -154,15 +172,15 @@
                             <div class="modul-box-bg-bottom">
                                 <!-- main navigation -->
                                 <ul class="main-nav">
-                                    <li class="active"><a href="{{ url('/') }}">Start</a></li>
-                                    <li><a href="{{ url('main/thegame') }}">Jocul</a></li>
-                                    <li><a href="{{ url('main/media') }}">Galerie</a></li>
-                                    <li><a href="{{ url('main/howto') }}">Primii pași</a></li>
-                                    <li><a href="{{ url('main/community') }}">Comunitate</a></li>
-                                    <li><a href="{{ url('main/wiki') }}">Wiki</a></li>
-                                    <li><a href="{{ url('main/board') }}">Forum</a></li>
-                                    <li><a href="{{ url('main/download') }}">Descărcare</a></li>
-                                    <li><a href="{{ url('main/account') }}">Securitate</a></li>
+                                    <li class="active"><a href="{{ url('/') }}">{{ __('app/main.nav.home') }}</a></li>
+                                    <li><a href="{{ url('main/thegame') }}">{{ __('app/main.nav.thegame') }}</a></li>
+                                    <li><a href="{{ url('main/media') }}">{{ __('app/main.nav.media') }}</a></li>
+                                    <li><a href="{{ url('main/howto') }}">{{ __('app/main.nav.howto') }}</a></li>
+                                    <li><a href="{{ url('main/community') }}">{{ __('app/main.nav.community') }}</a></li>
+                                    <li><a href="{{ url('main/wiki') }}">{{ __('app/main.nav.wiki') }}</a></li>
+                                    <li><a href="{{ url('main/board') }}">{{ __('app/main.nav.board') }}</a></li>
+                                    <li><a href="{{ url('main/download') }}">{{ __('app/main.nav.download') }}</a></li>
+                                    <li><a href="{{ url('main/account') }}">{{ __('app/main.nav.account') }}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -178,26 +196,26 @@
                         <div class="modul-box">
                             <div class="modul-box-bg">
                                 <div class="modul-box-bg-bottom">
-                                    <h3>Logare</h3>
+                                    <h3>{{ __('app/main.login.title') }}</h3>
                                     <form action="{{ url('user/login') }}" method="post">
                                         @csrf
 
                                         <div class="form-login">
-                                            <label>Nume de utilizator</label>
+                                            <label>{{ __('app/main.login.username') }}</label>
                                             <div class="input">
                                                 <input type="text" name="login"><br>
                                             </div>
 
-                                            <label>Parola</label>
+                                            <label>{{ __('app/main.login.password') }}</label>
                                             <div class="input">
                                                 <input type="password" name="password"><br>
                                             </div>
                                             <div>
-                                                <input type="submit" class="button btn-login" value="Login">
+                                                <input type="submit" class="button btn-login" value="{{ __('app/main.login.btn_login') }}">
                                                 <p class="agbok">
-                                                    Intrând aici, accept <a href="{{ url('legal/terms') }}"><strong>Termenii și condițiile</strong></a>.
-                                                    <a href="{{ url('user/passwordlostrequest') }}" rel="nofollow" class="password">Ai uitat parola?</a>
-                                                    <a href="{{ url('user/resendack') }}" rel="nofollow" class="password">Retrimiterea emailului de înregistrare</a>
+                                                    {!! Str::inlineMarkdown(__('app/main.login.agree_terms', ['url' => url('legal/terms')])) !!}
+                                                    <a href="{{ url('user/passwordlostrequest') }}" rel="nofollow" class="password">{{ __('app/main.login.forgot_password') }}</a>
+                                                    <a href="{{ url('user/resendack') }}" rel="nofollow" class="password">{{ __('app/main.login.resend_ack') }}</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -211,7 +229,7 @@
                         <div class="modul-box modul-box-2">
                             <div class="modul-box-bg">
                                 <div class="modul-box-bg-bottom">
-                                    <h3>Descărcare</h3>
+                                    <h3>{{ __('app/main.nav.download') }}</h3>
                                     <a href="{{ url('main/download') }}" class="btn download-btn"></a>
                                 </div>
                             </div>
@@ -220,7 +238,7 @@
                         <div class="modul-box modul-box-2">
                             <div class="modul-box-bg">
                                 <div class="modul-box-bg-bottom">
-                                    <h3>Descărcare</h3>
+                                    <h3>{{ __('app/main.nav.download') }}</h3>
                                     <a href="{{ url('main/download') }}" class="btn download-btn"></a>
                                 </div>
                             </div>
@@ -231,8 +249,8 @@
                             <div class="modul-box modul-box-2">
                                 <div class="modul-box-bg">
                                     <div class="modul-box-bg-bottom">
-                                        <h3>Magazinul de item-uri</h3>
-                                        <a href="/is/" class="itemshop btn itemshop-btn iframe" title="Magazinul de item-uri"></a>
+                                        <h3>{{ __('app/main.nav.itemshop') }}</h3>
+                                        <a href="{{ url('shop') }}" class="itemshop btn itemshop-btn iframe" title="{{ __('app/main.nav.itemshop') }}"></a>
                                     </div>
                                 </div>
                             </div>
@@ -249,35 +267,35 @@
                                 </div>
                             </div>
                         </div>
-                    --}}
 
-                    <div class="boxes-middle"></div>
-                    <div class="modul-box modul-box-2">
-                        <div class="modul-box-bg">
-                            <div class="modul-box-bg-bottom">
-                                <h3>Competitia Cosplay</h3>
-                                <a id="contest" href="{{ url('contest') }}" class="btn cosplay-btn" title="Competitia Cosplay"></a>
+                        <div class="boxes-middle"></div>
+                        <div class="modul-box modul-box-2">
+                            <div class="modul-box-bg">
+                                <div class="modul-box-bg-bottom">
+                                    <h3>Competitia Cosplay</h3>
+                                    <a id="contest" href="{{ url('contest') }}" class="btn cosplay-btn" title="Competitia Cosplay"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    --}}
 
                     <div class="boxes-middle">&nbsp;</div>
 
                     <div class="modul-box modul-box-2">
                         <div class="modul-box-bg">
                             <div class="modul-box-bg-bottom">
-                                <h3>Clasament</h3>
-                                <h3 style="margin-top:0">Jucători</h3>
+                                <h3>{{ __('app/main.ranking.title') }}</h3>
+                                <h3 style="margin-top:0">{{ __('app/main.ranking.players') }}</h3>
                                 <div class="form-score">
                                     <div id="highscore-player">
                                         <ul><li><div class="empire2"><strong class="offset">1</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore" class="first">picyu3</a></div></li><li class="light"><div class="empire1"><strong class="offset">2</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">XXXMEN77</a></div></li><li><div class="empire1"><strong class="offset">3</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">Spydy</a></div></li><li class="light"><div class="empire3"><strong class="offset">4</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">beLeSe</a></div></li><li><div class="empire2"><strong class="offset">5</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">alexdenis</a></div></li><li class="light"><div class="empire3"><strong class="offset">6</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">Pixie03</a></div></li><li><div class="empire3"><strong class="offset">7</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">KingARAGORN</a></div></li><li class="light"><div class="empire1"><strong class="offset">8</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">SCORPIO1</a></div></li><li><div class="empire2"><strong class="offset">9</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">Parazltu</a></div></li><li class="light"><div class="empire2"><strong>10</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">Sayana</a></div></li></ul>                                                                            </div>
-                                    <a href="{{ url('main/highscore') }}" class="btn" rel="nofollow">Tot clasamentul</a>
+                                    <a href="{{ url('main/highscore') }}" class="btn" rel="nofollow">{{ __('app/main.ranking.btn_highscore') }}</a>
                                 </div>
-                                <h3 style="margin-top:0">Bresle</h3>
+                                <h3 style="margin-top:0">{{ __('app/main.ranking.guilds') }}</h3>
                                 <div class="form-score">
                                     <div id="highscore-guild">
                                         <ul><li><div class="empire2"><strong class="offset">1</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore" class="first">InStyle</a></div></li><li class="light"><div class="empire3"><strong class="offset">2</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">ISENGARD</a></div></li><li><div class="empire2"><strong class="offset">3</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">TheRulers</a></div></li><li class="light"><div class="empire2"><strong class="offset">4</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">A55A55INII</a></div></li><li><div class="empire3"><strong class="offset">5</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">TheElfs</a></div></li><li class="light"><div class="empire3"><strong class="offset">6</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">MAESTRIIpur</a></div></li><li><div class="empire2"><strong class="offset">7</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">NeBuNaTiCii</a></div></li><li class="light"><div class="empire1"><strong class="offset">8</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">TheGoDs</a></div></li><li><div class="empire2"><strong class="offset">9</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">7UP</a></div></li><li class="light"><div class="empire2"><strong>10</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">ReVoLuTioN</a></div></li></ul>                                                                            </div>
-                                    <a href="{{ url('main/guildhighscore') }}" class="btn" rel="nofollow">Tot clasamentul</a>
+                                    <a href="{{ url('main/guildhighscore') }}" class="btn" rel="nofollow">{{ __('app/main.ranking.btn_highscore') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -301,9 +319,9 @@
                 <li class="first">
                     © 2006 YMIR Entertainment Co., Ltd., Published by Gameforge 4D GmbH. All rights reserved. All trademarks are the property of their respective owners.
                 </li>
-                <li class="impressum"><a href="{{ url('legal/imprint') }}" target="_blank" rel="nofollow">Imprint</a></li>
-                <li><a href="{{ url('legal/terms') }}" target="_blank" rel="nofollow">Condiţiile Generale de Utilizare</a></li>
-                <li><a href="{{ url('legal/privacy') }}" target="_blank" rel="nofollow">Politica de confidențialitate</a></li>
+                <li class="impressum"><a href="{{ url('legal/imprint') }}" target="_blank" rel="nofollow">{{ __('app/main.footer.imprint') }}</a></li>
+                <li><a href="{{ url('legal/terms') }}" target="_blank" rel="nofollow">{{ __('app/main.footer.terms') }}</a></li>
+                <li><a href="{{ url('legal/privacy') }}" target="_blank" rel="nofollow">{{ __('app/main.footer.privacy') }}</a></li>
             </ul>
         </div>
     </div>

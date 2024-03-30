@@ -7,14 +7,18 @@
             <div class="two-boxes-top">
                 <div class="two-boxes-bottom">
                     <div class="box">
-                        <h2>Metin2</h2>
-                        <div class="body"><p>Bine ai venit la Metin2!</p>
-                            <p>Paseste intr-o lume fantastica cu orase pitoresti si peisaje impresionante.</p><p>
-                            </p><p>Te asteapta lupte primejdioase!</p><p>
-                            </p><p>Devino maestru in artele martiale si protejeaza-ti tara de Forta neagra a Pietrelor Metin.</p></div>
+                        <h2>{{ __('app/content/home.welcome.title') }}</h2>
+                        <div class="body">
+                            <p>{{ __('app/content/home.welcome.subtext_1') }}</p>
+                            <p>{{ __('app/content/home.welcome.subtext_2') }}</p>
+                            <p></p>
+                            <p>{{ __('app/content/home.welcome.subtext_3') }}</p>
+                            <p></p>
+                            <p>{{ __('app/content/home.welcome.subtext_4') }}</p>
+                        </div>
                     </div>
                     <div class="box box-right">
-                        <h2>Trailer</h2>
+                        <h2>{{ __('app/content/home.trailer.title') }}</h2>
                         <div class="video">
                             <object wmode="opaque" width="221" height="131">
                                 <param name="wmode" value="opaque">
@@ -34,10 +38,13 @@
                     <div class="coda-slider-wrapper">
                         <div class="coda-slider preload" id="coda-slider-1">
                             <div class="panel">
-                                <a href="{{ url('teaser/grotto') }}" target="_blank"><img src="{{ asset('assets/main/img/banner/ro/gdvteaser.jpg') }}" width="480px" /></a>
+                                <a href="{{ url('teaser/grotto') }}" target="_blank"><img src="{{ asset('assets/main/img/banner/en/gdvteaser.jpg') }}" width="480px" /></a>
                             </div>
                             <div class="panel">
-                                <a href="{{ url('teaser/dc') }}" target="_blank"><img src="{{ asset('assets/main/img/banner/ro/dcbanner.jpg') }}" width="480px" /></a>
+                                <a href="{{ url('teaser/grotto') }}" target="_blank"><img src="{{ asset('assets/main/img/banner/en/gdvteaser-2.jpg') }}" width="480px" /></a>
+                            </div>
+                            <div class="panel">
+                                <a href="{{ url('teaser/dc') }}" target="_blank"><img src="{{ asset('assets/main/img/banner/dcbanner.jpg') }}" width="480px" /></a>
                             </div>
                         </div>
                     </div>
@@ -50,19 +57,19 @@
         <div class="content">
             <div class="content-bg">
                 <div class="content-bg-bottom">
-                    <h2>Screenshots</h2>
+                    <h2>{{ __('app/content/home.screenshots.title') }}</h2>
                     <div id="screenshots">
-                        <a class="first" title="Captura 1" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot01.jpg') }}">
-                            <img alt="Captura 1" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb01.jpg') }}" width="100" height="75" />
+                        <a class="first" title="{{ __('app/content/home.screenshots.capture') }} 1" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot01.jpg') }}">
+                            <img alt="{{ __('app/content/home.screenshots.capture') }} 1" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb01.jpg') }}" width="100" height="75" />
                         </a>
-                        <a class="first" title="Captura 2" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot02.jpg') }}">
-                            <img alt="Captura 2" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb02.jpg') }}" width="100" height="75" />
+                        <a class="first" title="{{ __('app/content/home.screenshots.capture') }} 2" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot02.jpg') }}">
+                            <img alt="{{ __('app/content/home.screenshots.capture') }} 2" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb02.jpg') }}" width="100" height="75" />
                         </a>
-                        <a class="first" title="Captura 3" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot03.jpg') }}">
-                            <img alt="Captura 3" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb03.jpg') }}" width="100" height="75" />
+                        <a class="first" title="{{ __('app/content/home.screenshots.capture') }} 3" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot03.jpg') }}">
+                            <img alt="{{ __('app/content/home.screenshots.capture') }} 3" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb03.jpg') }}" width="100" height="75" />
                         </a>
-                        <a class="first" title="Captura 4" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot04.jpg') }}">
-                            <img alt="Captura 4" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb04.jpg') }}" width="100" height="75" />
+                        <a class="first" title="{{ __('app/content/home.screenshots.capture') }} 4" href="{{ asset('assets/main/img/screenshots/mmorpg-fantasy-metin2-screenshot04.jpg') }}">
+                            <img alt="{{ __('app/content/home.screenshots.capture') }} 4" src="{{ asset('assets/main/img/screenshots/thumbs/mmorpg-fantasy-metin2-thumb04.jpg') }}" width="100" height="75" />
                         </a>
                     </div>
                     <br class="clearfloat" />
@@ -75,7 +82,7 @@
         <div class="content">
             <div class="content-bg">
                 <div class="content-bg-bottom">
-                    <h2>Noutăți</h2>
+                    <h2>{{ __('app/content/home.news.title') }}</h2>
                     <div class="inner-content" id="news_compact">
                         <ul>
                             <li>
@@ -94,7 +101,7 @@
                                 <p>Draga comunitate<br>Binevointa Zeului Dragon radiaza peste cele trei regate!<br>Profita de aceasta oportunitate si procura-ti cu 15% mai multe Monede Dragon azi! 14.06.2013 incepand cu ora 12;00 pana <a href="{{ url('main/news') }}" class="news_link">[...]</a></p>
                             </li>
                         </ul>
-                        <a href="{{ url('main/news') }}" class="btn">Mergi la noutăți</a>
+                        <a href="{{ url('main/news') }}" class="btn">{{ __('app/content/home.news.button_go_to_news') }}</a>
                         <br class="clearfloat">
                     </div>
                 </div>
@@ -106,29 +113,17 @@
         <div class="content content-last">
             <div class="content-bg">
                 <div class="content-bg-bottom">
-                    <h2>Metin2 - Actiunea Orientala MMORPG</h2>
+                    <h2>{{ __('app/content/home.main.title') }}</h2>
                     <div class="inner-content">
-                        <p>In vremuri stravechi rasuflarea Zeului Dragon veghea asupra regatelor Shinsoo, Chunjo
-                            si  Jinno. Dar aceasta <strong>lume fascinanta a magiei</strong> se afla
-                            in fata unui pericol imens: Impactul <strong>Pietrelor Metin</strong> care au cauzat haos
-                            si distrugere pe continent si intre locuitori. Au izbucnit razboaie intre continente, animalele salbatice s-au transformat
-                            in bestii terifiante. Lupta impotriva <strong>influentei negative a Pietrelor Metin</strong>
-                            in postura unui <strong>aliat al Zeului Dragon</strong>. <strong>Aduna-ti toate puterile
-                                si armele</strong> pentru a salva regatul.</p>
+                        <p>{!! Str::inlineMarkdown(__('app/content/home.main.subtext')) !!}</p>
 
-                        <h3>Caracteristici</h3>
+                        <h3>{{ __('app/content/home.main.characteristics') }}</h3>
                         <ul>
-                            <li>Un continent, patruns de violenta, unde razboinici cu totul
-                                si cu totul deosebiti, trebuie sa-si dovedeasca curajul
-                                in nenumarate aventuri.</li>
-                            <li>Trei regate care se dusmanesc intre ele, si carora, le poti pune la dispozitie forta ta
-                                si curajul tau.</li>
-                            <li>Poarta-ti luptele pe jos sau calare, si nu numai pentru a obtine putere
-                                si proprietati, ci si din onoare!</li>
-                            <li>Devino stapanul unei cetati, si, impreuna cu obstea ta, construieste propria fortareata!</li>
-
-                            <li>Invata numeroasele stiluri de lupta si insuseste-ti, prin antrenament special, tot felul de abilitati, pentru a-ti
-                                infrange inamicul!</li>
+                            <li>{{ __('app/content/home.main.subtext_1') }}</li>
+                            <li>{{ __('app/content/home.main.subtext_2') }}</li>
+                            <li>{{ __('app/content/home.main.subtext_3') }}</li>
+                            <li>{{ __('app/content/home.main.subtext_4') }}</li>
+                            <li>{{ __('app/content/home.main.subtext_5') }}</li>
                         </ul>
                     </div>
                 </div>
