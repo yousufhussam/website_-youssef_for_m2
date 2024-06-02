@@ -96,7 +96,7 @@
         })
     </script>
 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -250,7 +250,7 @@
                                 <div class="modul-box-bg">
                                     <div class="modul-box-bg-bottom">
                                         <h3>{{ __('app/main.nav.itemshop') }}</h3>
-                                        <a href="{{ url('shop') }}" class="itemshop btn itemshop-btn iframe" title="{{ __('app/main.nav.itemshop') }}"></a>
+                                        <a href="{{ route('mall') }}" class="itemshop btn itemshop-btn iframe" title="{{ __('app/main.nav.itemshop') }}"></a>
                                     </div>
                                 </div>
                             </div>

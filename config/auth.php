@@ -61,8 +61,7 @@ return [
 
     'providers' => [
         'users' => [
-            // 'driver' => 'eloquent',
-            'driver' => 'legacy',
+            'driver' => 'eloquent', // use "legacy" for MySQL password hashing
             'model' => App\Models\Account::class,
         ],
     ],

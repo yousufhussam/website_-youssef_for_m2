@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::connection('account')->create('account', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('login', 30)->default('')->unique('login');
-            $table->string('password', 45)->default('');
+            $table->text('password')->default('');
             $table->string('social_id', 13)->default('')->index('social_id');
             $table->string('email', 64)->default('');
             $table->dateTime('create_time')->default('0000-00-00 00:00:00');

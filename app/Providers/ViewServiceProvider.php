@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\View\Composers\ShopComposer;
+use App\View\Composers\MallComposer;
 use Illuminate\Support\Facades;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,6 +21,6 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Facades\View::composer('layouts.shop', ShopComposer::class);
+        Facades\View::composer('layouts.mall', MallComposer::class);
     }
 }

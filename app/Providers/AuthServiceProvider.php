@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
 use App\Hashing\MySQLHasher;
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Foundation\Application;

@@ -3,8 +3,9 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerificationController;
-use App\Http\Controllers\Shop\CategoryController;
-use App\Http\Controllers\Shop\ItemController;
+use App\Http\Controllers\Mall\CategoryController;
+use App\Http\Controllers\Mall\HomeController;
+use App\Http\Controllers\Mall\ItemController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -100,17 +101,19 @@ Route::prefix('legal')->group(function() {
     Route::get('/imprint', fn () => view('legal/imprint'));
 });
 
-Route::prefix('shop')->middleware(['auth', 'verified'])->group(function() {
-    Route::get('/', fn () => view('shop/home'));
+Route::prefix('mall')->middleware(['auth', 'verified'])->group(function() {
+    Route::get('/', [HomeController::class, 'home'])->name('mall');
 
-    Route::get('userdata', fn () => view('shop/userdata', ['storageCount' => 10, 'boughtCount' => 0]));
+    Route::get('userdata', fn () => view('mall/userdata', ['storageCount' => 10, 'boughtCount' => 0]));
 
-    Route::get('category/{id}', [CategoryController::class, 'show'])->name('shop.category');
-    Route::get('items/{id}', [ItemController::class, 'show'])->name('shop.item');
-    Route::get('items/{id}/buy', [ItemController::class, 'show'])->name('shop.item.buy');
+    Route::get('category/{id}', [CategoryController::class, 'show'])->name('mall.category');
+    Route::get('items/{id}', [ItemController::class, 'show'])->name('mall.item');
+    Route::get('items/{id}/image', [ItemController::class, 'generateImage'])->name('mall.item.image');
+    Route::get('items/{id}/image-large', [ItemController::class, 'generateLargeImage'])->name('mall.item.image-large');
+    Route::get('items/{id}/buy', [ItemController::class, 'show'])->name('mall.item.buy');
 
     Route::fallback(function() {
-        return response()->view('errors/shop-notfound', [], 404);
+        return response()->view('errors/mall-notfound', [], 404);
     });
 });
 
