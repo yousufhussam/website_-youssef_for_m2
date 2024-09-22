@@ -1,0 +1,18 @@
+﻿#caution_ie {
+	display:block;
+	border-bottom:3px solid #67919f;
+	padding:5px 0;
+	position:absolute;
+	text-align:center;
+}
+
+#caution_ie a {color:#E8BF47;}
+
+.play {
+	position:relative;
+	top:60px;
+}
+
+.images, .footer_background {
+  behavior: url(iepngfix.htc);
+}

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::connection('player')->create('item_proto', function (Blueprint $table) {
             $table->unsignedInteger('vnum')->default(0)->primary();
-            $table->binary('name')->default('Noname');
-            $table->binary('locale_name')->default('Noname');
+            $table->binary('name', length: 24)->default('Noname');
+            $table->binary('locale_name', length: 24)->default('Noname');
             $table->tinyInteger('type')->default(0);
             $table->tinyInteger('subtype')->default(0);
             $table->tinyInteger('weight')->nullable()->default(0);

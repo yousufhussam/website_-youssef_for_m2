@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -15,7 +16,7 @@ return new class extends Migration
     {
         Schema::connection('player')->create('skill_proto', function (Blueprint $table) {
             $table->integer('dwVnum')->default(0)->primary();
-            $table->string('szName', 32)->default('');
+            $table->binary('szName', 32)->default('');
             $table->tinyInteger('bType')->default(0);
             $table->tinyInteger('bLevelStep')->default(0);
             $table->tinyInteger('bMaxLevel')->default(0);
@@ -46,6 +47,14 @@ return new class extends Migration
             $table->integer('dwTargetRange')->default(1000);
             $table->unsignedInteger('dwSplashRange')->default(0);
         });
+
+        // Populate the table data
+        $data = File::json(database_path('data/skill_proto.json'));
+        foreach ($data as $key => &$value) {
+            // Decode szName from the base64 encoding
+            $value['szName'] = base64_decode($value['szName']);
+        }
+        \App\Models\Game\Player\SkillProto::upsert($data, ['dwVnum']);
     }
 
     /**

@@ -133,6 +133,44 @@
         <div class="shadow"> </div>
     </div>
 
+    {{-- Include Ruffle and configure it in order to emulate Adobe Flash for the trailer --}}
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+        window.RufflePlayer.config = {
+            autoplay: "on",
+            unmuteOverlay: "hidden",
+            contextMenu: "off",
+            splashScreen: false,
+        };
+
+        {{-- Override fetch of hardcoded URL in .swf file; https://github.com/ruffle-rs/ruffle/issues/1486 --}}
+        (function (originalFetch) {
+            const changeUrl = function (url) {
+                if (url === "http://dlcl.gfsrv.net/metin2/img/metin2_movie2.flv")
+                    url = "{{ asset('assets/main/img/movies/metin2_movie2.flv') }}";
+
+                return url;
+            };
+            window.fetch = function () {
+                let a = Array.from(arguments);
+                if (typeof(a[0]) === "string") {
+                    //Argument to fetch() call is a raw URL string
+                    a[0] = changeUrl(a[0]);
+                } else if (a[0] && typeof(a[0].url) === "string") {
+                    //Argument to fetch() call is a request object
+                    //HACK: This replaces the entire request object with an URL
+                    //      because the Request.url property is readonly.
+                    //      This is appropriate for GET requests only.
+                    const changedUrl = changeUrl(a[0].url);
+                    if (changedUrl !== a[0].url) {
+                        a[0] = changedUrl;
+                    }
+                }
+                return originalFetch.apply(window, a);
+            };
+        })(window.fetch);
+    </script>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $("#screenshots a").overlay({

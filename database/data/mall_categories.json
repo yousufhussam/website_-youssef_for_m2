@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "New Items"
+  },
+  {
+    "id": 2,
+    "name": "Modification&New Start"
+  },
+  {
+    "id": 3,
+    "name": "Contact & Trade"
+  },
+  {
+    "id": 4,
+    "name": "Regeneration&Strength"
+  },
+  {
+    "id": 5,
+    "name": "Fight and Aptitude"
+  },
+  {
+    "id": 6,
+    "name": "Wedding and Marriage"
+  },
+  {
+    "id": 7,
+    "name": "Refinement"
+  },
+  {
+    "id": 8,
+    "name": "Special Items"
+  },
+  {
+    "id": 9,
+    "name": "Hairstyles"
+  },
+  {
+    "id": 10,
+    "name": "Hairstyles of Attack"
+  },
+  {
+    "id": 11,
+    "name": "Economy Packages"
+  },
+  {
+    "id": 12,
+    "name": "Dragon Mark Items"
+  }
+]

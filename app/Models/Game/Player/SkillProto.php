@@ -1,13 +1,18 @@
 <?php
 
-namespace App\Models\Game;
+namespace App\Models\Game\Player;
 
-use App\Models\Mall\MallItem;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class ItemProto extends Model
+class SkillProto extends Model
 {
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
     /**
      * The connection name for the model.
      *
@@ -20,14 +25,14 @@ class ItemProto extends Model
      *
      * @var string
      */
-    protected $table = 'item_proto';
+    protected $table = 'skill_proto';
 
     /**
      * The primary key for the model.
      *
      * @var string
      */
-    protected $primaryKey = 'vnum';
+    protected $primaryKey = 'dwVnum';
 
     /**
      * The attributes that are mass assignable.
@@ -35,7 +40,7 @@ class ItemProto extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+
     ];
 
     /**

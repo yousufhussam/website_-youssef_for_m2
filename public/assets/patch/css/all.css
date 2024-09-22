@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+	background:#000 url(../img/accept-bg.jpg) no-repeat center 0;
+	color:#C2C3CF;
+	font-size:12px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin:0 auto;
+	width:605px;
+}
+
+
+#acceptWrapper {
+	margin:0 auto;
+	width:600px;
+}
+
+#content {
+	padding:20px 0 0 165px;
+	width:395px;
+}
+
+h1 {
+	font-size:19px;
+	color:#95bcd8;
+	margin:0 0 15px 0;
+}
+
+p {
+	margin:0 0 20px 0;
+	line-height:normal;
+}
+strong {
+	color:#b9dbac;
+	font-size:13px;
+	font-weight:bold;
+}
+a {
+	color:#b9dbac;
+	font-size:12px;
+}

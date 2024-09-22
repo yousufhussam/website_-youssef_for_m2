@@ -1,0 +1,157 @@
+[
+  {
+    "vnum": 1,
+    "name": "Weapon Shop Dealer",
+    "npc_vnum": 9001
+  },
+  {
+    "vnum": 2,
+    "name": "Fisherman",
+    "npc_vnum": 9009
+  },
+  {
+    "vnum": 3,
+    "name": "General Store Saleswoman",
+    "npc_vnum": 9003
+  },
+  {
+    "vnum": 4,
+    "name": "Armour Shop Dealer",
+    "npc_vnum": 9002
+  },
+  {
+    "vnum": 5,
+    "name": "Weapon Shop Dealer 2",
+    "npc_vnum": 9007
+  },
+  {
+    "vnum": 6,
+    "name": "Armour Shop Dealer 2",
+    "npc_vnum": 9008
+  },
+  {
+    "vnum": 7,
+    "name": "gold_bar_shop",
+    "npc_vnum": 9005
+  },
+  {
+    "vnum": 8,
+    "name": "firework_shop",
+    "npc_vnum": 9004
+  },
+  {
+    "vnum": 9,
+    "name": "Peddler",
+    "npc_vnum": 20042
+  },
+  {
+    "vnum": 10,
+    "name": "pick_shop",
+    "npc_vnum": 20015
+  },
+  {
+    "vnum": 11,
+    "name": "Stable Boy",
+    "npc_vnum": 20349
+  },
+  {
+    "vnum": 1001,
+    "name": "all_sword",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1002,
+    "name": "all_dualhand_sword",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1003,
+    "name": "all_bow",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1004,
+    "name": "all_twohand_sword",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1005,
+    "name": "all_bell",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1006,
+    "name": "all_fan",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1007,
+    "name": "all_warrior_armour",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1008,
+    "name": "all_assassin_armour",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1009,
+    "name": "all_sura_armour",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1010,
+    "name": "all_shaman_armour",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1011,
+    "name": "all_warrior_helmet",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1012,
+    "name": "all_assassin_helmet",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1013,
+    "name": "all_sura_helmet",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1014,
+    "name": "all_shaman_helmet",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1015,
+    "name": "all_shield",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1016,
+    "name": "all_bracelet",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1017,
+    "name": "all_shoe",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1018,
+    "name": "all_necklace",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 1019,
+    "name": "all_ring",
+    "npc_vnum": 0
+  },
+  {
+    "vnum": 13,
+    "name": "Alchemist",
+    "npc_vnum": 20001
+  }
+]

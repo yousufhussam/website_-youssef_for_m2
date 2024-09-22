@@ -3,9 +3,12 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\Mall\AuthController;
 use App\Http\Controllers\Mall\CategoryController;
 use App\Http\Controllers\Mall\HomeController;
 use App\Http\Controllers\Mall\ItemController;
+use App\Http\Controllers\Patch\PatchConfigController;
+use App\Http\Controllers\Patch\PatchLandingController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -101,6 +104,7 @@ Route::prefix('legal')->group(function() {
     Route::get('/imprint', fn () => view('legal/imprint'));
 });
 
+Route::get('mall/auth', [AuthController::class, 'auth'])->name('mall.auth');
 Route::prefix('mall')->middleware(['auth', 'verified'])->group(function() {
     Route::get('/', [HomeController::class, 'home'])->name('mall');
 
@@ -114,6 +118,26 @@ Route::prefix('mall')->middleware(['auth', 'verified'])->group(function() {
 
     Route::fallback(function() {
         return response()->view('errors/mall-notfound', [], 404);
+    });
+});
+
+Route::prefix('patch')->group(function() {
+    Route::get('/', [PatchLandingController::class, 'home'])->name('patch.landing');
+    Route::get('notice', [PatchLandingController::class, 'notice'])->name('patch.notice');
+    Route::get('config', [PatchConfigController::class, 'config'])->name('patch.config');
+});
+
+Route::prefix('teaser')->group(function() {
+    Route::prefix('grotto')->group(function() {
+        Route::get('/', fn () => view('teaser/grotto/home'))->name('teaser.grotto.home');
+        Route::get('news', fn () => view('teaser/grotto/news'))->name('teaser.grotto.news');
+        Route::get('gallery', fn () => view('teaser/grotto/gallery'))->name('teaser.grotto.gallery');
+    });
+
+    Route::prefix('dc')->group(function() {
+        Route::get('/', fn () => view('teaser/dc/home'))->name('teaser.dc.home');
+        Route::get('news', fn () => view('teaser/dc/news'))->name('teaser.dc.news');
+        Route::get('media', fn () => view('teaser/dc/media'))->name('teaser.dc.media');
     });
 });
 

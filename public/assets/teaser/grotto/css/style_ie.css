@@ -1,0 +1,15 @@
+﻿.content_background {
+	background:url(../img/bg_content.gif) repeat-y 1px 0;
+	width:707px;
+}
+
+.play {
+	position:relative;
+	top:60px;
+}
+
+.footer_background {
+	background:url(../img/bg_footer.png) no-repeat 0 bottom;
+	margin:0 auto;
+	width:1000px;
+}

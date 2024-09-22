@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -30,6 +31,10 @@ return new class extends Migration
             $table->unsignedInteger('result_vnum')->default(0);
             $table->smallInteger('prob')->default(100);
         });
+
+        // Populate the table data
+        $data = File::json(database_path('data/refine_proto.json'));
+        \App\Models\Game\Player\RefineProto::upsert($data, ['id']);
     }
 
     /**

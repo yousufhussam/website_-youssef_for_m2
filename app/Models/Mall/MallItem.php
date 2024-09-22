@@ -3,13 +3,20 @@
 namespace App\Models\Mall;
 
 use App\Models\Enums\MallItemPricingEnum;
-use App\Models\Game\ItemProto;
+use App\Models\Game\Player\ItemProto;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Facades\Auth;
 
 class MallItem extends Model
 {
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
     /**
      * The connection name for the model.
      *

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -25,6 +26,10 @@ return new class extends Migration
             $table->unsignedInteger('price')->default(0);
             $table->enum('enable', ['YES', 'NO'])->default('NO');
         });
+
+        // Populate the table data
+        $data = File::json(database_path('data/land.json'));
+        \App\Models\Game\Player\Land::upsert($data, ['id']);
     }
 
     /**

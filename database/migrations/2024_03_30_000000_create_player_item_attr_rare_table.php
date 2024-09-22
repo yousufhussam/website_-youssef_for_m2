@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -30,6 +31,10 @@ return new class extends Migration
             $table->string('shield', 100)->default('');
             $table->string('ear', 100)->default('');
         });
+
+        // Populate the table data
+        $data = File::json(database_path('data/item_attr_rare.json'));
+        \App\Models\Game\Player\ItemAttrRare::upsert($data, ['apply']);
     }
 
     /**

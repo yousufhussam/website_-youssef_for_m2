@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -18,6 +19,10 @@ return new class extends Migration
             $table->string('name', 32)->default('Noname');
             $table->smallInteger('npc_vnum')->default(0);
         });
+
+        // Populate the table data
+        $data = File::json(database_path('data/shop.json'));
+        \App\Models\Game\Player\Shop::upsert($data, ['vnum']);
     }
 
     /**

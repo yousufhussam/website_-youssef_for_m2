@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -20,6 +21,10 @@ return new class extends Migration
 
             $table->unique(['shop_vnum', 'item_vnum', 'count'], 'vnum_unique');
         });
+
+        // Populate the table data
+        $data = File::json(database_path('data/shop_item.json'));
+        \App\Models\Game\Player\ShopItem::upsert($data, ['shop_vnum', 'item_vnum']);
     }
 
     /**

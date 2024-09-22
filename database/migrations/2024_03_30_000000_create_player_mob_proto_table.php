@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::connection('player')->create('mob_proto', function (Blueprint $table) {
             $table->integer('vnum')->default(0)->primary();
-            $table->string('name', 24)->default('Noname');
-            $table->binary('locale_name')->default('Noname                  ');
+            $table->binary('name', length: 24)->default('Noname');
+            $table->binary('locale_name', length: 24)->default('Noname');
             $table->tinyInteger('rank')->default(0);
             $table->tinyInteger('type')->default(0);
             $table->boolean('battle_type')->default(false);
