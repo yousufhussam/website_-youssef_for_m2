@@ -43,7 +43,7 @@ RUN docker-php-ext-install -j$(nproc) mysqli pdo pdo_mysql
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
 
 # Configure Apache2
-COPY deploy/apache/metin2.conf /etc/apache2/sites-available/metin2.conf
+COPY docker/apache/metin2.conf /etc/apache2/sites-available/metin2.conf
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     a2enmod rewrite && \
     a2enmod remoteip && \
@@ -51,8 +51,8 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     a2ensite metin2
 
 # Copy the configuration files
-COPY deploy/php/*.ini /usr/local/etc/php/conf.d/
-COPY deploy/php/prod/*.ini /usr/local/etc/php/conf.d/
+COPY docker/php/*.ini /usr/local/etc/php/conf.d/
+COPY docker/php/prod/*.ini /usr/local/etc/php/conf.d/
 
 # Copy the source code
 RUN mkdir /app
@@ -64,11 +64,11 @@ RUN composer install --no-ansi --no-interaction --no-plugins --no-progress --no-
 RUN npm ci && npm run build
 
 # Make the init script executable
-RUN chmod +x /app/deploy/init.sh
+RUN chmod +x /app/docker/init.sh
 
 # Expose the API on port 80
 EXPOSE 80
 
 # Run supervisord for handling the container services
 ENTRYPOINT ["/bin/sh", "-c"]
-CMD ["/app/deploy/init.sh"]
+CMD ["/app/docker/init.sh"]
