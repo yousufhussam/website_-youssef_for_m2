@@ -146,7 +146,7 @@
         {{-- Override fetch of hardcoded URL in .swf file; https://github.com/ruffle-rs/ruffle/issues/1486 --}}
         (function (originalFetch) {
             const changeUrl = function (url) {
-                if (url === "http://dlcl.gfsrv.net/metin2/img/metin2_movie2.flv")
+                if (url.includes("/metin2/img/metin2_movie2.flv"))
                     url = "{{ asset('assets/main/img/movies/metin2_movie2.flv') }}";
 
                 return url;
