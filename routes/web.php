@@ -3,12 +3,15 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\Highscore\GuildHighscoreController;
+use App\Http\Controllers\Highscore\HighscoreController;
 use App\Http\Controllers\Mall\AuthController;
 use App\Http\Controllers\Mall\CategoryController;
 use App\Http\Controllers\Mall\HomeController;
 use App\Http\Controllers\Mall\ItemController;
 use App\Http\Controllers\Patch\PatchConfigController;
 use App\Http\Controllers\Patch\PatchLandingController;
+use App\Http\Controllers\User\CharactersController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -68,6 +71,7 @@ Route::prefix('user')->group(function() {
     # Registration
     Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->middleware('guest');
     Route::post('/register', [RegisterController::class, 'register'])->middleware('guest');
+    Route::post('/register-from-header', [RegisterController::class, 'registerFromHeader'])->middleware('guest');
     Route::get('/verification/notice', [VerificationController::class, 'show'])->name('verification.notice');
     Route::get('/verification/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
     Route::get('/verification/resend', [VerificationController::class, 'resend'])->name('verification.resend');
@@ -79,14 +83,16 @@ Route::prefix('user')->group(function() {
     });
     Route::get('/logout', [LoginController::class, 'logout']);
 
-    Route::get('/passwordlostrequest', fn () => view('user/passwordlostrequest'));
-    Route::get('/passwordlost/{username}/{hash}', fn ($username, $hash) => view('user/passwordlost-expired'));
+    Route::get('/passwordlostrequest', fn () => view('user/password-lost/password-lost-request'));
+    Route::get('/passwordlost/{username}/{hash}', fn ($username, $hash) => view('user/password-lost/password-lost-expired'));
 
     # User administration
     Route::middleware(['auth', 'verified'])->group(function() {
         Route::get('/administration', fn () => view('user/administration'));
 
-        Route::get('/characters', fn () => view('user/characters'));
+        Route::get('/characters', [CharactersController::class, 'show']);
+
+        Route::get('/passwordchangerequest', fn () => view('user/password-change/password-change-request'));
 
         Route::get('/emailchangeaccept/{username}/{hash}', fn ($username, $hash) => view('user/emailchangeaccept'));
         Route::get('/emailchangecancel/{username}/{hash}', fn ($username, $hash) => view('user/emailchangecancel'));
@@ -95,7 +101,7 @@ Route::prefix('user')->group(function() {
 
         Route::get('/generatecode/{userId}/{hash}', fn ($userId, $hash) => view('user/generatecode'));
 
-        Route::get('/lostpasswordcode/{userId}/{hash}', fn ($userId, $hash) => view('user/lostpasswordcode'));
+        Route::get('/lostpasswordcode/{userId}/{hash}', fn ($userId, $hash) => view('user/password-lost/password-lost-code'));
     });
 });
 

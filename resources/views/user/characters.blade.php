@@ -8,7 +8,7 @@
                 <div class="content-bg-bottom">
                     <!-- character list -->
                     <div class="char-list-content">
-                        <h2>Lista caracterelor</h2>
+                        <h2>{{ __('app/user/characters.title') }}</h2>
 
                         {{--
                             Pagination reverse-engineering (incomplete)
@@ -30,51 +30,50 @@
                             </div>
                         --}}
 
-
-                        <div class="charList">
-                            <div class="charimg" rowspan="3">
-                                <img src="{{ asset('assets/main/img/characters/0.png') }}" width="44" height="40" />
-                            </div>
-                            <div class="charuser">
-                                <div class="charname">gigelfronescu</div>
-                                <div class="charrank">
-                                    <span class="charlabel">Rang</span> <span class="chardata">#123</span>
+                        @foreach ($characters as $character)
+                            <div class="charList">
+                                <div class="charimg" rowspan="3">
+                                    <img src="{{ asset("assets/main/img/characters/{$character->job->value}.png") }}" width="44" height="40" />
+                                </div>
+                                <div class="charuser">
+                                    <div class="charname">{{ $character->name }}</div>
+                                    <div class="charrank">
+                                        <span class="charlabel">{{ __('app/user/characters.rank') }}</span>
+                                        @if ($character->highscore)
+                                            <span class="chardata">#{{ $character->highscore->id }}</span>
+                                        @else
+                                            <span class="chardata">N/A</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="charrow">
+                                    <div class="charclass">
+                                        <span class="charlabel">{{ __('app/user/characters.class') }}</span>
+                                        <span class="chardata">{{ $character->job->name() }}</span>
+                                    </div>
+                                    <div class="chartime">
+                                        <span class="charlabel">{{ __('app/user/characters.time') }}</span>
+                                        <span class="chardata">{{ (int) ($character->playtime / 60) }}h {{ $character->playtime % 60 }}m</span>
+                                    </div>
+                                </div>
+                                <div class="charrow">
+                                    <div class="charlevel">
+                                        <span class="charlabel">{{ __('app/user/characters.level') }}</span>
+                                        <span class="chardata">{{ $character->level }}</span>
+                                    </div>
+                                    <div class="charlevel">
+                                        <span class="charlabel">{{ __('app/user/characters.exp') }}</span>
+                                        <span class="chardata">{{ number_format($character->exp, 0, ',', '.') }}</span>
+                                    </div>
+                                </div>
+                                <div class="charrow charend">
+                                    <div class="charposition">
+                                        <span class="charlabel">{{ __('app/user/characters.empire') }}</span>
+                                        <span class="chardata">{{ $character->index->empire->name() }}</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="charrow">
-                                <div class="charclass"><span class="charlabel">Clasă</span> <span class="chardata">Sura</span></div>
-                                <div class="chartime"><span class="charlabel">Timp de joc</span> <span class="chardata">3h 20m</span></div>
-                            </div>
-                            <div class="charrow">
-                                <div class="charlevel"><span class="charlabel">Nivel</span><span class="chardata">69</span></div>
-                                <div class="charlevel"><span class="charlabel">Experiență</span> <span class="chardata">1.351.561</span></div>
-                            </div>
-                            <div class="charrow charend">
-                                <div class="charposition"><span class="charlabel">Regat</span> <span class="chardata">Shinsoo</span></div>
-                            </div>
-                        </div>
-                        <div class="charList">
-                            <div class="charimg" rowspan="3">
-                                <img src="{{ asset('assets/main/img/characters/2.png') }}" width="44" height="40" />
-                            </div>
-                            <div class="charuser">
-                                <div class="charname">gigelfronescu</div>
-                                <div class="charrank">
-                                    <span class="charlabel">Rang</span> <span class="chardata">#123</span>
-                                </div>
-                            </div>
-                            <div class="charrow">
-                                <div class="charclass"><span class="charlabel">Clasă</span> <span class="chardata">Sura</span></div>
-                                <div class="chartime"><span class="charlabel">Timp de joc</span> <span class="chardata">3h 20m</span></div>
-                            </div>
-                            <div class="charrow">
-                                <div class="charlevel"><span class="charlabel">Nivel</span><span class="chardata">69</span></div>
-                                <div class="charlevel"><span class="charlabel">Experiență</span> <span class="chardata">1.351.561</span></div>
-                            </div>
-                            <div class="charrow charend">
-                                <div class="charposition"><span class="charlabel">Regat</span> <span class="chardata">Shinsoo</span></div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

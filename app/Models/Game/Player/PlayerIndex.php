@@ -4,12 +4,11 @@ namespace App\Models\Game\Player;
 
 use App\Models\Account;
 use App\Models\Enums\CharacterJobEnum;
-use App\Models\Game\Highscore\HighscoreCache;
+use App\Models\Enums\EmpireEnum;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Player extends Model
+class PlayerIndex extends Model
 {
     /**
      * Indicates if the model should be timestamped.
@@ -30,7 +29,7 @@ class Player extends Model
      *
      * @var string
      */
-    protected $table = 'player';
+    protected $table = 'player_index';
 
     /**
      * The primary key for the model.
@@ -63,30 +62,14 @@ class Player extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'job' => CharacterJobEnum::class,
+        'empire' => EmpireEnum::class,
     ];
 
     /**
-     * Get the account that owns the player.
+     * Get the account that owns the player index.
      */
     public function account(): BelongsTo
     {
-        return $this->belongsTo(Account::class, 'account_id', 'id');
-    }
-
-    /**
-     * Get the index of this player's account
-     */
-    public function index(): BelongsTo
-    {
-        return $this->belongsTo(PlayerIndex::class, 'account_id', 'id');
-    }
-
-    /**
-     * Get this player's ranking
-     */
-    public function highscore(): HasOne
-    {
-        return $this->hasOne(HighscoreCache::class, 'name', 'name');
+        return $this->belongsTo(Account::class, 'id', 'id');
     }
 }
