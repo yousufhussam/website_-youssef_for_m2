@@ -1,8 +1,8 @@
 <div id="progressTracker">
     @php($progressTexts = [
-        1 => 'Înregistrare',
-        2 => 'Activează și descarcă',
-        3 => 'Instalează și joacă-te',
+        1 => __('app/register.progress-texts.register'),
+        2 => __('app/register.progress-texts.activate-download'),
+        3 => __('app/register.progress-texts.install-play'),
     ])
 
     @for ($i = 1; $i <= 3; $i++)

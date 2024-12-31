@@ -35,8 +35,9 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param array $data
      * @return Account
+     * @throws \Throwable
      */
     protected function create(array $data): Account
     {
@@ -48,6 +49,35 @@ class RegisterController extends Controller
         $account->saveOrFail();
 
         return $account;
+    }
+
+    /**
+     * Executes the registration logic on a validator input
+     *
+     * @param \Illuminate\Validation\Validator $validator
+     * @return RedirectResponse
+     * @throws ValidationException
+     * @throws \Throwable
+     */
+    protected function runRegistrationLogic(\Illuminate\Validation\Validator $validator): RedirectResponse
+    {
+        // Validate the input
+        if ($validator->fails()) {
+            return redirect('user/register')
+                ->withErrors($validator)
+                ->withInput($validator->getData());
+        }
+
+        // Retrieve the validated input
+        $validated = $validator->validated();
+
+        // Attempt to create the account and emit the event
+        event(new Registered($user = $this->create($validated)));
+
+        // Authenticate the user
+        Auth::guard()->login($user);
+
+        return redirect('user/verification/notice');
     }
 
     /**
@@ -65,16 +95,31 @@ class RegisterController extends Controller
      *
      * @param Request $request
      * @return RedirectResponse
-     * @throws ValidationException
+     * @throws \Throwable
      */
-    public function register(Request $request)
+    public function register(Request $request): RedirectResponse
     {
-        $this->validator($request->all())->validate();
+        $validator = $this->validator($request->all());
+        return $this->runRegistrationLogic($validator);
+    }
 
-        event(new Registered($user = $this->create($request->all())));
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     * @throws \Throwable
+     */
+    public function registerFromHeader(Request $request): RedirectResponse
+    {
+        $requestData = $request->all();
+        $validator = $this->validator([
+            'login' => $requestData['header-form-login'] ?? null,
+            'email' => $requestData['header-form-email'] ?? null,
+            'password' => $requestData['header-form-password'] ?? null,
+            'tac' => $requestData['header-form-tac'] ?? null,
+        ]);
 
-        Auth::guard()->login($user);
-
-        return redirect('user/verification/notice');
+        return $this->runRegistrationLogic($validator);
     }
 }
