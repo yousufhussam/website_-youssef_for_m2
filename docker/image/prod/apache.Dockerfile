@@ -64,11 +64,11 @@ RUN composer install --no-ansi --no-interaction --no-plugins --no-progress --no-
 RUN npm ci && npm run build
 
 # Make the init script executable
-RUN chmod +x /app/docker/init.sh
+RUN chmod +x /app/docker/init-apache.sh
 
 # Expose the API on port 80
 EXPOSE 80
 
 # Run supervisord for handling the container services
 ENTRYPOINT ["/bin/sh", "-c"]
-CMD ["/app/docker/init.sh"]
+CMD ["/app/docker/init-apache.sh"]
