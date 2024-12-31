@@ -28,4 +28,12 @@ return [
     'form.required' => '* is required',
 
     'form.register-btn' => 'Register',
+
+    'header-form.step-1' => 'Register',
+    'header-form.step-2' => 'Download',
+    'header-form.step-3' => 'Play for free',
+
+    'header-form.hint-username' => 'Only letters and numbers allowed.<br />Length between 5 and 16 characters.',
+    'header-form.hint-email' => 'The activation link will be sent to this address.',
+    'header-form.hint-password' => 'Only letters and numbers allowed.<br />Length between 5 and 16 characters.',
 ];

@@ -1,0 +1,21 @@
+.header-wrapper {
+    background: url(../img/header-bg-classic.jpg) no-repeat 50% 0;
+    height: 250px;
+}
+
+#header {
+    height: 250px;
+}
+
+.header-box {
+    margin: 130px 0 0 199px;
+}
+
+.header-box-nav-container{
+    background: url(../img/header-box.png) no-repeat;
+    margin: 7px 0 0 6px;
+}
+
+.container-wrapper {
+    background: url(../img/container-bg-top-classic.jpg) no-repeat 50% 0;
+}

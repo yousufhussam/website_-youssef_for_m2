@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\View\Composers\MallComposer;
+use App\View\Composers\ThemeComposer;
 use Illuminate\Support\Facades;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,6 +22,7 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Facades\View::composer('layouts.app', ThemeComposer::class);
         Facades\View::composer('layouts.mall', MallComposer::class);
     }
 }

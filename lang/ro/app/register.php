@@ -28,4 +28,12 @@ return [
     'form.required' => '* este necesar',
 
     'form.register-btn' => 'Înregistrare',
+
+    'header-form.step-1' => 'Înregistrează-te',
+    'header-form.step-2' => 'Descarcă',
+    'header-form.step-3' => 'Joacă gratis',
+
+    'header-form.hint-username' => 'Sunt permise doar litere și cifre.<br />Lungime între 5 și 16 caractere.',
+    'header-form.hint-email' => 'Un link de activare va fi trimis la această adresă.',
+    'header-form.hint-password' => 'Sunt permise doar litere și cifre.<br />Lungime între 5 și 16 caractere.',
 ];

@@ -10,6 +10,11 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
     <link href="{{ asset('assets/main/css/reset.css') }}" rel="stylesheet" type="text/css" media="all"/>
     <link href="{{ asset('assets/main/css/all.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    @if ($subTheme == 'classic')
+        <link href="{{ asset('assets/main/css/header-classic.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    @elseif ($subTheme == 'classic-btn')
+        <link href="{{ asset('assets/main/css/header-classic-btn.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    @endif
     <link  href="{{ asset('assets/main/css/plugins.css') }}" rel="stylesheet" type="text/css" media="screen" />
 
     <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="{{ asset('assets/main/css/ie6.css') }}" media="screen"/><![endif]-->
@@ -108,31 +113,102 @@
                 </a>
 
                 @guest
-                    <div class="header-box">
-                        <div id="regBtn">
-                            <a id="toReg" href="{{ url('user/register') }}" title="{{ __('app/main.header.register_alt') }}">
+                    @if ($subTheme == 'classic')
+                        <div class="header-box">
+                            <ul class="top-nav">
+                                <li><span>1</span><a href="{{ url('user/register') }}">{{ __('app/register.header-form.step-1') }}</a></li>
+                                <li><span>2</span><a href="{{ url('main/download') }}">{{ __('app/register.header-form.step-2') }}</a></li>
+                                <li><span>3</span><a href="{{ url('main/howto') }}">{{ __('app/register.header-form.step-3') }}</a></li>
+                            </ul>
+                            <div id="err-register" style="display: none;"></div>
+                            <form action="{{ url('user/register-from-header') }}" method="post">
+                                @csrf
+
+                                <div class="form">
+                                    <fieldset>
+                                        <div class="box">
+                                            <label for="namefield">{{ __('app/register.form.username') }}</label>
+                                            <div class="input"><input type="text" id="namefield" name="header-form-login" maxlength="16" value="" onblur="registrationTooltip(this,'',1,false);" onfocus="registrationTooltip(this,'',1,true);"/></div>
+                                        </div>
+                                        <div class="box">
+                                            <label for="emailfield">{{ __('app/register.form.email') }}</label>
+                                            <div class="input input-2"><input type="text" id="emailfield" name="header-form-email" maxlength="64" value="" onblur="registrationTooltip(this,'',2,false);" onfocus="registrationTooltip(this,'',2,true);"/></div>
+                                        </div>
+                                        <div class="box">
+                                            <label for="pwdfield">{{ __('app/register.form.password') }}</label>
+                                            <div class="input input-3"><input type="password" id="pwdfield" name="header-form-password" maxlength="16" value="" onblur="registrationTooltip(this,'',3,false);" onfocus="registrationTooltip(this,'',3,true);"/></div>
+                                        </div>
+                                        <input type="submit" class="button" value="{{ __('app/register.form.register-btn') }}"/>
+                                    </fieldset>
+                                    <input class="form-agb-box" name="header-form-tac" type="checkbox" value="tac" />
+                                    <div class="agb-label">
+                                        {!! Str::inlineMarkdown(__('app/register.form.terms-and-conditions', ['termsUrl' => url('legal/terms'), 'privacyUrl' => url('legal/privacy')])) !!}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <script type="text/javascript">
+                            function registrationTooltip(elem, text, hint, clear) {
+                                if (clear) {
+                                    if (elem.value === text) {
+                                        elem.value = '';
+                                    }
+
+                                    switch (hint) {
+                                        case 1:
+                                            $("#err-register").html("{!! __('app/register.header-form.hint-username') !!}");
+                                            $("#err-register").css("display", "block");
+                                            break;
+                                        case 2:
+                                            $("#err-register").html("{!! __('app/register.header-form.hint-email') !!}");
+                                            $("#err-register").css("display", "block");
+                                            break;
+                                        case 3:
+                                            $("#err-register").html("{!! __('app/register.header-form.hint-password') !!}");
+                                            $("#err-register").css("display", "block");
+                                            break;
+                                    }
+                                } else {
+                                    if ((elem.value === '') && (text != null)) {
+                                        elem.value = text;
+                                    }
+                                    $("#err-register").css("display", "none");
+                                }
+                            }
+                        </script>
+                    @elseif ($subTheme == 'classic-btn')
+                        <div class="header-box">
+                            <a id="regBtn" href="{{ url('user/register') }}" title="{{ __('app/main.header.register_alt') }}">
                                 {{ __('app/main.header.register') }}
                             </a>
-                            <div id="regSteps">
-                                <a href="{{ url('user/register') }}" title="{{ __('app/main.header.register_alt') }}">
-                                    <span>{{ __('app/main.header.register_steps_1') }}</span> »
-                                    <span>{{ __('app/main.header.register_steps_2') }}</span> »
-                                    <span>{{ __('app/main.header.register_steps_3') }}</span>
-                                </a>
-                            </div>
                         </div>
+                    @elseif ($subTheme == 'normal')
+                        <div class="header-box">
+                            <div id="regBtn">
+                                <a id="toReg" href="{{ url('user/register') }}" title="{{ __('app/main.header.register_alt') }}">
+                                    {{ __('app/main.header.register') }}
+                                </a>
+                                <div id="regSteps">
+                                    <a href="{{ url('user/register') }}" title="{{ __('app/main.header.register_alt') }}">
+                                        <span>{{ __('app/main.header.register_steps_1') }}</span> »
+                                        <span>{{ __('app/main.header.register_steps_2') }}</span> »
+                                        <span>{{ __('app/main.header.register_steps_3') }}</span>
+                                    </a>
+                                </div>
+                            </div>
 
-                        <script type="text/javascript">
-                            $('#regBtn').hover(
-                                function () {
-                                    $(this).addClass("reg-hover");
-                                },
-                                function () {
-                                    $(this).removeClass("reg-hover");
-                                }
-                            );
-                        </script>
-                    </div>
+                            <script type="text/javascript">
+                                $('#regBtn').hover(
+                                    function () {
+                                        $(this).addClass("reg-hover");
+                                    },
+                                    function () {
+                                        $(this).removeClass("reg-hover");
+                                    }
+                                );
+                            </script>
+                        </div>
+                    @endif
                 @else
                     <div id="userBox">
                         <div class="welcome-text welcome-text-left">{{ __('app/main.header.welcome', ['name' => Auth::user()->login]) }}</div>
@@ -300,7 +376,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="boxes-bottom"> </div>
+                    <div class="boxes-bottom"></div>
                 </div>
             </div>
         </div>
