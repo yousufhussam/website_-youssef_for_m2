@@ -364,13 +364,43 @@
                                 <h3 style="margin-top:0">{{ __('app/main.ranking.players') }}</h3>
                                 <div class="form-score">
                                     <div id="highscore-player">
-                                        <ul><li><div class="empire2"><strong class="offset">1</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore" class="first">picyu3</a></div></li><li class="light"><div class="empire1"><strong class="offset">2</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">XXXMEN77</a></div></li><li><div class="empire1"><strong class="offset">3</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">Spydy</a></div></li><li class="light"><div class="empire3"><strong class="offset">4</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">beLeSe</a></div></li><li><div class="empire2"><strong class="offset">5</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">alexdenis</a></div></li><li class="light"><div class="empire3"><strong class="offset">6</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">Pixie03</a></div></li><li><div class="empire3"><strong class="offset">7</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">KingARAGORN</a></div></li><li class="light"><div class="empire1"><strong class="offset">8</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">SCORPIO1</a></div></li><li><div class="empire2"><strong class="offset">9</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">Parazltu</a></div></li><li class="light"><div class="empire2"><strong>10</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/highscore">Sayana</a></div></li></ul>                                                                            </div>
+                                        <ul>
+                                            @foreach ($topHighscore as $entry)
+                                                <li @class(['light' => $loop->even])>
+                                                    <div
+                                                        @class([
+                                                            'empire1' => $entry->empire == \App\Models\Enums\EmpireEnum::SHINSOO,
+                                                            'empire2' => $entry->empire == \App\Models\Enums\EmpireEnum::CHUNJO,
+                                                            'empire3' => $entry->empire == \App\Models\Enums\EmpireEnum::JINNO
+                                                        ])
+                                                    >
+                                                        <strong @class(['offset' => $entry->id < 10])>{{ $entry->id }}</strong>&ndash;<a href="{{ url('main/highscore') }}" @class(['first' => $loop->first])>{{ $entry->name }}</a>
+                                                    </div>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                     <a href="{{ url('main/highscore') }}" class="btn" rel="nofollow">{{ __('app/main.ranking.btn_highscore') }}</a>
                                 </div>
                                 <h3 style="margin-top:0">{{ __('app/main.ranking.guilds') }}</h3>
                                 <div class="form-score">
                                     <div id="highscore-guild">
-                                        <ul><li><div class="empire2"><strong class="offset">1</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore" class="first">InStyle</a></div></li><li class="light"><div class="empire3"><strong class="offset">2</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">ISENGARD</a></div></li><li><div class="empire2"><strong class="offset">3</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">TheRulers</a></div></li><li class="light"><div class="empire2"><strong class="offset">4</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">A55A55INII</a></div></li><li><div class="empire3"><strong class="offset">5</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">TheElfs</a></div></li><li class="light"><div class="empire3"><strong class="offset">6</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">MAESTRIIpur</a></div></li><li><div class="empire2"><strong class="offset">7</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">NeBuNaTiCii</a></div></li><li class="light"><div class="empire1"><strong class="offset">8</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">TheGoDs</a></div></li><li><div class="empire2"><strong class="offset">9</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">7UP</a></div></li><li class="light"><div class="empire2"><strong>10</strong>&ndash;<a href="https://web.archive.org/web/20130621071508/http://www.metin2.ro/main/guildhighscore">ReVoLuTioN</a></div></li></ul>                                                                            </div>
+                                        <ul>
+                                            @foreach ($topGuildHighscore as $entry)
+                                                <li @class(['light' => $loop->even])>
+                                                    <div
+                                                        @class([
+                                                            'empire1' => $entry->empire == \App\Models\Enums\EmpireEnum::SHINSOO,
+                                                            'empire2' => $entry->empire == \App\Models\Enums\EmpireEnum::CHUNJO,
+                                                            'empire3' => $entry->empire == \App\Models\Enums\EmpireEnum::JINNO
+                                                        ])
+                                                    >
+                                                        <strong @class(['offset' => $entry->id < 10])>{{ $entry->id }}</strong>&ndash;<a href="{{ url('main/guildhighscore') }}" @class(['first' => $loop->first])>{{ $entry->name }}</a>
+                                                    </div>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                     <a href="{{ url('main/guildhighscore') }}" class="btn" rel="nofollow">{{ __('app/main.ranking.btn_highscore') }}</a>
                                 </div>
                             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\View\Composers\HighscoreComposer;
 use App\View\Composers\MallComposer;
 use App\View\Composers\ThemeComposer;
 use Illuminate\Support\Facades;
@@ -24,5 +25,6 @@ class ViewServiceProvider extends ServiceProvider
     {
         Facades\View::composer('layouts.app', ThemeComposer::class);
         Facades\View::composer('layouts.mall', MallComposer::class);
+        Facades\View::composer('layouts.app', HighscoreComposer::class);
     }
 }

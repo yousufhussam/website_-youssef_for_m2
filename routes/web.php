@@ -31,8 +31,16 @@ Route::prefix('main')->group(function() {
     Route::get('/media', fn () => view('main/media'));
     Route::get('/news', fn () => view('main/news'));
     Route::get('/download', fn () => view('main/download'));
-    Route::get('/highscore', fn () => view('main/highscore'));
-    Route::get('/guildhighscore', fn () => view('main/guildhighscore'));
+
+    # Highscore
+    Route::get('/highscore', [HighscoreController::class, 'show']);
+    Route::post('/highscore', [HighscoreController::class, 'search']);
+    Route::get('/highscore/{empireChoice}/{classChoice}/{page}', [HighscoreController::class, 'show'])->name('highscore-page');
+
+    # Guild highscore
+    Route::get('/guildhighscore', [GuildHighscoreController::class, 'show']);
+    Route::post('/guildhighscore', [GuildHighscoreController::class, 'search']);
+    Route::get('/guildhighscore/{empireChoice}/{page}', [GuildHighscoreController::class, 'show'])->name('guild-highscore-page');
 
     # The game
     Route::get('/thegame', fn () => view('main/thegame/thegame'));
