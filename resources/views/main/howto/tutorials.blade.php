@@ -6,17 +6,18 @@
         <div class="content content-last">
             <div class="content-bg">
                 <div class="content-bg-bottom">
-                    <h2>Metin2 - Tutoriale</h2>
+                    <h2>{{ __('app/content/howto.tutorials.title') }}</h2>
                     <div class="firststeps-inner-content">
                         <ul class="tabs-nav tabs2">
-                            <li id="tab1"><a href="{{ url('main/howto') }}">Primii paşi</a></li>
-                            <li id="tab2" class="selected"><a href="{{ url('main/tutorials') }}">Tutoriale</a></li>
+                            <li id="tab1"><a href="{{ url('main/howto') }}">{{ __('app/content/howto.tabs.first-steps') }}</a></li>
+                            <li id="tab2" class="selected"><a href="{{ url('main/tutorials') }}">{{ __('app/content/howto.tabs.tutorials') }}</a></li>
                         </ul>
                         <div class="tutorialsbox">
-                            <p>Bun venit la MMORPG Metin2 online! Dupa inregistrare vei afla mai multe despre multitudinea optiunilor acestui joc online si Imperiile sale. Tutorialul iti va explica cum sa intri in lumea MMORPG si te va ajuta sa ai un joc captivant si interesant.</p>
-                            <a href="{{ url('main/tutorials/createcharacter') }}" rel="#overlay" class="tutorial-btn">Creeaza caracterul</a>
-                            <a href="{{ url('main/tutorials/introduction') }}" rel="#overlay" class="tutorial-btn">Introducere</a>
-
+                            <p>{{ __('app/content/howto.tutorials.text') }}</p>
+                            <a href="{{ url('main/tutorials/createcharacter') }}" rel="#overlay" class="tutorial-btn">{{ __('app/content/howto.tutorials.create-character') }}</a>
+                            <a href="{{ url('main/tutorials/introduction') }}" rel="#overlay" class="tutorial-btn">{{ __('app/content/howto.tutorials.introduction') }}</a>
+                            <a href="{{ url('main/tutorials/crafting-scrolls') }}" rel="#overlay" class="tutorial-btn">{{ __('app/content/howto.tutorials.crafting-scrolls') }}</a>
+                            <a href="{{ url('main/tutorials/crafting-stones') }}" rel="#overlay" class="tutorial-btn">{{ __('app/content/howto.tutorials.crafting-stones') }}</a>
                         </div>
                         <div class="box-foot"></div>
                     </div>

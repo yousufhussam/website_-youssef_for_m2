@@ -55,6 +55,8 @@ Route::prefix('main')->group(function() {
     Route::get('/tutorials', fn () => view('main/howto/tutorials'));
     Route::get('/tutorials/createcharacter', fn () => view('main/howto/createcharacter'));
     Route::get('/tutorials/introduction', fn () => view('main/howto/introduction'));
+    Route::get('/tutorials/crafting-scrolls', fn () => view('main/howto/crafting-scrolls'));
+    Route::get('/tutorials/crafting-stones', fn () => view('main/howto/crafting-stones'));
 
     # Community
     Route::get('/community', fn () => view('main/community/community'));
