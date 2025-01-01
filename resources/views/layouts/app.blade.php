@@ -212,7 +212,7 @@
                 @else
                     <div id="userBox">
                         <div class="welcome-text welcome-text-left">{{ __('app/main.header.welcome', ['name' => Auth::user()->login]) }}</div>
-                        <div class="welcome-text welcome-text-right">{{ __('app/main.header.cash_balance', ['cash' => Auth::user()->cash]) }}</div>
+                        <div class="welcome-text welcome-text-right">{{ __('app/main.header.cash_balance', ['cash' => Auth::user()->cash, 'cashName' => \App\Models\Enums\MallItemPricingEnum::CASH->longName()]) }}</div>
                         <br class="clearfloat" />
                         <div class="header-box-nav-container">
                             <ul class="header-box-nav-login" style="position:absolute; margin-left:-0px;">

@@ -19,19 +19,19 @@
                             <a href="{{ route('mall.item', ['id' => $item->id]) }}" class="openinformation" title="More information"></a>
                         </div>
                         <div class="discountPercentCirclePromoted"></div>
-                        <p class="discountOldPricePromoted">{{ $item->old_price }}&nbsp;{{ $item->pricing->description() }}</p>
+                        <p class="discountOldPricePromoted">{{ $item->old_price }}&nbsp;{{ $item->pricing->name() }}</p>
                     @endif
 
                     <div @class(['promotedItemBtns', 'promotedItemBtns-discount' => $item->old_price])>
                         @if ($item->old_price)
                             <p class="pdiscount">
-                                {{ $item->quantity }} pcs: <span class="price discount price-discount-ie6">{{ $item->price }} {{ $item->pricing->description() }}</span>
+                                {{ $item->quantity }} pcs: <span class="price discount price-discount-ie6">{{ $item->price }} {{ $item->pricing->name() }}</span>
                             </p>
                             <div class="divdiscount">
                                 <a href="{{ route('mall.item', ['id' => $item->id]) }}" title="More information" class="detail-discount openinformation">Details</a>
                             </div>
                         @else
-                            <p>{{ $item->quantity }} pcs. only: <span class="price">{{ $item->price }} {{ $item->pricing->description() }}</span></p>
+                            <p>{{ $item->quantity }} pcs. only: <span class="price">{{ $item->price }} {{ $item->pricing->name() }}</span></p>
                             <a href="{{ route('mall.item', ['id' => $item->id]) }}" title="More information" class="detail openinformation">Details</a>
                         @endif
                     </div>

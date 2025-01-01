@@ -37,13 +37,13 @@
                                 {{ $item->quantity }} pcs. for:
 
                                 @if (!$item->old_price)
-                                    <span class="price">{{ $item->price }} {{ $item->pricing->description() }}</span>
+                                    <span class="price">{{ $item->price }} {{ $item->pricing->name() }}</span>
                                 @endif
                             </div>
 
                             @if ($item->old_price)
-                                <div class="price discount price-discount-ie6">{{ $item->price }} {{ $item->pricing->description() }}</div>
-                                <div class="discountOldPriceCategory">{{ $item->old_price }} {{ $item->pricing ->description() }}</div>
+                                <div class="price discount price-discount-ie6">{{ $item->price }} {{ $item->pricing->name() }}</div>
+                                <div class="discountOldPriceCategory">{{ $item->old_price }} {{ $item->pricing ->name() }}</div>
                                 <div class="discountPercentCircleCategory"></div>
                             @endif
                         </div>

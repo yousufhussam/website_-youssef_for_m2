@@ -10,7 +10,7 @@ return [
     'header.register_steps_3' => '3. Descarcă și joacă pe gratis',
 
     'header.welcome' => 'Bun venit, :name!',
-    'header.cash_balance' => 'Ai :cash Monede Dragon',
+    'header.cash_balance' => 'Ai :cash :cashName',
 
     'header.nav.buy_coins' => 'Încarcă MD',
     'header.nav.administration' => 'Datele utilizatorului',

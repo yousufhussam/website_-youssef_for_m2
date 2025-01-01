@@ -44,13 +44,13 @@
                 </div>
                 <div class="sprice-discount">
                     <div id="oldPriceAmountDiv">
-                        <span id="oldPriceAmount">{{ $item->old_price }}</span>&nbsp;{{ $item->pricing->description() }}
+                        <span id="oldPriceAmount">{{ $item->old_price }}</span>&nbsp;{{ $item->pricing->name() }}
                     </div>
-                    Price: <span id="priceAmount">{{$item->price }}</span>&nbsp;{{ $item->pricing->description() }}
+                    Price: <span id="priceAmount">{{$item->price }}</span>&nbsp;{{ $item->pricing->name() }}
                 </div>
             @else
                 <div class="sprice">
-                    Price: <span id="priceAmount">{{ $item->price }}</span>&nbsp;{{ $item->pricing->description() }}
+                    Price: <span id="priceAmount">{{ $item->price }}</span>&nbsp;{{ $item->pricing->name() }}
                 </div>
             @endif
         </div>
@@ -61,7 +61,7 @@
             <a id="linkBlank" class="blank" style="display:none" href="#">Buy item</a>
         @else
             <a id="buyItemLink" class="blank" href="#" style="cursor: default">Not
-                enough {{ $item->pricing->description() }}</a>
+                enough {{ $item->pricing->name() }}</a>
         @endif
 
         @if ($item->pricing == \App\Models\Enums\MallItemPricingEnum::CASH)

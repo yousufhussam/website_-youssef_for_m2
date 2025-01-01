@@ -10,10 +10,10 @@ return [
     'header.register_steps_3' => '3. Download & play for free',
 
     'header.welcome' => 'Welcome, :name!',
-    'header.cash_balance' => 'You have :cash Dragon Coins',
+    'header.cash_balance' => 'You have :cash :cashName',
 
     'header.nav.buy_coins' => 'Buy DC',
-    'header.nav.administration' => 'User information',
+    'header.nav.administration' => 'Account Information',
     'header.nav.logout' => 'Logout',
 
     'nav.home' => 'Start',

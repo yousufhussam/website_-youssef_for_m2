@@ -6,39 +6,80 @@
         <div class="content content-last">
             <div class="content-bg">
                 <div class="content-bg-bottom">
-                    <h2>Contul tău</h2>
+                    <h2>{{ __('app/user/administration.title') }}</h2>
                     <div class="administration-inner-content">
                         <div class="input-data-box">
-                            <h4>Datele utilizatorului</h4>
+                            <h4>{{ __('app/user/administration.subtitle') }}</h4>
 
                             <ul>
-								<li>Nume de utilizator: {{ Auth::user()->login }}</li>
-								<li>Email: <span id="yourEmail">{{ Auth::user()->email }}</span></li>
-								<li>Monede Dragon: {{ Auth::user()->cash }} <a href="#" class="load-link">(top up)</a></li>
-								<li>Semnele Dragonului: {{ Auth::user()->mileage }}</li>
+                                <li>{{ __('app/user/administration.username') }}: {{ Auth::user()->login }}</li>
+                                <li>
+                                    {{ __('app/user/administration.email') }}:
+                                    <span id="yourEmail">{{ Auth::user()->email }}</span>
+                                </li>
+                                <li>
+                                    {{ \App\Models\Enums\MallItemPricingEnum::CASH->longName() }}:
+                                    {{ Auth::user()->cash }} {{ \App\Models\Enums\MallItemPricingEnum::CASH->name() }}
+                                    <a href="#" class="load-link">{{ __('app/user/administration.cash-topup') }}</a>
+                                </li>
+                                <li>
+                                    {{ \App\Models\Enums\MallItemPricingEnum::MILEAGE->longName() }}:
+                                    {{ Auth::user()->mileage }} {{ \App\Models\Enums\MallItemPricingEnum::MILEAGE->name() }}
+                                </li>
 
                                 @if (Auth::user()->social_id)
-								    <li class="long-li-code">Cod de ștergere caracter: <span class="delete-code">{{ Auth::user()->social_id }}</span></li>
+                                    <li class="long-li-code">
+                                        {{ __('app/user/administration.delete-code') }}:
+                                        <span class="delete-code">{{ Auth::user()->social_id }}</span>
+                                    </li>
                                 @else
-                                    <li class="long-li-code">Cod de ștergere caracter: <span class="delete-code">încă nespecificat</span></li>
+                                    <li class="long-li-code">
+                                        {{ __('app/user/administration.delete-code') }}:
+                                        <span class="delete-code">{{ __('app/user/administration.delete-code-not-available') }}</span>
+                                    </li>
                                 @endif
                             </ul>
 
-                            <div class="administration-box"><a href="#" class="btn">Încarcă MD</a><p>Îmbunătățește-ți contul folosind Monede Dragon</p></div>
-                            <div class="administration-box"><a href="{{ url('user/characters') }}" class="btn">Caracter</a><p>Lista caracterelor</p></div>
-                            {{-- <div class="administration-box"><a href="#" class="btn">Prieteni</a><p>Recruteaza prieteni si vezi statusul noilor prieteni recrutati</p></div> --}}
-                            <div class="administration-box"><a href="{{ url('user/emailchange') }}" class="btn">Email</a><p>Schimbă adresa de email</p></div>
-                            <div class="administration-box"><a href="{{ url('user/passwordchangerequest') }}" class="btn">Parola</a><p>Schimbă parola</p></div>
-                            <div class="administration-box"><a href="{{ url('user/storagepasswordlost') }}" class="btn">Parola Depozit</a><p>Cere parola de la Depozit</p></div>
-                            <div class="administration-box"><a href="{{ url('user/displaycode') }}" class="btn">Parola Stergere</a><p>Codul pentru ştergerea personajelor</p></div>
-                            <div class="administration-box"><a href="#" class="btn">Anularea contului</a><p>Anularea contului</p></div>
-
+                            <div class="administration-box">
+                                <a href="#" class="btn">{{ __('app/user/administration.btn-topup') }}</a>
+                                <p>{{ __('app/user/administration.btn-topup-desc') }}</p>
+                            </div>
+                            <div class="administration-box">
+                                <a href="{{ url('user/characters') }}" class="btn">{{ __('app/user/administration.btn-characters') }}</a>
+                                <p>{{ __('app/user/administration.btn-characters-desc') }}</p>
+                            </div>
+                            {{--
+                                <div class="administration-box">
+                                    <a href="#" class="btn">{{ __('app/user/administration.btn-recruit') }}</a>
+                                    <p>{{ __('app/user/administration.btn-desc') }}</p>
+                                </div>
+                            --}}
+                            <div class="administration-box">
+                                <a href="{{ url('user/emailchange') }}" class="btn">{{ __('app/user/administration.btn-email-change') }}</a>
+                                <p>{{ __('app/user/administration.btn-email-change-desc') }}</p>
+                            </div>
+                            <div class="administration-box">
+                                <a href="{{ url('user/passwordchangerequest') }}" class="btn">{{ __('app/user/administration.btn-password-change') }}</a>
+                                <p>{{ __('app/user/administration.btn-password-change-desc') }}</p>
+                            </div>
+                            <div class="administration-box">
+                                <a href="{{ url('user/storagepasswordlost') }}" class="btn">{{ __('app/user/administration.btn-storage-password') }}</a>
+                                <p>{{ __('app/user/administration.btn-storage-password-desc') }}</p>
+                            </div>
+                            <div class="administration-box">
+                                <a href="{{ url('user/displaycode') }}" class="btn">{{ __('app/user/administration.btn-display-code') }}</a>
+                                <p>{{ __('app/user/administration.btn-display-code-desc') }}</p>
+                            </div>
+                            <div class="administration-box">
+                                <a href="#" class="btn">{{ __('app/user/administration.btn-delete-account') }}</a>
+                                <p>{{ __('app/user/administration.btn-delete-account-desc') }}</p>
+                            </div>
                         </div>
                         <div class="box-foot"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="shadow">&nbsp;</div>
+        <div class="shadow"></div>
     </div>
 @endsection
