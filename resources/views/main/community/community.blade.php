@@ -6,21 +6,20 @@
         <div class="content content-last">
             <div class="content-bg">
                 <div class="content-bg-bottom">
-                    <h2>Metin2 - Comunitate</h2>
+                    <h2>{{ __('app/content/community.title') }}</h2>
                     <div class="firststeps-inner-content">
                         <div class="community">
-                            <p>Fiind un joc multiplayer, Metin2 nu te va lasa singur pe campul de lupta. Pe Forum poti intalni numerosi jucatori ce iti pot raspunde la toate intrebarile sau cand ai o problema. De asemenea, cu care poti face schimb de idei. Poti obtine mai multe informatii despre jocul Metin2 pe Wiki.
-                                Alatura-te comunitatii Metin2!</p>
-                            <a href="{{ url('main/code-of-conduct') }}" class="tutorial-btn">Ghid Comunitate</a>
-                            <a href="{{ url('main/board') }}" class="tutorial-btn" target="_blank">Forum</a>
-                            <a href="{{ url('main/support') }}" class="tutorial-btn" target="_blank">Ticketservice</a>
-                            <a href="{{ url('main/wiki') }}" class="tutorial-btn" target="_blank">Wiki</a>
+                            <p>{{ __('app/content/community.text') }}</p>
+                            <a href="{{ url('main/code-of-conduct') }}" class="tutorial-btn">{{ __('app/content/community.links.guide') }}</a>
+                            <a href="{{ url('main/board') }}" class="tutorial-btn" target="_blank">{{ __('app/content/community.links.forum') }}</a>
+                            <a href="{{ url('main/support') }}" class="tutorial-btn" target="_blank">{{ __('app/content/community.links.support') }}</a>
+                            <a href="{{ url('main/wiki') }}" class="tutorial-btn" target="_blank">{{ __('app/content/community.links.wiki') }}</a>
                         </div>
                         <div class="box-foot"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="shadow">&nbsp;</div>
+        <div class="shadow"></div>
     </div>
 @endsection
