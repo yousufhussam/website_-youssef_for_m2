@@ -16,6 +16,7 @@
         <link href="{{ asset('assets/main/css/header-classic-btn.css') }}" rel="stylesheet" type="text/css" media="all"/>
     @endif
     <link  href="{{ asset('assets/main/css/plugins.css') }}" rel="stylesheet" type="text/css" media="screen" />
+    <link  href="{{ asset('assets/main/css/netbar.css') }}" rel="stylesheet" type="text/css" media="screen" />
 
     <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="{{ asset('assets/main/css/ie6.css') }}" media="screen"/><![endif]-->
     <!--[if gte IE 6]><link rel="stylesheet" type="text/css" href="{{ asset('assets/main/css/ie7.css') }}" media="screen"/><![endif]-->
@@ -30,6 +31,7 @@
     <script type="text/javascript" src="{{ asset('assets/main/js/jquery.bgiframe.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/main/js/jquery.jeditable.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/main/js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/main/js/netbar.js') }}"></script>
     <script type="text/javascript">
         $.fn.exists = function(){return jQuery(this).length>0;}
 
@@ -104,7 +106,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body class="netbar">
+    <x-netbar.main />
+
     <div id="page">
         <div class="header-wrapper">
             <div id="header">

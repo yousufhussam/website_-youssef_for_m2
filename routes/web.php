@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Highscore\GuildHighscoreController;
 use App\Http\Controllers\Highscore\HighscoreController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\Mall\AuthController;
 use App\Http\Controllers\Mall\CategoryController;
 use App\Http\Controllers\Mall\HomeController;
@@ -28,6 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', fn () => view('main/home'));
+Route::get('/set-language/{language}', [LanguageController::class, 'setLanguage'])->name('set-language');
 
 Route::prefix('main')->group(function() {
     Route::get('/home', fn () => view('main/home'));

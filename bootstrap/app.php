@@ -26,6 +26,9 @@ return Application::configure(basePath: dirname(__DIR__))
             Request::HEADER_X_FORWARDED_AWS_ELB
         );
     })
+    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->appendToGroup('web', \App\Http\Middleware\Language::class);
+    })
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
