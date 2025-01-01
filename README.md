@@ -16,3 +16,11 @@ it aims to be the management centre for the Metin2 stack.
 - Ranking (with cache system for fast search)
 - Adding Grotto & DC landing pages
 - Converting Flash-based media players to HTML5.
+
+## Development
+
+To build the image, checkout the repo and run 
+
+```shell
+docker build -t metin2/web:test -f docker/image/prod/apache.Dockerfile .
+```
