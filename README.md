@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The Metin2 Website
 
 This is a replica of the old Metin2 website in the pre-2014 era, made in Laravel. Still very much a work in progress,
@@ -48,3 +49,7 @@ Adapt the `--step` parameter according to the number of migration files you adde
 ```shell
 docker run --env-file .env --network deploy_default --rm metin2/web:test "php artisan migrate:rollback --step=1"
 ```
+=======
+# website_-youssef_for_m2
+this is for test 
+>>>>>>> 360ee871016d8e2566b9dd99930283648a56914e
