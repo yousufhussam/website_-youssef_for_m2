@@ -45,7 +45,7 @@ class RegisterController extends Controller
         $account->login = $data['login'];
         $account->email = $data['email'];
         $account->password = Hash::make($data['password']);
-        $account->status = AccountStatusEnum::NOT_AVAILABLE;
+        $account->status = AccountStatusEnum::OK;
         $account->saveOrFail();
 
         return $account;
@@ -72,12 +72,13 @@ class RegisterController extends Controller
         $validated = $validator->validated();
 
         // Attempt to create the account and emit the event
-        event(new Registered($user = $this->create($validated)));
+        $user = $this->create($validated);
 
         // Authenticate the user
         Auth::guard()->login($user);
 
-        return redirect('user/verification/notice');
+        // تحويل اللاعب لصفحة التحكم الرئيسية مباشرة بدل صفحة التفعيل
+       return redirect('user/administration');
     }
 
     /**
